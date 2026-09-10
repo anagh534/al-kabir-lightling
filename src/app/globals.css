@@ -66,3 +66,41 @@ html {
     transform: translateX(150%);
   }
 }
+
+/* Clean up the Google Translate Widget */
+.goog-te-gadget {
+  font-family: inherit !important;
+  color: transparent !important;
+  font-size: 0px !important; /* hide the 'Powered by Google' text */
+}
+
+.goog-te-gadget .goog-te-combo {
+  font-family: inherit !important;
+  color: #334155 !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  outline: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  cursor: pointer;
+}
+
+.goog-te-gadget .goog-te-combo:focus {
+  outline: none !important;
+}
+
+/* Hide the Google banner at the top of the page */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Hide the Google icon inside the dropdown if possible */
+.goog-logo-link {
+  display: none !important;
+}

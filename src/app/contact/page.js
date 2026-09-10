@@ -152,7 +152,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. Contact Information & Interactive Form Section */}
-      <section id="quote-form" className="py-16 sm:py-20 bg-white scroll-mt-24">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left: Company Contact Cards (5 cols) */}
@@ -269,7 +269,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: Contact Form matching PAGE 11 of Docx (7 cols) */}
-            <div className="lg:col-span-7 bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-10">
+            <div id="quote-form" className="lg:col-span-7 bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-10 scroll-mt-24">
               <div className="mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
                   Send Message
