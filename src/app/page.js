@@ -203,15 +203,6 @@ export default function HomePage() {
                 units, and electrical infrastructure.
               </p>
             </div>
-
-            <button
-              onClick={() => handleOpenQuote("Full Product Range")}
-              type="button"
-              className="inline-flex items-center gap-2 text-xs font-bold text-[#009ea9] hover:text-[#00858f] transition-colors cursor-pointer"
-            >
-              <span>Download Product Specifications</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
           </div>
 
           {/* Grid of High-Res Category Cards using Architectural Design System */}
