@@ -264,20 +264,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Consultation Card */}
-              <div className="p-5 rounded-2xl bg-[#e6f8fa]/70 border border-[#009ea9]/20 flex items-center justify-between">
-                <div>
-                  <p className="text-xs font-bold text-slate-900">
-                    Need on-site engineering assistance?
-                  </p>
-                  <p className="text-[11px] text-slate-600 mt-0.5">
-                    Our technical team can visit your project site or consultant office.
-                  </p>
-                </div>
-                <span className="text-xs font-bold text-[#009ea9] shrink-0">
-                  Muscat HQ
-                </span>
-              </div>
             </div>
 
             {/* Right: Contact Form matching PAGE 11 of Docx (7 cols) */}
@@ -330,191 +316,137 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Name */}
-                    <div>
-                      <label
-                        htmlFor="c-name"
-                        className="block text-xs font-semibold text-slate-700 mb-1"
-                      >
-                        Full Name *
-                      </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {/* Floating Label: Full Name */}
+                    <div className="relative group">
                       <input
                         id="c-name"
                         type="text"
                         required
-                        placeholder="e.g. Eng. Tariq Al-Harthy"
+                        placeholder="Full Name *"
                         value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none"
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                       />
+                      <label
+                        htmlFor="c-name"
+                        className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                      >
+                        Full Name *
+                      </label>
                     </div>
 
-                    {/* Company */}
-                    <div>
-                      <label
-                        htmlFor="c-company"
-                        className="block text-xs font-semibold text-slate-700 mb-1"
-                      >
-                        Company / Organization
-                      </label>
+                    {/* Floating Label: Company */}
+                    <div className="relative group">
                       <input
                         id="c-company"
                         type="text"
-                        placeholder="e.g. Muscat Construction LLC"
+                        placeholder="Company Name"
                         value={formData.company}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            company: e.target.value,
-                          })
-                        }
-                        className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none"
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                       />
+                      <label
+                        htmlFor="c-company"
+                        className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-[&:not(:placeholder-shown)]:top-2 peer-[&:not(:placeholder-shown)]:text-[10px] peer-[&:not(:placeholder-shown)]:font-bold"
+                      >
+                        Company Name
+                      </label>
                     </div>
 
-                    {/* Email */}
-                    <div>
-                      <label
-                        htmlFor="c-email"
-                        className="block text-xs font-semibold text-slate-700 mb-1"
-                      >
-                        Email Address *
-                      </label>
+                    {/* Floating Label: Email */}
+                    <div className="relative group">
                       <input
                         id="c-email"
                         type="email"
                         required
-                        placeholder="tariq@company.om"
+                        placeholder="Email Address *"
                         value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none"
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                       />
+                      <label
+                        htmlFor="c-email"
+                        className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                      >
+                        Email Address *
+                      </label>
                     </div>
 
-                    {/* Mobile */}
-                    <div>
-                      <label
-                        htmlFor="c-mobile"
-                        className="block text-xs font-semibold text-slate-700 mb-1"
-                      >
-                        Mobile / WhatsApp *
-                      </label>
+                    {/* Floating Label: Mobile */}
+                    <div className="relative group">
                       <input
                         id="c-mobile"
                         type="tel"
                         required
-                        placeholder="+968 9123 4567"
+                        placeholder="Mobile / WhatsApp *"
                         value={formData.mobile}
-                        onChange={(e) =>
-                          setFormData({ ...formData, mobile: e.target.value })
-                        }
-                        className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none"
+                        onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                        className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                       />
+                      <label
+                        htmlFor="c-mobile"
+                        className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                      >
+                        Mobile / WhatsApp *
+                      </label>
                     </div>
                   </div>
 
-                  {/* Subject */}
-                  <div>
-                    <label
-                      htmlFor="c-subject"
-                      className="block text-xs font-semibold text-slate-700 mb-1"
-                    >
-                      Inquiry Subject / Department *
-                    </label>
+                  {/* Subject Dropdown (Floating Label Style) */}
+                  <div className="relative group pt-1">
                     <select
                       id="c-subject"
                       value={formData.subject}
-                      onChange={(e) =>
-                        setFormData({ ...formData, subject: e.target.value })
-                      }
-                      className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-white"
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all appearance-none"
                     >
                       {!["Sales & Project Quotation", "Engineering & Lux Calculations", "Accounts & Invoicing", "General & Administration"].includes(formData.subject) && (
                         <option value={formData.subject}>Quotation for: {formData.subject}</option>
                       )}
-                      <option value="Sales & Project Quotation">
-                        Sales Enquiries (sales@alkabirlighting.com)
-                      </option>
-                      <option value="Engineering & Lux Calculations">
-                        Project &amp; Lux Calculations (projects@alkabirlighting.com)
-                      </option>
-                      <option value="Accounts & Invoicing">
-                        Accounts Department (accounts@alkabirlighting.com)
-                      </option>
-                      <option value="General & Administration">
-                        General Enquiries (admin@alkabirlighting.com)
-                      </option>
+                      <option value="Sales & Project Quotation">Sales Enquiries (sales@alkabirlighting.com)</option>
+                      <option value="Engineering & Lux Calculations">Project &amp; Lux Calculations (projects@alkabirlighting.com)</option>
+                      <option value="Accounts & Invoicing">Accounts Department (accounts@alkabirlighting.com)</option>
+                      <option value="General & Administration">General Enquiries (admin@alkabirlighting.com)</option>
                     </select>
+                    <label
+                      htmlFor="c-subject"
+                      className="absolute left-5 top-2 text-[10px] font-bold text-slate-400 transition-all pointer-events-none"
+                    >
+                      Inquiry Subject / Department *
+                    </label>
                   </div>
 
-                  {/* Message */}
-                  <div>
-                    <label
-                      htmlFor="c-message"
-                      className="block text-xs font-semibold text-slate-700 mb-1"
-                    >
-                      Your Message *
-                    </label>
+                  {/* Floating Label: Message */}
+                  <div className="relative group pt-1">
                     <textarea
                       id="c-message"
                       required
                       rows={4}
-                      placeholder="Please specify your project location, scope, fixture requirements, or questions..."
+                      placeholder="Project Details *"
                       value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none resize-none"
-                    />
-                  </div>
-
-                  {/* File Upload (Docx Page 11: Upload File) */}
-                  <div className="border-2 border-dashed border-slate-200 hover:border-[#009ea9] rounded-2xl p-4 text-center transition-colors bg-slate-50/60">
-                    <input
-                      type="file"
-                      id="c-upload"
-                      className="hidden"
-                      onChange={handleFileChange}
-                      accept=".pdf,.xlsx,.xls,.dwg,.doc,.docx,.png,.jpg"
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all resize-none placeholder-transparent"
                     />
                     <label
-                      htmlFor="c-upload"
-                      className="flex flex-col items-center justify-center cursor-pointer gap-1"
+                      htmlFor="c-message"
+                      className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
                     >
-                      <UploadCloud className="w-6 h-6 text-[#009ea9]" />
-                      <span className="text-xs font-semibold text-slate-700">
-                        {formData.fileName ? (
-                          <span className="text-[#009ea9] flex items-center gap-1">
-                            <FileText className="w-3.5 h-3.5" />
-                            {formData.fileName}
-                          </span>
-                        ) : (
-                          "Upload BOQ, Drawing, or Specification File"
-                        )}
-                      </span>
-                      <span className="text-[11px] text-slate-400">
-                        Accepted: PDF, XLSX, DWG, DOCX (Max 25MB)
-                      </span>
+                      Your Message *
                     </label>
                   </div>
 
-                  {/* Submit Button */}
                   <div className="pt-2">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-white bg-[#009ea9] hover:bg-[#008791] active:scale-[0.99] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75"
+                      className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-sm font-black text-white bg-[#009ea9] hover:bg-[#008791] active:scale-[0.98] transition-all shadow-lg hover:shadow-[#009ea9]/25 cursor-pointer disabled:opacity-75"
                     >
                       {isSubmitting ? (
-                        <span>Sending Message...</span>
+                        <span>Sending Details...</span>
                       ) : (
                         <>
-                          <span>Submit Message</span>
+                          <span>Submit Enquiry</span>
                           <Send className="w-4 h-4" />
                         </>
                       )}
