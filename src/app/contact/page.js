@@ -19,7 +19,9 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
+import { productCategories } from "@/data/categories";
 import { companyInfo } from "@/data/company";
+import { ChevronDown } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -27,7 +29,7 @@ export default function ContactPage() {
     company: "",
     email: "",
     mobile: "",
-    subject: "Sales & Project Quotation",
+    subject: "",
     message: "",
     fileName: "",
   });
@@ -393,27 +395,28 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* Subject Dropdown (Floating Label Style) */}
+                  {/* Category Dropdown (Floating Label Style) */}
                   <div className="relative group pt-1">
                     <select
-                      id="c-subject"
+                      id="c-category"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all appearance-none"
+                      className="w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all appearance-none cursor-pointer"
                     >
-                      {!["Sales & Project Quotation", "Engineering & Lux Calculations", "Accounts & Invoicing", "General & Administration"].includes(formData.subject) && (
-                        <option value={formData.subject}>Quotation for: {formData.subject}</option>
+                      <option value="">Select a product category (Optional)</option>
+                      {productCategories.map((cat) => (
+                        <option key={cat.id} value={cat.name}>{cat.name}</option>
+                      ))}
+                      {!productCategories.find(c => c.name === formData.subject) && formData.subject !== "" && (
+                         <option value={formData.subject}>{formData.subject}</option>
                       )}
-                      <option value="Sales & Project Quotation">Sales Enquiries (sales@alkabirlighting.com)</option>
-                      <option value="Engineering & Lux Calculations">Project &amp; Lux Calculations (projects@alkabirlighting.com)</option>
-                      <option value="Accounts & Invoicing">Accounts Department (accounts@alkabirlighting.com)</option>
-                      <option value="General & Administration">General Enquiries (admin@alkabirlighting.com)</option>
                     </select>
+                    <ChevronDown className="absolute right-5 top-[1.35rem] w-4 h-4 text-slate-400 pointer-events-none group-focus-within:text-[#009ea9] transition-colors" />
                     <label
-                      htmlFor="c-subject"
+                      htmlFor="c-category"
                       className="absolute left-5 top-2 text-[10px] font-bold text-slate-400 transition-all pointer-events-none"
                     >
-                      Inquiry Subject / Department *
+                      Product Category (Optional)
                     </label>
                   </div>
 
