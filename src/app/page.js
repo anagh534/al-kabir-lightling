@@ -19,10 +19,10 @@ import { brands } from "@/data/brands";
 import { companyInfo } from "@/data/company";
 import ContactForm from "@/components/ContactForm";
 import QuoteModal from "@/components/QuoteModal";
-
-
+import heroImg from "../../public/images/hero-lighting.jpg";
 
 export default function HomePage() {
+
   const [activeModalCategory, setActiveModalCategory] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCategoryTab, setSelectedCategoryTab] = useState("all");
@@ -66,13 +66,14 @@ export default function HomePage() {
         {/* Master Hero Background Photography */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-lighting.jpg"
+            src={heroImg}
             alt="Monumental Architectural Lighting in Modern Commercial Lobby"
             fill
             priority
             quality={92}
             className="object-cover object-center filter brightness-[0.78]"
           />
+
 
 
           {/* Subtle gradient vignette */}

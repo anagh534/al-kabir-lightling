@@ -15,10 +15,11 @@ import {
   Check,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
-
+import studioImg from "../../../public/images/about-studio.jpg";
 
 
 export const metadata = {
+
   title: "About Us | Engineering & Lighting Solutions Partner in Oman",
   description:
     "Learn about Al Kabir Lighting: our vision, mission, core strengths, international brand sourcing, and engineering technical support for Oman and GCC projects.",
@@ -166,12 +167,13 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 aspect-[16/10]">
                 <Image
-                  src="/images/about-studio.jpg"
+                  src={studioImg}
                   alt="Al Kabir Lighting Engineering Simulation Studio in Muscat"
                   fill
                   quality={90}
                   className="object-cover object-center"
                 />
+
 
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />

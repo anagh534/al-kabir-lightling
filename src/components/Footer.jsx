@@ -12,6 +12,7 @@ import {
   Send,
 } from "lucide-react";
 import { companyInfo } from "@/data/company";
+import logoImg from "../../public/logo.png";
 
 export default function Footer({ onRequestQuote }) {
   return (
@@ -27,14 +28,13 @@ export default function Footer({ onRequestQuote }) {
             >
               <div className="relative w-44 h-12">
                 <Image
-                  src="/logo.png"
+                  src={logoImg}
                   alt="Al Kabir Lighting"
-                  width={176}
-                  height={48}
                   className="object-contain w-auto h-full"
                 />
               </div>
             </Link>
+
 
 
 

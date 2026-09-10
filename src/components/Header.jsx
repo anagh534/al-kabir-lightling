@@ -8,6 +8,8 @@ import { ArrowRight, Menu, X, Phone, Mail } from "lucide-react";
 import { navLinks } from "@/data/navigation";
 import { companyInfo } from "@/data/company";
 
+import logoImg from "../../public/logo.png";
+
 export default function Header({ onRequestQuote }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -29,15 +31,14 @@ export default function Header({ onRequestQuote }) {
           >
             <div className="relative w-40 h-14 sm:w-48 sm:h-16 flex items-center">
               <Image
-                src="/logo.png"
+                src={logoImg}
                 alt="Al Kabir Lighting"
-                width={190}
-                height={64}
                 priority
                 className="object-contain w-auto h-full"
               />
             </div>
           </Link>
+
 
 
 
