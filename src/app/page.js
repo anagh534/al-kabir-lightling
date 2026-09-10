@@ -108,7 +108,7 @@ export default function HomePage() {
           }}
         >
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop"
+            src="/images/portfolio/office.jpg"
             alt="Modern Architectural Lighting in Oman"
             className="w-full h-full object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.75] contrast-[1.15] transition-all duration-[2000ms] ease-out"
           />
