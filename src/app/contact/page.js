@@ -152,7 +152,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. Contact Information & Interactive Form Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section id="quote-form" className="py-16 sm:py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left: Company Contact Cards (5 cols) */}

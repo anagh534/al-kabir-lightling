@@ -66,7 +66,7 @@ export default function HomePage() {
   const [selectedCategoryTab, setSelectedCategoryTab] = useState("all");
 
   const handleOpenQuote = (categoryName = "") => {
-    router.push(`/contact?subject=${encodeURIComponent(categoryName)}`);
+    router.push(`/contact?subject=${encodeURIComponent(categoryName)}#quote-form`);
   };
 
   const engineeringCapabilities = [

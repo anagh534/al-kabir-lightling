@@ -13,7 +13,7 @@ export default function SiteLayout({ children }) {
 
   const handleOpenQuote = (category = "General Inquiry") => {
     const subject = typeof category === "string" ? category : "General Inquiry";
-    router.push(`/contact?subject=${encodeURIComponent(subject)}`);
+    router.push(`/contact?subject=${encodeURIComponent(subject)}#quote-form`);
   };
 
   return (
