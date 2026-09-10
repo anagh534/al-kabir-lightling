@@ -5,15 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Calendar, Building2 } from "lucide-react";
 import { projects } from "@/data/portfolio";
+import PageHeader from "@/components/PageHeader";
 
 export default function PortfolioPage() {
-  const [isVisible, setIsVisible] = useState(false);
   const showcaseRef = useRef(null);
   const [showcaseIntersecting, setShowcaseIntersecting] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -32,22 +30,15 @@ export default function PortfolioPage() {
   const gridProjects = projects.slice(1);
 
   return (
-    <div className="flex flex-col bg-slate-50 min-h-screen pt-24">
-      {/* HEADER SECTION */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-16 lg:py-24 max-w-7xl mx-auto w-full text-center">
-        <span className={`inline-block text-xs font-bold uppercase tracking-widest text-[#009ea9] mb-4 transition-all duration-1000 ease-editorial ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          Our Legacy
-        </span>
-        <h1 className={`text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight transition-all duration-1000 delay-100 ease-editorial ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          Portfolio & Showcase
-        </h1>
-        <p className={`mt-6 text-lg text-slate-500 max-w-2xl mx-auto transition-all duration-1000 delay-200 ease-editorial ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          A curated selection of monumental architectural, commercial, and industrial projects successfully supplied and engineered across the Sultanate of Oman.
-        </p>
-      </section>
+    <div className="flex flex-col bg-slate-50 min-h-screen">
+      <PageHeader
+        title="Portfolio & Showcase"
+        subtitle="A curated selection of monumental architectural, commercial, and industrial projects successfully supplied and engineered across the Sultanate of Oman."
+        breadcrumbs={[{ label: "Portfolio" }]}
+      />
 
       {/* FEATURED SHOWCASE SECTION */}
-      <section ref={showcaseRef} className="px-4 sm:px-6 lg:px-8 pb-20 max-w-7xl mx-auto w-full">
+      <section ref={showcaseRef} className="px-4 sm:px-6 lg:px-8 py-20 max-w-7xl mx-auto w-full">
         <div className="flex items-center gap-4 mb-8">
           <div className="h-px bg-slate-200 flex-grow"></div>
           <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Featured Showcase</span>
