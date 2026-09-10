@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Send, CheckCircle2, ArrowRight } from "lucide-react";
+
 
 export default function ContactForm({ className = "" }) {
   const [formData, setFormData] = useState({
@@ -27,18 +27,13 @@ export default function ContactForm({ className = "" }) {
   return (
     <section className={`py-16 bg-white overflow-hidden ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-200/90 shadow-lg overflow-hidden bg-slate-50/50 flex flex-col lg:flex-row">
-          {/* Left Decorative Banner matching Reference */}
-          <div className="relative lg:w-2/5 min-h-[260px] lg:min-h-full bg-gradient-to-br from-[#0f172a] via-[#005f66] to-[#009ea9] text-white p-8 sm:p-12 flex flex-col justify-between overflow-hidden">
-            {/* Background texture image */}
-            <div className="absolute inset-0 opacity-20 mix-blend-overlay">
-              <Image
-                src="/images/left-wave.webp"
-                alt="Decorative curve graphic"
-                fill
-                className="object-cover"
-              />
-            </div>
+        <div className="rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden bg-white flex flex-col lg:flex-row">
+          {/* Left Decorative Banner */}
+          <div className="relative lg:w-2/5 min-h-[300px] lg:min-h-full bg-gradient-to-br from-[#090e17] via-[#005f66] to-[#009ea9] text-white p-8 sm:p-12 flex flex-col justify-between overflow-hidden">
+            {/* Ambient decorative blur circles */}
+            <div className="absolute -top-12 -right-12 w-56 h-56 bg-[#00e5f2]/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-white/10 rounded-full blur-2xl pointer-events-none" />
+
 
             <div className="relative z-10">
               <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wider text-cyan-200 mb-4">

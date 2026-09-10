@@ -4,21 +4,20 @@ import {
   CheckCircle2,
   Target,
   Compass,
-  Lightbulb,
-  FileSpreadsheet,
-  Layers,
   Cpu,
-  Truck,
+  Layers,
+  FileSpreadsheet,
   Award,
+  Lightbulb,
+  Truck,
   ArrowRight,
-  Building2,
   ShieldCheck,
   Check,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
-  title: "About Us | Trusted Project Supply Partner in Oman",
+  title: "About Us | Engineering & Lighting Solutions Partner in Oman",
   description:
     "Learn about Al Kabir Lighting: our vision, mission, core strengths, international brand sourcing, and engineering technical support for Oman and GCC projects.",
 };
@@ -51,7 +50,7 @@ export default function AboutPage() {
     },
     {
       title: "Local Oman Stock",
-      desc: "Central warehousing in Muscat and regional depots maintaining buffer stock for fast-moving project items.",
+      desc: "Central warehousing in Muscat maintaining buffer stock for fast-moving project items.",
     },
     {
       title: "Dedicated Client Care",
@@ -118,17 +117,17 @@ export default function AboutPage() {
         breadcrumbs={[{ label: "About Us" }]}
       />
 
-      {/* 1. Who We Are Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* 1. Who We Are Section with High-Res Studio Image */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Narrative */}
-            <div className="lg:col-span-7 space-y-6">
+            {/* Left Narrative (6 cols) */}
+            <div className="lg:col-span-6 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
                 Company Overview
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Engineering Dependable Supply for Oman’s Infrastructure
+                Dependable Engineering &amp; Sourcing for Oman&apos;s Built Environment
               </h2>
               <p className="text-base text-slate-600 leading-relaxed">
                 <strong>Al Kabir Lighting</strong> is an Oman-based lighting and
@@ -146,52 +145,39 @@ export default function AboutPage() {
               </p>
 
               <div className="pt-2 grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <p className="text-2xl font-black text-[#009ea9]">500+</p>
-                  <p className="text-xs font-semibold text-slate-600">
-                    Oman Projects Supplied
+                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                  <p className="text-3xl font-black text-[#009ea9]">500+</p>
+                  <p className="text-xs font-semibold text-slate-600 mt-1">
+                    Projects Successfully Supplied
                   </p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <p className="text-2xl font-black text-[#009ea9]">50+</p>
-                  <p className="text-xs font-semibold text-slate-600">
-                    International Brand Partners
+                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                  <p className="text-3xl font-black text-[#009ea9]">50+</p>
+                  <p className="text-xs font-semibold text-slate-600 mt-1">
+                    Global Brand Partners
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Right Feature Card */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-900 text-white p-8 sm:p-10">
-                <div className="space-y-6 relative z-10">
-                  <div className="w-12 h-12 rounded-2xl bg-[#009ea9] flex items-center justify-center text-white">
-                    <Building2 className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight">
-                    One Partner. Multiple Solutions.
-                  </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    We eliminate the friction of managing dozens of individual
-                    vendors. From project submittal to site delivery, our
-                    integrated team handles technical compliance, logistics,
-                    and warranty backing.
+            {/* Right High-Res Studio Photography (6 cols) */}
+            <div className="lg:col-span-6">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 aspect-[16/10]">
+                <Image
+                  src="/images/about-studio.jpg"
+                  alt="Al Kabir Lighting Engineering Simulation Studio in Muscat"
+                  fill
+                  quality={90}
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#00e5f2]">
+                    Muscat Technical Studio
                   </p>
-
-                  <div className="pt-4 border-t border-slate-800 space-y-2.5 text-xs text-slate-300">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#009ea9]" />
-                      <span>Compliant with Oman Ministry &amp; Nama Standards</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#009ea9]" />
-                      <span>Dedicated In-House Lighting Simulation Studio</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#009ea9]" />
-                      <span>Fast Local Stock in Muscat, Sohar, and Salalah</span>
-                    </div>
-                  </div>
+                  <p className="text-sm font-semibold text-slate-200 mt-0.5">
+                    Senior lighting engineers reviewing 3D Dialux simulations &amp; consultant submittal dossiers
+                  </p>
                 </div>
               </div>
             </div>
@@ -199,13 +185,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Vision & Mission Cards */}
-      <section className="py-16 bg-slate-50 border-y border-slate-200/80">
+      {/* 2. Vision & Mission */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Vision */}
-            <div className="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-xs hover:border-[#009ea9] transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center mb-5">
+            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xs hover:border-[#009ea9] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center mb-6">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -219,8 +205,8 @@ export default function AboutPage() {
             </div>
 
             {/* Mission */}
-            <div className="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-xs hover:border-[#009ea9] transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center mb-5">
+            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xs hover:border-[#009ea9] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center mb-6">
                 <Compass className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -237,14 +223,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. Core Strengths Grid */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* 3. Core Strengths */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs uppercase tracking-wider font-bold text-[#009ea9]">
-              Built for Project Success
+              The Al Kabir Advantage
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
               Our Core Strengths
             </h2>
             <p className="text-sm text-slate-500 mt-2">
@@ -259,10 +245,10 @@ export default function AboutPage() {
                 key={idx}
                 className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-[#009ea9] hover:bg-white hover:shadow-md transition-all duration-300"
               >
-                <div className="w-8 h-8 rounded-lg bg-[#009ea9] text-white flex items-center justify-center text-xs font-bold mb-4">
+                <span className="text-xs font-black text-[#009ea9]">
                   0{idx + 1}
-                </div>
-                <h3 className="text-base font-bold text-slate-900">
+                </span>
+                <h3 className="text-base font-bold text-slate-900 mt-2">
                   {s.title}
                 </h3>
                 <p className="text-xs text-slate-500 mt-2 leading-relaxed">
@@ -274,17 +260,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Technical Support & Engineering Services (PAGE 08 from Docx) */}
-      <section className="py-16 sm:py-20 bg-slate-900 text-white">
+      {/* 4. Technical Engineering Services */}
+      <section className="py-20 bg-[#090e17] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-16">
             <span className="text-xs uppercase tracking-wider font-bold text-[#00e5f2]">
               Practical Engineering Value
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-1">
-              Technical &amp; Project Support
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">
+              Technical &amp; Project Support Services
             </h2>
-            <p className="text-sm sm:text-base text-slate-300 mt-2">
+            <p className="text-sm sm:text-base text-slate-300 mt-3">
               We present technical support as a practical service that assists
               consultants and contractors in passing project submissions,
               achieving spec compliance, and accelerating installation.
@@ -297,7 +283,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 hover:border-[#009ea9] transition-all"
+                  className="bg-slate-900/90 border border-slate-800 rounded-3xl p-7 hover:border-[#009ea9] transition-all"
                 >
                   <div className="w-10 h-10 rounded-xl bg-[#009ea9]/20 text-[#00e5f2] flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5" />
@@ -316,30 +302,21 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Markets We Serve */}
-      <section className="py-16 sm:py-20 bg-slate-50">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs uppercase tracking-wider font-bold text-[#009ea9]">
-                Who We Partner With
+                Market Sectors
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-                Markets We Serve
+              <h2 className="text-3xl font-extrabold text-slate-900">
+                Markets We Serve Across Oman
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Whether supplying public infrastructure tenders, high-spec
                 private developments, or urgent maintenance packages, Al Kabir
                 Lighting serves every level of Oman’s construction ecosystem.
               </p>
-              <div className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#009ea9] hover:text-[#00858f]"
-                >
-                  <span>Connect with a Commercial Account Manager</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
             </div>
 
             <div className="lg:col-span-7">
@@ -347,7 +324,7 @@ export default function AboutPage() {
                 {markets.map((market, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-white border border-slate-200 shadow-2xs"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs"
                   >
                     <div className="w-6 h-6 rounded-full bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center shrink-0">
                       <Check className="w-3.5 h-3.5" />
@@ -366,26 +343,20 @@ export default function AboutPage() {
       {/* 6. CTA Banner */}
       <section className="py-16 bg-white border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-            Ready to Discuss Your Next Project?
+          <h2 className="text-3xl font-extrabold text-slate-900">
+            Ready to Discuss Your Project Specifications?
           </h2>
           <p className="text-sm text-slate-500 max-w-xl mx-auto">
             Contact our engineering specialists or submit your BOQ documents for
             a fast, transparent, and competitive commercial quotation.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-[#009ea9] hover:bg-[#008690] shadow-md transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-bold text-white bg-[#009ea9] hover:bg-[#00858f] shadow-md transition-all"
             >
               <span>Contact Commercial Team</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/branches"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all"
-            >
-              <span>View Branch Network</span>
             </Link>
           </div>
         </div>

@@ -247,22 +247,19 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* View Branch Network Link */}
-              <div className="p-5 rounded-2xl bg-[#e6f8fa]/60 border border-[#009ea9]/20 flex items-center justify-between">
+              {/* Consultation Card */}
+              <div className="p-5 rounded-2xl bg-[#e6f8fa]/70 border border-[#009ea9]/20 flex items-center justify-between">
                 <div>
                   <p className="text-xs font-bold text-slate-900">
-                    Need branch info outside Muscat?
+                    Need on-site engineering assistance?
                   </p>
-                  <p className="text-[11px] text-slate-600">
-                    Explore Sohar, Salalah, Ghala, and Nizwa locations.
+                  <p className="text-[11px] text-slate-600 mt-0.5">
+                    Our technical team can visit your project site or consultant office.
                   </p>
                 </div>
-                <Link
-                  href="/branches"
-                  className="text-xs font-bold text-[#009ea9] hover:underline shrink-0"
-                >
-                  View Branches &rarr;
-                </Link>
+                <span className="text-xs font-bold text-[#009ea9] shrink-0">
+                  Muscat HQ
+                </span>
               </div>
             </div>
 

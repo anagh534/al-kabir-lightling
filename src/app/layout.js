@@ -1,60 +1,49 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SiteLayout from "@/components/SiteLayout";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  variable: "--font-sans",
   display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
   metadataBase: new URL("https://alkabirlighting.com"),
   title: {
-    default: "Al Kabir Lighting | Lighting, Electrical & Building Material Solutions in Oman",
+    default: "Al Kabir Lighting | Premium Architectural, Industrial & Infrastructure Solutions in Oman",
     template: "%s | Al Kabir Lighting Oman",
   },
   description:
-    "Leading Oman supplier of architectural, commercial, outdoor, and industrial lighting, electrical switchgear, cables, and building materials. Trusted partner for major projects across the Sultanate.",
+    "Al Kabir Lighting is an Oman-based leader in architectural lighting, industrial luminaires, power distribution cables, and high-performance building materials for major commercial and infrastructure projects.",
   keywords: [
     "Al Kabir Lighting",
-    "Lighting Suppliers Oman",
+    "Architectural Lighting Oman",
     "Commercial Lighting Muscat",
     "Industrial Lighting Oman",
     "Building Materials Oman",
     "Philips Lighting Oman",
     "Schneider Electric Oman",
-    "LED Street Lights Muscat",
-    "Explosion Proof Lighting Oman",
-    "Electrical Cables Oman",
-    "Project Supply Oman",
+    "LED Street Lighting Oman",
+    "Explosion Proof Lighting ATEX",
+    "Dialux Lux Calculations Oman",
   ],
   authors: [{ name: "Al Kabir Lighting LLC" }],
   creator: "Al Kabir Lighting LLC",
   publisher: "Al Kabir Lighting LLC",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   openGraph: {
-    title: "Al Kabir Lighting | One Partner. Multiple Solutions.",
+    title: "Al Kabir Lighting | Architectural & Project Solutions Oman",
     description:
-      "Supplying quality lighting, electrical, and building material products across Oman for a brighter, smarter tomorrow.",
+      "Supplying quality lighting, electrical, and building material solutions across Oman for commercial, industrial, and infrastructure developments.",
     url: "https://alkabirlighting.com",
     siteName: "Al Kabir Lighting",
     images: [
       {
-        url: "/images/hero-showroom.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Al Kabir Lighting Oman Showroom & Products",
+        url: "/images/hero-lighting.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Al Kabir Lighting Oman Showroom & Architectural Projects",
       },
     ],
     locale: "en_OM",
@@ -62,21 +51,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Al Kabir Lighting | Lighting, Electrical & Building Materials Oman",
+    title: "Al Kabir Lighting | Lighting & Building Material Solutions Oman",
     description:
-      "Supplying quality lighting, electrical, and building material products across Oman.",
-    images: ["/images/hero-showroom.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+      "Premium lighting, electrical, and project supply across the Sultanate of Oman.",
+    images: ["/images/hero-lighting.jpg"],
   },
   icons: {
     icon: "/logo.png",
@@ -116,21 +94,16 @@ const jsonLd = {
       closes: "18:00",
     },
   ],
-  sameAs: [
-    "https://linkedin.com/company/alkabirlighting",
-    "https://facebook.com/alkabirlighting",
-    "https://instagram.com/alkabirlighting",
-  ],
   areaServed: ["Oman", "GCC"],
   description:
-    "Professional lighting, electrical and building material solutions for commercial, industrial, infrastructure, residential and government projects across Oman.",
+    "Professional architectural lighting, electrical and building material solutions for commercial, industrial, infrastructure, and residential projects across Oman.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${plusJakartaSans.variable} h-full antialiased scroll-smooth`}
     >
       <head>
         <script
@@ -138,7 +111,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans text-slate-900 bg-white">
         <SiteLayout>{children}</SiteLayout>
       </body>
     </html>
