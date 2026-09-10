@@ -25,196 +25,163 @@ export default function ContactForm({ className = "" }) {
   };
 
   return (
-    <section className={`py-16 bg-white overflow-hidden ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden bg-white flex flex-col lg:flex-row">
-          {/* Left Decorative Banner */}
-          <div className="relative lg:w-2/5 min-h-[300px] lg:min-h-full bg-gradient-to-br from-[#090e17] via-[#005f66] to-[#009ea9] text-white p-8 sm:p-12 flex flex-col justify-between overflow-hidden">
-            {/* Ambient decorative blur circles */}
-            <div className="absolute -top-12 -right-12 w-56 h-56 bg-[#00e5f2]/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-
-
+    <section className={`py-24 bg-white overflow-hidden ${className}`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[2.5rem] shadow-2xl overflow-hidden bg-white flex flex-col lg:flex-row border border-slate-100">
+          
+          {/* Left Minimal Decorative Banner */}
+          <div className="relative lg:w-5/12 bg-gradient-to-br from-[#090e17] to-[#042830] text-white p-10 lg:p-16 flex flex-col justify-center overflow-hidden">
+            {/* Elegant lighting gradient overlay */}
+            <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#009ea9]/30 via-transparent to-transparent opacity-80" />
+            
             <div className="relative z-10">
-              <span className="inline-block px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wider text-cyan-200 mb-4">
-                FAST COMMERCIAL RESPONSE
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight uppercase">
-                Together We Build Brighter Tomorrows
+              <h3 className="text-3xl lg:text-4xl font-black tracking-tight leading-[1.1] mb-6">
+                Together We Build Brighter Tomorrows.
               </h3>
-            </div>
-
-            <div className="relative z-10 pt-8">
-              <p className="text-xs sm:text-sm text-cyan-100 leading-relaxed">
-                Whether you are executing a commercial tower, an industrial plant,
-                or a residential complex in Oman, Al Kabir Lighting delivers
-                comprehensive project solutions.
+              <p className="text-sm text-slate-300 leading-relaxed max-w-sm mb-12">
+                Whether executing a commercial tower or an industrial plant in Oman, our engineering desk guarantees a transparent commercial response within 48 hours.
               </p>
-              <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-white">
-                <span className="w-2 h-2 rounded-full bg-cyan-300 animate-pulse" />
-                <span>24–48 Hour Engineering Quotation Response</span>
-              </div>
             </div>
           </div>
 
-          {/* Right Form matching Reference Fields */}
-          <div className="lg:w-3/5 p-6 sm:p-10 lg:p-12 bg-white flex flex-col justify-center">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
-                Send Your Requirement
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                Tell us about your project or product requirement. Our team will
-                get back to you with the best solution.
-              </p>
-            </div>
-
+          {/* Right Minimal Floating Label Form */}
+          <div className="lg:w-7/12 p-8 sm:p-12 lg:p-16 bg-white flex flex-col justify-center">
             {submitted ? (
-              <div className="py-8 text-center space-y-3 bg-[#e6f8fa]/60 rounded-2xl p-6 border border-[#009ea9]/30">
-                <CheckCircle2 className="w-10 h-10 text-[#009ea9] mx-auto" />
-                <h4 className="text-lg font-bold text-slate-900">
-                  Thank you! Your requirement has been received.
+              <div className="py-12 text-center animate-in fade-in zoom-in-95 duration-500">
+                <div className="w-20 h-20 mx-auto rounded-full bg-[#e6f8fa] flex items-center justify-center text-[#009ea9] mb-6 shadow-inner">
+                  <CheckCircle2 className="w-10 h-10" />
+                </div>
+                <h4 className="text-2xl font-black text-slate-900 tracking-tight mb-2">
+                  Enquiry Received
                 </h4>
-                <p className="text-xs text-slate-600 max-w-sm mx-auto">
-                  An Al Kabir technical sales engineer will contact{" "}
-                  <strong>{formData.fullName}</strong> shortly with recommended
-                  products and pricing.
+                <p className="text-sm text-slate-500 max-w-xs mx-auto mb-8">
+                  Our technical sales engineer will contact <strong>{formData.fullName}</strong> shortly with pricing details.
                 </p>
                 <button
                   type="button"
                   onClick={() => {
                     setSubmitted(false);
-                    setFormData({
-                      fullName: "",
-                      companyName: "",
-                      email: "",
-                      phone: "",
-                      message: "",
-                    });
+                    setFormData({ fullName: "", companyName: "", email: "", phone: "", message: "" });
                   }}
-                  className="mt-2 text-xs font-bold text-[#009ea9] hover:underline"
+                  className="px-8 py-3 rounded-full text-sm font-bold text-[#009ea9] bg-[#e6f8fa] hover:bg-[#009ea9] hover:text-white transition-all shadow-sm"
                 >
-                  Send another requirement
+                  Send Another Request
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="form-name"
-                      className="block text-xs font-semibold text-slate-700 mb-1"
-                    >
-                      Full Name *
-                    </label>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-8">
+                  Send Your Requirement
+                </h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  {/* Floating Label: Full Name */}
+                  <div className="relative group">
                     <input
                       id="form-name"
                       type="text"
                       required
-                      placeholder="e.g. Salim Al-Ghafri"
+                      placeholder="Full Name *"
                       value={formData.fullName}
-                      onChange={(e) =>
-                        setFormData({ ...formData, fullName: e.target.value })
-                      }
-                      className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-slate-50/50 focus:bg-white"
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                     />
+                    <label
+                      htmlFor="form-name"
+                      className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                    >
+                      Full Name *
+                    </label>
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="form-company"
-                      className="block text-xs font-semibold text-slate-700 mb-1"
-                    >
-                      Company Name
-                    </label>
+                  {/* Floating Label: Company */}
+                  <div className="relative group">
                     <input
                       id="form-company"
                       type="text"
-                      placeholder="e.g. Global EPC Consultants"
+                      placeholder="Company Name"
                       value={formData.companyName}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          companyName: e.target.value,
-                        })
-                      }
-                      className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-slate-50/50 focus:bg-white"
+                      onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                      className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                     />
+                    <label
+                      htmlFor="form-company"
+                      className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-[&:not(:placeholder-shown)]:top-2 peer-[&:not(:placeholder-shown)]:text-[10px] peer-[&:not(:placeholder-shown)]:font-bold"
+                    >
+                      Company Name
+                    </label>
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="form-email"
-                      className="block text-xs font-semibold text-slate-700 mb-1"
-                    >
-                      Email Address *
-                    </label>
+                  {/* Floating Label: Email */}
+                  <div className="relative group">
                     <input
                       id="form-email"
                       type="email"
                       required
-                      placeholder="salim@company.om"
+                      placeholder="Email Address *"
                       value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-slate-50/50 focus:bg-white"
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                     />
+                    <label
+                      htmlFor="form-email"
+                      className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                    >
+                      Email Address *
+                    </label>
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="form-phone"
-                      className="block text-xs font-semibold text-slate-700 mb-1"
-                    >
-                      Phone Number *
-                    </label>
+                  {/* Floating Label: Phone */}
+                  <div className="relative group">
                     <input
                       id="form-phone"
                       type="tel"
                       required
-                      placeholder="+968 9123 4567"
+                      placeholder="Phone Number *"
                       value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                      className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-slate-50/50 focus:bg-white"
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
                     />
+                    <label
+                      htmlFor="form-phone"
+                      className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                    >
+                      Phone Number *
+                    </label>
                   </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="form-message"
-                    className="block text-xs font-semibold text-slate-700 mb-1"
-                  >
-                    Your Message / Requirement *
-                  </label>
+                {/* Floating Label: Message */}
+                <div className="relative group pt-2">
                   <textarea
                     id="form-message"
                     required
                     rows={4}
-                    placeholder="Describe project details, product requirements, or BOQ summary..."
+                    placeholder="Project Details *"
                     value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-slate-50/50 focus:bg-white resize-none"
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all resize-none placeholder-transparent"
                   />
+                  <label
+                    htmlFor="form-message"
+                    className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
+                  >
+                    Project Details / Requirement *
+                  </label>
                 </div>
 
-                <div>
+                <div className="pt-4">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-sm font-bold text-white bg-[#009ea9] hover:bg-[#008791] active:scale-98 transition-all shadow-md cursor-pointer disabled:opacity-75"
+                    className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-sm font-black text-white bg-[#009ea9] hover:bg-[#008791] active:scale-[0.98] transition-all shadow-lg hover:shadow-[#009ea9]/25 cursor-pointer disabled:opacity-75"
                   >
                     {isSubmitting ? (
-                      <span>Sending Enquiry...</span>
+                      <span>Sending Details...</span>
                     ) : (
                       <>
-                        <span>Send Enquiry</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <span>Submit Enquiry</span>
+                        <Send className="w-4 h-4" />
                       </>
                     )}
                   </button>
