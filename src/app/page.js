@@ -186,43 +186,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. PRODUCT CATEGORIES - HIGH RESOLUTION PHOTOGRAPHY */}
-      <section id="categories" className="py-20 bg-slate-50/70 border-b border-slate-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
-                Engineered for Projects
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
-                Product Categories
-              </h2>
-              <p className="text-sm text-slate-500 mt-1 max-w-xl">
-                Comprehensive multi-brand portfolio covering architectural
-                interiors, high-power exterior façade fixtures, ATEX industrial
-                units, and electrical infrastructure.
-              </p>
-            </div>
-          </div>
-
-          {/* Grid of High-Res Category Cards using Architectural Design System */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {productCategories.map((cat, idx) => (
-              <ProductShowcaseCard
-                key={cat.id}
-                title={cat.name}
-                designer={cat.tagline}
-                imageUrl={cat.image}
-                description={cat.description}
-                items={cat.items}
-                onQuoteClick={() => handleOpenQuote(cat.name)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. TECHNICAL & ENGINEERING SUPPORT */}
+      {/* 2. TECHNICAL & ENGINEERING SUPPORT */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -276,8 +240,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 3. PRODUCT CATEGORIES - HIGH RESOLUTION PHOTOGRAPHY */}
+      <section id="categories" className="py-20 bg-slate-50/70 border-y border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
+                Engineered for Projects
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
+                Product Categories
+              </h2>
+              <p className="text-sm text-slate-500 mt-1 max-w-xl">
+                Comprehensive multi-brand portfolio covering architectural
+                interiors, high-power exterior façade fixtures, ATEX industrial
+                units, and electrical infrastructure.
+              </p>
+            </div>
+          </div>
+
+          {/* Grid of High-Res Category Cards using Architectural Design System */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {productCategories.map((cat, idx) => (
+              <ProductShowcaseCard
+                key={cat.id}
+                title={cat.name}
+                designer={cat.tagline}
+                imageUrl={cat.image}
+                description={cat.description}
+                items={cat.items}
+                onQuoteClick={() => handleOpenQuote(cat.name)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 4. GLOBAL BRAND PARTNERS */}
-      <section className="py-20 bg-slate-50/80 border-y border-slate-200/80">
+      <section className="py-20 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
