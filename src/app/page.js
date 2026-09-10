@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,9 +19,15 @@ import { brands } from "@/data/brands";
 import { companyInfo } from "@/data/company";
 import ContactForm from "@/components/ContactForm";
 import QuoteModal from "@/components/QuoteModal";
+import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import heroImg from "../../public/images/hero-lighting.jpg";
 
 export default function HomePage() {
+  const [isHeroVisible, setIsHeroVisible] = useState(false);
+
+  useEffect(() => {
+    setIsHeroVisible(true);
+  }, []);
 
   const [activeModalCategory, setActiveModalCategory] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -62,9 +68,15 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[620px] lg:min-h-[720px] flex items-center bg-[#090e17] text-white overflow-hidden">
+      <section className="relative min-h-[620px] lg:min-h-[720px] flex items-center bg-[#090e17] text-white overflow-hidden motion-reduce:transition-none">
         {/* Master Hero Background Photography */}
-        <div className="absolute inset-0 z-0">
+        <div 
+          className="absolute inset-0 z-0 transform-gpu"
+          style={{
+            clipPath: isHeroVisible ? 'inset(0 0 0 0)' : 'inset(5% 5% 5% 5%)',
+            transition: 'clip-path 1200ms cubic-bezier(0.16, 1, 0.3, 1)',
+          }}
+        >
           <Image
             src={heroImg}
             alt="Monumental Architectural Lighting in Modern Commercial Lobby"
@@ -83,22 +95,35 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
           <div className="max-w-3xl space-y-6">
-            <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#00e5f2] uppercase">
-              Oman&apos;s Trusted Project Supply Partner
-            </p>
+            <div className="overflow-hidden">
+              <p className={`text-xs sm:text-sm font-semibold tracking-widest text-[#00e5f2] uppercase transition-transform duration-1200 ease-editorial will-change-transform motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
+                Oman&apos;s Trusted Project Supply Partner
+              </p>
+            </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-              Architectural Lighting &amp; Building Material Solutions
+              <span className="block overflow-hidden pb-1">
+                <span className={`block transition-transform duration-1200 ease-editorial delay-100 will-change-transform motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
+                  Architectural Lighting &amp;
+                </span>
+              </span>
+              <span className="block overflow-hidden pb-1">
+                <span className={`block transition-transform duration-1200 ease-editorial delay-200 will-change-transform motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
+                  Building Material Solutions
+                </span>
+              </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal max-w-2xl">
-              Supplying high-performance commercial, industrial, infrastructure
-              lighting, and certified electrical building materials across the
-              Sultanate of Oman.
-            </p>
+            <div className="overflow-hidden">
+              <p className={`text-base sm:text-lg text-slate-200 leading-relaxed font-normal max-w-2xl transition-all duration-1200 ease-editorial delay-300 motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                Supplying high-performance commercial, industrial, infrastructure
+                lighting, and certified electrical building materials across the
+                Sultanate of Oman.
+              </p>
+            </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className={`flex flex-wrap items-center gap-4 pt-4 transition-all duration-1200 ease-editorial delay-500 motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <button
                 onClick={() => handleOpenQuote("Turnkey Project Solution")}
                 type="button"
@@ -117,7 +142,7 @@ export default function HomePage() {
             </div>
 
             {/* Value Indicators */}
-            <div className="pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 text-slate-300 text-xs">
+            <div className={`pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 text-slate-300 text-xs transition-all duration-1200 ease-editorial delay-700 motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <div>
                 <p className="text-xl sm:text-2xl font-black text-white">500+</p>
                 <p className="text-slate-400 mt-0.5">Projects Supplied</p>
@@ -167,69 +192,18 @@ export default function HomePage() {
             </button>
           </div>
 
-          {/* Grid of 6 High-Res Category Cards */}
+          {/* Grid of High-Res Category Cards using Architectural Design System */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {productCategories.map((cat) => (
-              <div
+            {productCategories.map((cat, idx) => (
+              <ProductShowcaseCard 
                 key={cat.id}
-                className="group bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-xl hover:border-[#009ea9]/60 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  {/* High-Res Photography */}
-                  <div className="relative w-full h-56 overflow-hidden bg-slate-100">
-                    <Image
-                      src={cat.image}
-                      alt={cat.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
-
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                    <span className="absolute bottom-3 left-4 text-xs font-semibold text-white/90 drop-shadow-sm">
-                      {cat.specs}
-                    </span>
-                  </div>
-
-                  {/* Body */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#009ea9] transition-colors">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs font-semibold text-[#009ea9] mt-1">
-                      {cat.tagline}
-                    </p>
-                    <p className="text-xs text-slate-500 mt-2.5 leading-relaxed">
-                      {cat.description}
-                    </p>
-
-                    {/* Sub-items */}
-                    <div className="mt-4 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
-                      {cat.items.map((item, i) => (
-                        <span
-                          key={i}
-                          className="px-2.5 py-1 text-[11px] font-medium rounded-md bg-slate-100 text-slate-700"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card Action */}
-                <div className="p-6 pt-0">
-                  <button
-                    onClick={() => handleOpenQuote(cat.name)}
-                    type="button"
-                    className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-[#009ea9] hover:text-white bg-[#e6f8fa] hover:bg-[#009ea9] transition-all flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <span>Request Quotation / BOQ</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
+                title={cat.name}
+                designer={cat.tagline}
+                imageUrl={cat.image}
+                description={cat.description}
+                items={cat.items}
+                onQuoteClick={() => handleOpenQuote(cat.name)}
+              />
             ))}
           </div>
         </div>

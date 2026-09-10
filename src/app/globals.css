@@ -9,6 +9,23 @@
   --color-brand-teal: #009ea9;
   --color-brand-slate: #1e293b;
   --color-brand-dark: #090e17;
+
+  /* Architectural Lux Theme */
+  --color-lux-100: #FFFFFF;
+  --color-lux-200: #F7F7F5;
+  --color-lux-300: #E8E6E1;
+  --color-lux-800: #141210;
+  --color-lux-900: #0B0B0C;
+  --color-lux-950: #050505;
+
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-lumen: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --duration-400: 400ms;
+  --duration-700: 700ms;
+  --duration-1200: 1200ms;
+
+  --background-image-ceiling-wash: linear-gradient(105deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%);
 }
 
 :root {
