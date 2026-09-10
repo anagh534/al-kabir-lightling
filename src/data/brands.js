@@ -1,0 +1,58 @@
+export const brands = [
+  {
+    name: "PHILIPS",
+    category: "Lighting & Controls",
+    logo: "/images/brand-philips.webp",
+    description: "Global leader in professional LED luminaires, connected systems and lamps.",
+    origin: "Netherlands",
+  },
+  {
+    name: "Schneider Electric",
+    category: "Electrical & Distribution",
+    logo: "/images/brand-schneider.webp",
+    description: "World-class power distribution, switches, sockets, and automated lighting controls.",
+    origin: "France",
+  },
+  {
+    name: "OSRAM",
+    category: "Lighting Solutions",
+    logo: "/images/brand-osram.webp",
+    description: "Premium optical semiconductors, architectural modules, and specialty project lamps.",
+    origin: "Germany",
+  },
+  {
+    name: "Legrand",
+    category: "Electrical & Cable Management",
+    logo: "/images/brand-legrand.webp",
+    description: "Integrated electrical solutions, wiring accessories, containment, and smart systems.",
+    origin: "France",
+  },
+  {
+    name: "ABB",
+    category: "Power & Automation",
+    logo: "/images/brand-abb.webp",
+    description: "Pioneering electrification technologies, circuit protection, and industrial systems.",
+    origin: "Switzerland",
+  },
+  {
+    name: "HAVELLS",
+    category: "Lighting & Electrical",
+    logo: "/images/brand-havells.webp",
+    description: "Versatile commercial lighting luminaires, industrial fans, and modular switchgear.",
+    origin: "India",
+  },
+  {
+    name: "3M",
+    category: "Building Materials & Safety",
+    logo: "/images/brand-3m.webp",
+    description: "Industrial tapes, electrical termination, occupational safety, and reflective solutions.",
+    origin: "USA",
+  },
+  {
+    name: "Dulux",
+    category: "Coatings & Finishes",
+    logo: "/images/brand-dulux.webp",
+    description: "Architectural paints, specialized coatings, and exterior protective solutions.",
+    origin: "United Kingdom",
+  },
+];

@@ -1,0 +1,50 @@
+export const companyInfo = {
+  name: "Al Kabir Lighting",
+  legalName: "Al Kabir Lighting & Trading LLC",
+  tagline: "Supplying a Brighter Tomorrow",
+  positioning: "Lighting | Electrical | Building Materials | Project Solutions",
+  motto: "One Partner. Multiple Solutions.",
+  phone: "+968 2456 7890",
+  mobile: "+968 9123 4567",
+  whatsapp: "+96891234567",
+  whatsappFormatted: "+968 9123 4567",
+  email: "info@alkabirlighting.com",
+  address: "P.O. Box 1234, Sultan Qaboos Street, Al Khuwair, Muscat, Sultanate of Oman",
+  city: "Muscat",
+  country: "Sultanate of Oman",
+  hours: "Sun - Thu: 8:00 AM - 6:00 PM",
+  departments: [
+    {
+      name: "Sales Enquiries",
+      email: "sales@alkabirlighting.com",
+      role: "Commercial tenders, quotations & contractor inquiries",
+    },
+    {
+      name: "Project Enquiries",
+      email: "projects@alkabirlighting.com",
+      role: "Engineering submittals, Lux calculations & BOQs",
+    },
+    {
+      name: "Accounts & Finance",
+      email: "accounts@alkabirlighting.com",
+      role: "Billing, supplier invoices & commercial credits",
+    },
+    {
+      name: "General Enquiries",
+      email: "admin@alkabirlighting.com",
+      role: "Corporate affairs & administrative support",
+    },
+  ],
+  socials: {
+    linkedin: "https://linkedin.com/company/alkabirlighting",
+    facebook: "https://facebook.com/alkabirlighting",
+    instagram: "https://instagram.com/alkabirlighting",
+    youtube: "https://youtube.com/@alkabirlighting",
+  },
+  stats: [
+    { value: "500+", label: "Projects Completed" },
+    { value: "50+", label: "Global Brand Partners" },
+    { value: "100%", label: "Oman Spec Compliant" },
+    { value: "24-48h", label: "Fast RFQ Turnaround" },
+  ],
+};

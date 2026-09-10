@@ -1,0 +1,448 @@
+AL KABIR LIGHTING
+WEBSITE CONTENT & PAGE DETAILS
+Product Showcase Website for Lighting, Electrical & Building Materials
+Recommended Positioning
+A premium B2B product-showcase website focused on product categories, international brands, project sectors, technical support and fast RFQ generation — without unnecessary e-commerce complexity.
+Prepared for web development and content implementation
+DOCUMENT OVERVIEW
+Recommended Website Structure
+The site should be visually strong, easy to navigate and built mainly for B2B product discovery and enquiry conversion.
+#
+Page
+Purpose
+01
+Home
+Primary company positioning, categories, brands, sectors and RFQ calls-to-action
+02
+About Us
+Company profile, vision, mission and strengths
+03
+Products
+Lighting, electrical and building-material categories
+04
+Building Materials
+Electrical, plumbing, sanitary, hardware, safety and industrial supplies
+05
+Brands
+Brand logos, profiles, catalogues and enquiry links
+06
+Lighting Solutions
+Application-based solutions for major project types
+07
+Sectors / Projects
+Industries and project segments served
+08
+Technical Support
+Lux calculation, submittals, samples, BOQ and documentation support
+09
+Downloads
+Catalogues, datasheets and selected technical files
+10
+News / Updates
+New products, brands, projects and company updates
+11
+Contact Us
+Company contact details, map and enquiry form
+12
+Request a Quote
+Dedicated RFQ upload and enquiry page
+13
+Product Detail
+Simple product information, specifications and downloads
+14
+Search
+Search by product, code, brand, application or category
+Recommended Main Menu
+HOME  •  ABOUT US  •  PRODUCTS  •  BRANDS  •  SOLUTIONS  •  SECTORS  •  DOWNLOADS  •  CONTACT  •  REQUEST QUOTE
+PAGE 01
+HOME PAGE
+The home page should immediately establish Al Kabir Lighting as a professional multi-brand supplier and project-support partner in Oman.
+Hero Banner
+Headline: “Lighting & Building Material Solutions for Every Project”
+Subheading: Professional lighting, electrical and building material solutions for commercial, industrial, infrastructure, residential and government projects across Oman.
+Primary buttons: Explore Products • Request a Quotation • Contact Us
+Hero visuals can rotate between architectural lighting, industrial lighting, street & infrastructure lighting, building materials and project solutions.
+Homepage Content Blocks
+About Al Kabir
+Short company introduction with a strong “Your Trusted Project Supply Partner” message.
+Product Categories
+Large image-based cards for Lighting, Electrical and Building Materials.
+Featured Products
+Show 8–12 selected products with image, name, brand, category and Request Quote button.
+Our Brands
+Logo carousel presenting key international brands and manufacturers.
+Industries We Serve
+Oil & Gas, infrastructure, commercial, residential, hospitality, industrial and government.
+Project Solutions
+Product selection, lux calculation, submittals, quotations, samples and delivery coordination.
+Why Al Kabir
+Product range, international sourcing, project experience, technical support and local Oman service.
+Quick Enquiry
+Simple enquiry form with BOQ / drawing / specification file upload.
+Homepage Product Categories
+Indoor Lighting
+Outdoor Lighting
+Architectural Lighting
+Industrial Lighting
+Street Lighting
+Emergency Lighting
+Landscape Lighting
+Solar Lighting
+Explosion-Proof Lighting
+Sports Lighting
+Electrical Products
+Building Materials
+PAGE 02
+ABOUT US
+Keep the content concise, credible and project-oriented.
+Who We Are
+Al Kabir Lighting is an Oman-based lighting and building material trading company serving contractors, consultants, industries, government organisations, developers and project customers. We provide dependable products, commercially competitive solutions and professional project support through a diversified portfolio of lighting, electrical and building material products.
+Vision
+To become one of the most trusted lighting and building material solution providers in Oman and the GCC.
+Mission
+To provide reliable products, professional service and commercially competitive solutions while building long-term relationships with customers, suppliers and project partners.
+Core Strengths
+Multi-brand product portfolio
+Lighting and building material expertise
+Strong international sourcing network
+Project-based supply capability
+Technical product support
+Responsive quotation service
+Local stock for selected products
+International sourcing capability
+Professional customer support
+Markets We Serve
+Sultanate of Oman
+GCC projects
+Contractors and consultants
+Government organisations
+Oil & gas companies
+Industries and developers
+Facility management companies
+Traders and resellers
+PAGE 03
+PRODUCTS
+The products page should be image-led and easy to browse. Keep descriptions short and avoid excessive technical detail on category pages.
+Lighting Categories
+Indoor Lighting
+LED panels, downlights, spotlights, linear lights, track lights, pendants and office lighting.
+Outdoor Lighting
+Floodlights, wall lights, bollards, garden lights, façade lighting and outdoor ceiling lights.
+Industrial Lighting
+High bays, low bays, tri-proof lights, warehouse lighting and heavy-duty luminaires.
+Street & Infrastructure
+LED street lights, roadway lighting, area lighting, high mast lighting, poles and accessories.
+Emergency Lighting
+Emergency bulkheads, exit signs, twin-head lights, conversion kits and central-battery compatible options.
+Explosion-Proof Lighting
+Floodlights, high bays, linear lights and hazardous-area luminaires.
+Landscape Lighting
+Bollards, spike lights, in-ground lights, step lights, garden and underwater lighting.
+Solar Lighting
+Solar street lights, floodlights, bollards, garden lights and area lighting.
+Architectural Lighting
+Linear systems, façade lighting, wall washers, architectural downlights and accent lighting.
+Sports Lighting
+High-output floodlighting and area lighting for sports facilities and large outdoor spaces.
+Product Category Page Layout
+1.  Category hero image and short introduction
+2.  Subcategory tiles
+3.  Featured products or product families
+4.  Brand filters
+5.  Application filters
+6.  Download catalogue link
+7.  Request Quote / WhatsApp call-to-action
+PAGE 04
+BUILDING MATERIALS
+A dedicated product family page for non-lighting project materials.
+Electrical Materials
+Electrical accessories, wiring accessories, switches & sockets, cables and cable accessories.
+Plumbing
+Pipes, fittings, valves and plumbing accessories.
+Sanitary
+Sanitary ware, bathroom accessories, faucets and mixers.
+Hardware
+Fasteners, fixing accessories, hand tools and construction hardware.
+Safety
+PPE, safety accessories and site safety products.
+Industrial Supplies
+Industrial electrical products, maintenance products and project accessories.
+Display Style
+Use clean category images with one or two lines of text. Do not make this page look like an online hardware shop. The objective is to show supply capability and encourage enquiries.
+PAGE 05
+BRANDS
+Show the strength of Al Kabir’s international sourcing and multi-brand capability.
+Brands Page Structure
+Introductory statement about selected international manufacturers and suppliers
+Large clean logo grid
+Filters by Lighting / Electrical / Building Materials / Industrial
+Featured brand section
+Download catalogue buttons
+Direct enquiry buttons
+Individual Brand Page
+Brand logo and name
+Country / origin
+Short brand introduction
+Main product categories
+Selected product images
+Download Catalogue
+Send Enquiry
+Important
+Only publish brand logos, names and claims that Al Kabir is authorised or permitted to display. Keep distributor/partner wording accurate to the actual relationship.
+PAGE 06
+LIGHTING SOLUTIONS
+This page should position Al Kabir as a project solutions company, not only a product trader.
+Commercial Lighting
+Offices, shopping centres, retail stores, showrooms, restaurants and commercial buildings.
+Industrial Lighting
+Factories, warehouses, workshops and industrial plants.
+Infrastructure Lighting
+Roads, highways, public areas, parking areas and infrastructure developments.
+Oil & Gas Lighting
+Industrial facilities, hazardous areas, maintenance requirements and outdoor industrial areas.
+Hospitality Lighting
+Hotels, resorts, restaurants and public spaces.
+Residential Lighting
+Villas, apartments, residential compounds and landscaped residential areas.
+Each Solution Page Should Include
+Short application introduction
+Recommended product categories
+Relevant brands
+Typical project requirements
+Technical support available
+Request a project quotation
+PAGE 07
+SECTORS / PROJECTS
+Show capability by sector without publishing confidential project details.
+Government
+Public-sector requirements, tenders and government facilities.
+Oil & Gas
+Industrial and maintenance lighting/electrical requirements.
+Infrastructure
+Roads, external areas, public spaces and civil projects.
+Commercial
+Offices, retail, mixed-use and commercial buildings.
+Industrial
+Factories, workshops, warehouses and production facilities.
+Residential
+Villas, apartments, compounds and residential developments.
+Hospitality
+Hotels, resorts, restaurants and leisure projects.
+Healthcare
+Hospitals, clinics and healthcare facilities.
+Education
+Schools, colleges and institutional projects.
+Sports & Landscape
+Sports fields, external areas, parks and landscape developments.
+Page Note
+Use strong project imagery with two or three lines per sector. Case studies can be added later where approval exists.
+PAGE 08
+TECHNICAL SUPPORT
+Present technical support as a practical service that helps customers complete project submissions and product selection.
+Product Selection
+Selection according to specifications, application and project requirements.
+Lux Calculation
+Lighting calculations for selected commercial, industrial and outdoor projects.
+Technical Submittals
+Support with product data, certificates and compliance documentation.
+Product Samples
+Coordination of samples for selected project requirements.
+BOQ Support
+Customers can submit BOQs for product selection and commercial quotation.
+Alternative Selection
+Equivalent solutions can be proposed according to technical specifications.
+Datasheets & Catalogues
+Technical documents can be provided when required.
+Delivery Coordination
+Support with project delivery planning and supply coordination.
+PAGE 09
+DOWNLOADS
+Keep the download centre organised and easy to maintain.
+Download Categories
+Lighting Catalogues
+Industrial Lighting
+Street Lighting
+Emergency Lighting
+Architectural Lighting
+Building Materials
+Electrical Products
+Download Card Format
+Brand Logo • Catalogue Name • Product Category • PDF icon • DOWNLOAD button
+Recommendation
+Avoid uploading every certificate and technical file into one public library. Keep public downloads focused on useful catalogues and datasheets; provide project-specific certificates upon enquiry when appropriate.
+PAGE 10
+NEWS / UPDATES
+A lightweight content page that supports credibility and search visibility without requiring daily publishing.
+New product launches
+New brand announcements
+Project supply milestones
+Exhibition participation
+Product training
+Certifications and approvals
+Company announcements
+Recommended Frequency
+One to four quality updates per month is sufficient. Focus on real business activity rather than generic filler content.
+PAGE 11
+CONTACT US
+Make it effortless for contractors, consultants and procurement teams to reach the correct person.
+Company Information
+Office / showroom address
+Telephone
+Mobile
+WhatsApp
+Sales email
+General email
+Google Map
+Business hours
+Contact Form Fields
+Name
+Company
+Email
+Mobile
+Subject
+Message
+Upload file
+Department Contacts
+Sales Enquiries – sales@alkabirlighting.com
+Project Enquiries – projects@alkabirlighting.com
+Accounts – accounts@alkabirlighting.com
+General Enquiries – admin@alkabirlighting.com
+PAGE 12
+REQUEST A QUOTE
+The RFQ page should be one of the most prominent calls-to-action across the entire website.
+RFQ Form Fields
+Company Name
+Contact Person
+Email
+Mobile
+Project Name
+Project Location
+Product Category
+Required Quantity
+Required Delivery Date
+Message / Requirement
+File Uploads
+BOQ
+Excel file
+PDF
+DWG drawing
+Specification
+Product image
+Submission Button
+Use a prominent “SUBMIT RFQ” button and display a confirmation message stating that the sales team will review the request.
+PAGE 13
+PRODUCT DETAIL PAGE
+Keep individual product pages simple, visually strong and technically useful.
+Recommended Layout
+Large product image
+Product name
+Brand
+Short 2–4 line description
+Key features
+Basic specifications
+Available downloads
+Related products
+Request Quote / WhatsApp / Download Datasheet buttons
+Basic Specifications
+Power
+Wattage / available wattages
+Lumen
+Nominal output
+CCT / CRI
+Colour temperature and colour rendering
+IP Rating
+Ingress protection
+Control
+On/Off, DALI, 0–10V or other options
+Mounting / Application
+Installation type and typical use
+Downloads
+Datasheet
+Catalogue
+IES file
+Installation manual
+Certificate – where suitable for public release
+PAGE 14
+SEARCH FUNCTION
+Search should help visitors find products quickly across a broad multi-brand portfolio.
+Search by:
+Product name
+Product code
+Brand
+Application
+Category
+Keyword
+Recommended Search Filters
+Product Category
+Brand
+Indoor / Outdoor
+Application
+IP Rating
+Mounting Type
+PAGE 15
+HEADER, FOOTER & NAVIGATION
+Consistent navigation should make the site feel like a modern international project-supply company.
+Header
+Top strip: phone • email • WhatsApp
+Main header: Al Kabir Lighting logo
+Navigation: Home • About • Products • Brands • Solutions • Sectors • Downloads • Contact
+Highlighted right-side button: REQUEST QUOTE
+Footer
+Company name and positioning line
+Product links
+Company links
+Contact details
+Social media links: LinkedIn • Instagram • Facebook • YouTube
+Copyright, Privacy Policy and Terms & Conditions
+PAGE 16
+WEBSITE STYLE & DESIGN DIRECTION
+The visual direction should look premium, technical and modern — not like a crowded online trading catalogue.
+Recommended Style
+White or very light background
+One Al Kabir corporate accent colour
+Large professional product photography
+Minimal text on category pages
+Bold typography and generous spacing
+Clean line icons
+Subtle modern animations
+Fast mobile-first design
+Consistent product-image ratios
+Avoid
+Too many colours
+Long blocks of text
+Flashing banners
+Overloaded menus
+Displaying product prices
+Too many specifications on category pages
+Low-resolution supplier images
+Inconsistent product naming
+PAGE 17
+RECOMMENDED HOME PAGE ORDER
+The sequence below keeps product discovery first and enquiry conversion visible throughout the journey.
+1.  Hero Banner
+2.  Main Product Categories
+3.  About Al Kabir
+4.  Featured Products
+5.  Brands
+6.  Lighting Solutions
+7.  Industries We Serve
+8.  Why Al Kabir
+9.  Latest Products / New Arrivals
+10.  Technical & Project Support
+11.  Download Catalogues
+12.  Request a Quote
+13.  Contact Information
+14.  Footer
+PAGE 18
+WEBSITE POSITIONING & FINAL RECOMMENDATION
+The website should communicate breadth, professionalism and response capability without becoming overcomplicated.
+Recommended Positioning Line
+AL KABIR LIGHTING
+Lighting  |  Electrical  |  Building Materials  |  Project Solutions
+One Partner. Multiple Solutions.
+Recommended First-Version Size
+Approximately 15–20 main pages are sufficient. Start with the core pages and add individual product pages gradually as priority products and brands are finalised.
+Best Content Balance
+Approximately 70% visual/product showcase and 30% company/technical information. The strongest sections should be Products, Brands, Sectors, Downloads and Request a Quote.
+Final Website Objective
+A visitor should understand within seconds that Al Kabir Lighting can support complete project requirements across lighting, electrical and building materials, with strong sourcing, technical assistance and fast commercial response.
