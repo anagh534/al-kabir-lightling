@@ -20,6 +20,8 @@ import { companyInfo } from "@/data/company";
 import ContactForm from "@/components/ContactForm";
 import QuoteModal from "@/components/QuoteModal";
 
+
+
 export default function HomePage() {
   const [activeModalCategory, setActiveModalCategory] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -71,6 +73,8 @@ export default function HomePage() {
             quality={92}
             className="object-cover object-center filter brightness-[0.78]"
           />
+
+
           {/* Subtle gradient vignette */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#090e17]/95 via-[#090e17]/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-transparent to-transparent" />
@@ -179,6 +183,8 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
+
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                     <span className="absolute bottom-3 left-4 text-xs font-semibold text-white/90 drop-shadow-sm">
                       {cat.specs}

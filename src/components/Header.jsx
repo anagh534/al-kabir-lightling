@@ -13,7 +13,7 @@ export default function Header({ onRequestQuote }) {
   const pathname = usePathname();
 
   const isActive = (href) => {
-    if (href === "/") return pathname === "/";
+    if (href === "/") return pathname === "/" || pathname === "";
     return pathname.startsWith(href);
   };
 
@@ -38,6 +38,8 @@ export default function Header({ onRequestQuote }) {
               />
             </div>
           </Link>
+
+
 
           {/* Desktop Navigation - Strictly Home, About, Contact */}
           <nav

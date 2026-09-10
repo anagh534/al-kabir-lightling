@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
+
+
 export const metadata = {
   title: "About Us | Engineering & Lighting Solutions Partner in Oman",
   description:
@@ -170,6 +172,8 @@ export default function AboutPage() {
                   quality={90}
                   className="object-cover object-center"
                 />
+
+
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
                   <p className="text-xs font-bold uppercase tracking-wider text-[#00e5f2]">

@@ -36,6 +36,8 @@ export default function Footer({ onRequestQuote }) {
               </div>
             </Link>
 
+
+
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Al Kabir Lighting is an Oman-based lighting, electrical, and
               building materials specialist supplying high-spec commercial,
