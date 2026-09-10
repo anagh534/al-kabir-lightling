@@ -5,6 +5,7 @@ export const brands = [
     category: "Architectural & Roadway Lighting",
     origin: "Netherlands",
     specialty: "Connected LED Luminaires & Dynalite Controls",
+    logo: "/logos/philips.png",
   },
   {
     name: "Schneider Electric",
@@ -12,6 +13,7 @@ export const brands = [
     category: "Power Distribution & Wiring Devices",
     origin: "France",
     specialty: "Modular Switchgear, Acti9, Unica Series",
+    logo: "/logos/schneider.png",
   },
   {
     name: "OSRAM",
@@ -19,6 +21,7 @@ export const brands = [
     category: "Specialized Project & Optical Lamps",
     origin: "Germany",
     specialty: "High-Performance Modules & Architectural Optics",
+    logo: "/logos/osram.png",
   },
   {
     name: "Legrand",
@@ -26,6 +29,7 @@ export const brands = [
     category: "Electrical Accessories & Containment",
     origin: "France",
     specialty: "Arteor Switches, DLP Trunking, Cable Trays",
+    logo: "/logos/legrand.png",
   },
   {
     name: "ABB",
@@ -33,6 +37,7 @@ export const brands = [
     category: "Electrification & Automation",
     origin: "Switzerland",
     specialty: "Breakers, Contactors, Industrial Drives",
+    logo: "/logos/abb.png",
   },
   {
     name: "HAVELLS",
@@ -40,6 +45,7 @@ export const brands = [
     category: "Lighting & Industrial Fans",
     origin: "India",
     specialty: "Commercial Panels, Downlights & Industrial Fixtures",
+    logo: "/logos/havells.png",
   },
   {
     name: "3M",
@@ -47,6 +53,7 @@ export const brands = [
     category: "Electrical Termination & Tapes",
     origin: "USA",
     specialty: "Scotch Electrical Tapes, Cable Joints, PPE",
+    logo: "/logos/3m.png",
   },
   {
     name: "Dulux",
@@ -54,5 +61,6 @@ export const brands = [
     category: "Protective Finishes & Paints",
     origin: "United Kingdom",
     specialty: "Exterior WeatherShield & Commercial Coatings",
+    logo: "/logos/dulux.png",
   },
 ];

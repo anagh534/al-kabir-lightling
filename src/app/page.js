@@ -283,23 +283,44 @@ export default function HomePage() {
             {brands.map((b) => (
               <div
                 key={b.name}
-                className="bg-white p-6 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex flex-col justify-between"
+                className="bg-white p-8 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center min-h-[120px]"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-black text-slate-900 tracking-tight">
-                      {b.name}
-                    </span>
-                    <span className="text-[10px] uppercase font-bold text-slate-400">
-                      {b.origin}
-                    </span>
-                  </div>
-                  <p className="text-xs font-semibold text-[#009ea9]">
-                    {b.category}
-                  </p>
-                  <p className="text-[11px] text-slate-500 mt-2 leading-relaxed">
-                    {b.specialty}
-                  </p>
+                <div className="flex items-center justify-center">
+                  {b.name === "PHILIPS" && (
+                    <span className="font-sans font-black tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>Philips</span>
+                  )}
+                  {b.name === "Schneider Electric" && (
+                    <div className="flex items-center gap-2">
+                      <svg className="w-8 h-8" style={{ color: '#3DCD58' }} viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M20,20 L80,20 L80,80 L20,80 Z M35,35 L65,35 L65,65 L35,65 Z" fillRule="evenodd" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-sans font-bold tracking-tight text-base leading-tight" style={{ color: '#3DCD58' }}>Schneider<br/>Electric</span>
+                    </div>
+                  )}
+                  {b.name === "OSRAM" && (
+                    <span className="font-sans font-bold tracking-widest text-2xl uppercase" style={{ color: '#FF6600' }}>Osram</span>
+                  )}
+                  {b.name === "Legrand" && (
+                    <div className="flex items-center gap-2">
+                      <svg className="w-6 h-6" style={{ color: '#E30613' }} viewBox="0 0 100 100" fill="currentColor">
+                        <rect x="10" y="10" width="35" height="80" />
+                        <rect x="55" y="10" width="35" height="80" />
+                      </svg>
+                      <span className="font-sans font-black tracking-tight text-xl lowercase" style={{ color: '#E30613' }}>legrand</span>
+                    </div>
+                  )}
+                  {b.name === "ABB" && (
+                    <span className="font-sans font-black tracking-tighter text-4xl uppercase" style={{ color: '#FF000F' }}>ABB</span>
+                  )}
+                  {b.name === "HAVELLS" && (
+                    <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#ED1C24' }}>Havells</span>
+                  )}
+                  {b.name === "3M" && (
+                    <span className="font-sans font-black tracking-tighter text-5xl uppercase" style={{ color: '#FF0000' }}>3M</span>
+                  )}
+                  {b.name === "Dulux" && (
+                    <span className="font-serif font-bold italic tracking-tight text-3xl" style={{ color: '#003B7E' }}>Dulux</span>
+                  )}
                 </div>
               </div>
             ))}
