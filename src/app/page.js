@@ -21,6 +21,7 @@ import { productCategories } from "@/data/categories";
 import { brands } from "@/data/brands";
 import { companyInfo } from "@/data/company";
 import ContactForm from "@/components/ContactForm";
+import { testimonials } from "@/data/testimonials";
 
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -357,23 +358,7 @@ export default function HomePage() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Ahmed Al Balushi",
-                role: "Procurement Manager, Muscat Construction Co.",
-                content: "Al Kabir Lighting completely transformed how we source for our commercial projects. Their technical support for Dialux calculations ensured we passed consultant approvals without a single revision. Highly dependable partner.",
-              },
-              {
-                name: "Sarah Matthews",
-                role: "Lead Architect, Gulf Design Studio",
-                content: "The architectural lighting fixtures we received were exactly as specified. Their team suggested equivalent alternatives that saved us 15% on budget while maintaining the exact aesthetic we needed for the hotel lobby.",
-              },
-              {
-                name: "Mohammed Tariq",
-                role: "MEP Engineer, Infrastructure Oman",
-                content: "Fast RFQ turnarounds and excellent availability of ATEX industrial fittings. When we needed explosion-proof lighting for a critical port facility on short notice, they delivered from local stock within 48 hours.",
-              }
-            ].map((review, idx) => (
+            {testimonials.map((review, idx) => (
               <ScrollReveal key={idx} delay={idx * 200} direction="up" distance={30}>
                 <div className="h-full relative bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 p-8 rounded-3xl hover:border-[#009ea9]/50 transition-colors group">
                   <Quote className="absolute top-6 right-6 w-8 h-8 text-[#009ea9]/20 group-hover:text-[#009ea9]/40 transition-colors" />
