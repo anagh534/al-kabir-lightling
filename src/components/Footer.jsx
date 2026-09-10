@@ -16,125 +16,110 @@ import logoImg from "../../public/logo.png";
 
 export default function Footer({ onRequestQuote }) {
   return (
-    <footer className="bg-[#090e17] text-slate-300 border-t border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+    <footer className="bg-[#040810] text-slate-300 relative overflow-hidden">
+      {/* Decorative Top Accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#009ea9] to-transparent opacity-50" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Col 1: Brand (5 cols) */}
-          <div className="lg:col-span-5 space-y-5">
+          <div className="lg:col-span-5 space-y-8">
             <Link
               href="/"
-              className="inline-block p-2 bg-white rounded-xl shadow-xs"
+              className="inline-block transition-transform hover:opacity-90"
               aria-label="Al Kabir Lighting Home"
             >
-              <div className="relative w-44 h-12">
+              <div className="relative w-52 h-14">
                 <Image
                   src={logoImg}
                   alt="Al Kabir Lighting"
-                  className="object-contain w-auto h-full"
+                  className="object-contain object-left w-full h-full brightness-0 invert drop-shadow-lg"
                 />
               </div>
             </Link>
-
-
-
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Al Kabir Lighting is an Oman-based lighting, electrical, and
               building materials specialist supplying high-spec commercial,
               industrial, and infrastructure developments.
             </p>
-
-            <div className="flex items-center gap-3 pt-2 text-xs text-slate-400">
-              <ShieldCheck className="w-4 h-4 text-[#009ea9]" />
-              <span>Oman Regulatory &amp; Ministry Compliant Products</span>
-            </div>
           </div>
 
           {/* Col 2: Navigation Links (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
+          <div className="lg:col-span-3 space-y-6">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500">
               Navigation
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 font-medium text-sm">
               <li>
-                <Link
-                  href="/"
-                  className="text-slate-400 hover:text-[#009ea9] transition-colors"
-                >
+                <Link href="/" className="text-slate-300 hover:text-[#00e5f2] transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#009ea9]"></span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/about"
-                  className="text-slate-400 hover:text-[#009ea9] transition-colors"
-                >
+                <Link href="/about" className="text-slate-300 hover:text-[#00e5f2] transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#009ea9]"></span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-slate-400 hover:text-[#009ea9] transition-colors"
-                >
-                  Contact &amp; RFQ
+                <Link href="/portfolio" className="text-slate-300 hover:text-[#00e5f2] transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#009ea9]"></span>
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-slate-300 hover:text-[#00e5f2] transition-colors flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#009ea9]"></span>
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Col 3: Direct Inquiries (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
+          <div className="lg:col-span-4 space-y-6">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500">
               Muscat Headquarters
             </h4>
-            <div className="space-y-3 text-sm text-slate-400">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#009ea9] shrink-0 mt-1" />
-                <span>{companyInfo.address}</span>
+            <div className="space-y-4 text-sm text-slate-300 font-medium">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-slate-800/50 flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4 text-[#009ea9]" />
+                </div>
+                <span className="mt-1.5 leading-relaxed">{companyInfo.address}</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#009ea9] shrink-0" />
-                <a
-                  href={`tel:${companyInfo.phone.replace(/\s+/g, "")}`}
-                  className="hover:text-white transition-colors"
-                >
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-slate-800/50 flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 text-[#009ea9]" />
+                </div>
+                <a href={`tel:${companyInfo.phone.replace(/\s+/g, "")}`} className="hover:text-[#00e5f2] transition-colors">
                   {companyInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#009ea9] shrink-0" />
-                <a
-                  href={`mailto:${companyInfo.email}`}
-                  className="hover:text-white transition-colors"
-                >
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-slate-800/50 flex items-center justify-center shrink-0">
+                  <Mail className="w-4 h-4 text-[#009ea9]" />
+                </div>
+                <a href={`mailto:${companyInfo.email}`} className="hover:text-[#00e5f2] transition-colors">
                   {companyInfo.email}
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-[#009ea9] shrink-0" />
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-slate-800/50 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4 text-[#009ea9]" />
+                </div>
                 <span>{companyInfo.hours}</span>
               </div>
-            </div>
-
-            <div className="pt-2">
-              <button
-                onClick={onRequestQuote}
-                type="button"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-[#009ea9] hover:bg-[#00858f] transition-all cursor-pointer shadow-md"
-              >
-                <span>Request Project Quotation</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-slate-800/80 bg-black/40 py-6 text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} Al Kabir Lighting &amp; Trading LLC. All rights reserved.</p>
-          <p className="text-slate-400 font-medium">Sultanate of Oman</p>
+      <div className="border-t border-slate-800/80 bg-black/50 py-6 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+          <p className="tracking-wide">© {new Date().getFullYear()} Al Kabir Lighting &amp; Trading LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
