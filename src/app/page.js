@@ -22,6 +22,35 @@ import QuoteModal from "@/components/QuoteModal";
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import heroImg from "../../public/images/hero-lighting.jpg";
 
+const Counter = ({ end, suffix = "", duration = 2000, trigger }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!trigger) return;
+    
+    let startTime = null;
+    let animationFrame;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percent = Math.min(progress / duration, 1);
+      
+      const ease = percent === 1 ? 1 : 1 - Math.pow(2, -10 * percent);
+      setCount(Math.floor(end * ease));
+      
+      if (percent < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+    
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, trigger]);
+
+  return <span>{count}{suffix}</span>;
+};
+
 export default function HomePage() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
 
@@ -137,19 +166,19 @@ export default function HomePage() {
             {/* Value Indicators - Refined */}
             <div className="pt-8 lg:pt-12 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8 text-slate-300 text-xs">
               <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">500+</p>
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={500} suffix="+" trigger={isHeroVisible} /></p>
                 <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Projects Supplied</p>
               </div>
               <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">50+</p>
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={50} suffix="+" trigger={isHeroVisible} /></p>
                 <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Global Brands</p>
               </div>
               <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">100%</p>
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={100} suffix="%" trigger={isHeroVisible} /></p>
                 <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Spec Compliant</p>
               </div>
               <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">24h</p>
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={24} suffix="h" trigger={isHeroVisible} /></p>
                 <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">RFQ Turnaround</p>
               </div>
             </div>
