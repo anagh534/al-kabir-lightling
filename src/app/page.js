@@ -68,9 +68,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* 1. HERO SECTION - REDESIGNED */}
-      <section className="relative min-h-[100svh] flex items-center bg-[#090e17] text-white overflow-hidden motion-reduce:transition-none pt-20">
+      <section className="group relative min-h-[500px] lg:min-h-[600px] flex items-center bg-[#090e17] text-white overflow-hidden motion-reduce:transition-none pt-5">
         {/* Modern Architectural Background */}
-        <div 
+        <div
           className="absolute inset-0 z-0 transform-gpu"
           style={{
             clipPath: isHeroVisible ? 'inset(0 0 0 0)' : 'inset(8% 8% 8% 8%)',
@@ -81,34 +81,18 @@ export default function HomePage() {
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop"
             alt="Modern Architectural Lighting in Oman"
-            className="w-full h-full object-cover object-center filter brightness-[0.65] contrast-[1.1]"
+            className="w-full h-full object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.75] contrast-[1.15] transition-all duration-[2000ms] ease-out"
           />
           {/* Multi-layer thematic gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#090e17] via-[#090e17]/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-transparent to-transparent opacity-80" />
-          <div className="absolute inset-0 bg-[#009ea9]/10 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-[#009ea9]/10 mix-blend-overlay group-hover:opacity-50 transition-opacity duration-[2000ms]" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-          <div className="max-w-4xl space-y-8">
-            
-            {/* Dynamic Floating Badges - Instantly answers "What do we do?" */}
-            <div className="flex flex-wrap items-center gap-3">
-              {[
-                { name: 'Architectural Lighting', delay: 'delay-100' },
-                { name: 'Electrical Switchgear', delay: 'delay-200' },
-                { name: 'Building Materials', delay: 'delay-300' }
-              ].map((badge) => (
-                <span 
-                  key={badge.name}
-                  className={`px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest bg-white/5 border border-white/10 backdrop-blur-md text-[#e6f8fa] shadow-2xl transition-all duration-1000 ease-editorial transform will-change-transform ${isHeroVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-4 opacity-0 scale-95'} ${badge.delay}`}
-                >
-                  {badge.name}
-                </span>
-              ))}
-            </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16 w-full">
+          <div className="max-w-4xl space-y-6 lg:space-y-8">
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
               <span className="block overflow-hidden pb-1">
                 <span className={`block transition-transform duration-1200 ease-editorial delay-300 will-change-transform ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
                   Engineering the Light
@@ -124,17 +108,17 @@ export default function HomePage() {
             </h1>
 
             <div className="overflow-hidden">
-              <p className={`text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl transition-all duration-1200 ease-editorial delay-500 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <p className={`text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl transition-all duration-1200 ease-editorial delay-500 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                 We are Oman's premier supply partner, sourcing world-class luminaires, certified electrical infrastructure, and structural materials for commercial and industrial mega-projects.
               </p>
             </div>
 
             {/* CTAs with modern pulse animation */}
-            <div className={`flex flex-wrap items-center gap-5 pt-6 transition-all duration-1200 ease-editorial delay-700 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+            <div className={`flex flex-wrap items-center gap-4 pt-2 lg:pt-6 transition-all duration-1200 ease-editorial delay-700 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <button
                 onClick={() => handleOpenQuote("Turnkey Project Solution")}
                 type="button"
-                className="relative inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-black text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-95 transition-all shadow-[0_0_40px_rgba(0,158,169,0.4)] hover:shadow-[0_0_60px_rgba(0,158,169,0.6)] cursor-pointer group overflow-hidden"
+                className="relative inline-flex items-center gap-3 px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-sm font-black text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-95 transition-all shadow-[0_0_40px_rgba(0,158,169,0.4)] hover:shadow-[0_0_60px_rgba(0,158,169,0.6)] cursor-pointer group overflow-hidden"
               >
                 <span className="relative z-10">Request Project Quotation</span>
                 <ArrowRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -143,7 +127,7 @@ export default function HomePage() {
 
               <a
                 href="#categories"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white bg-white/5 hover:bg-white/15 border border-white/20 backdrop-blur-md transition-all cursor-pointer group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-sm font-bold text-white bg-white/5 hover:bg-white/15 border border-white/20 backdrop-blur-md transition-all cursor-pointer group"
               >
                 <span>View Our Portfolio</span>
                 <ArrowRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -151,7 +135,7 @@ export default function HomePage() {
             </div>
 
             {/* Value Indicators - Refined */}
-            <div className={`pt-12 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-8 text-slate-300 text-xs transition-all duration-1200 ease-editorial delay-1000 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+            <div className="pt-8 lg:pt-12 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8 text-slate-300 text-xs">
               <div className="group">
                 <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">500+</p>
                 <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Projects Supplied</p>
@@ -204,7 +188,7 @@ export default function HomePage() {
           {/* Grid of High-Res Category Cards using Architectural Design System */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productCategories.map((cat, idx) => (
-              <ProductShowcaseCard 
+              <ProductShowcaseCard
                 key={cat.id}
                 title={cat.name}
                 designer={cat.tagline}
@@ -303,7 +287,7 @@ export default function HomePage() {
                       <svg className="w-8 h-8" style={{ color: '#3DCD58' }} viewBox="0 0 100 100" fill="currentColor">
                         <path d="M20,20 L80,20 L80,80 L20,80 Z M35,35 L65,35 L65,65 L35,65 Z" fillRule="evenodd" clipRule="evenodd" />
                       </svg>
-                      <span className="font-sans font-bold tracking-tight text-base leading-tight" style={{ color: '#3DCD58' }}>Schneider<br/>Electric</span>
+                      <span className="font-sans font-bold tracking-tight text-base leading-tight" style={{ color: '#3DCD58' }}>Schneider<br />Electric</span>
                     </div>
                   )}
                   {b.name === "OSRAM" && (
