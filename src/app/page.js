@@ -156,13 +156,13 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
               </button>
 
-              <a
-                href="#categories"
+              <Link
+                href="/portfolio"
                 className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-sm font-bold text-white bg-white/5 hover:bg-white/15 border border-white/20 backdrop-blur-md transition-all cursor-pointer group"
               >
                 <span>View Our Portfolio</span>
                 <ArrowRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-              </a>
+              </Link>
             </div>
 
             {/* Value Indicators - Refined */}
