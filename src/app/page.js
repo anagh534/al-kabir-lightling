@@ -22,6 +22,7 @@ import { companyInfo } from "@/data/company";
 import ContactForm from "@/components/ContactForm";
 import QuoteModal from "@/components/QuoteModal";
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
+import ScrollReveal from "@/components/ScrollReveal";
 import heroImg from "../../public/images/hero-lighting.jpg";
 
 const Counter = ({ end, suffix = "", duration = 2000, trigger }) => {
@@ -192,7 +193,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 space-y-6">
+            <ScrollReveal className="lg:col-span-5 space-y-6" direction="left">
               <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
                 Engineering Integrity
               </span>
@@ -215,26 +216,25 @@ export default function HomePage() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
-            </div>
+            </ScrollReveal>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {engineeringCapabilities.map((item, idx) => {
                 const Icon = item.icon;
                 return (
-                  <div
-                    key={idx}
-                    className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#009ea9] transition-all"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center mb-4">
-                      <Icon className="w-5 h-5" />
+                  <ScrollReveal key={idx} delay={idx * 150} direction="up" distance={30}>
+                    <div className="h-full p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#009ea9] transition-all">
+                      <div className="w-10 h-10 rounded-xl bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center mb-4">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-base font-bold text-slate-900 mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+                  </ScrollReveal>
                 );
               })}
             </div>
@@ -281,7 +281,7 @@ export default function HomePage() {
       {/* 4. GLOBAL BRAND PARTNERS */}
       <section className="py-20 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <ScrollReveal direction="up" className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-[#009ea9]">
               Multi-Brand Portfolio
             </span>
@@ -292,52 +292,51 @@ export default function HomePage() {
               Sourcing authentic, factory-warranted luminaires, switchgear, and
               building materials from world leaders.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {brands.map((b) => (
-              <div
-                key={b.name}
-                className="bg-white p-8 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center min-h-[120px]"
-              >
-                <div className="flex items-center justify-center">
-                  {b.name === "PHILIPS" && (
-                    <span className="font-sans font-black tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>Philips</span>
-                  )}
-                  {b.name === "Schneider Electric" && (
-                    <div className="flex items-center gap-2">
-                      <svg className="w-8 h-8" style={{ color: '#3DCD58' }} viewBox="0 0 100 100" fill="currentColor">
-                        <path d="M20,20 L80,20 L80,80 L20,80 Z M35,35 L65,35 L65,65 L35,65 Z" fillRule="evenodd" clipRule="evenodd" />
-                      </svg>
-                      <span className="font-sans font-bold tracking-tight text-base leading-tight" style={{ color: '#3DCD58' }}>Schneider<br />Electric</span>
-                    </div>
-                  )}
-                  {b.name === "OSRAM" && (
-                    <span className="font-sans font-bold tracking-widest text-2xl uppercase" style={{ color: '#FF6600' }}>Osram</span>
-                  )}
-                  {b.name === "Legrand" && (
-                    <div className="flex items-center gap-2">
-                      <svg className="w-6 h-6" style={{ color: '#E30613' }} viewBox="0 0 100 100" fill="currentColor">
-                        <rect x="10" y="10" width="35" height="80" />
-                        <rect x="55" y="10" width="35" height="80" />
-                      </svg>
-                      <span className="font-sans font-black tracking-tight text-xl lowercase" style={{ color: '#E30613' }}>legrand</span>
-                    </div>
-                  )}
-                  {b.name === "ABB" && (
-                    <span className="font-sans font-black tracking-tighter text-4xl uppercase" style={{ color: '#FF000F' }}>ABB</span>
-                  )}
-                  {b.name === "HAVELLS" && (
-                    <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#ED1C24' }}>Havells</span>
-                  )}
-                  {b.name === "3M" && (
-                    <span className="font-sans font-black tracking-tighter text-5xl uppercase" style={{ color: '#FF0000' }}>3M</span>
-                  )}
-                  {b.name === "Dulux" && (
-                    <span className="font-serif font-bold italic tracking-tight text-3xl" style={{ color: '#003B7E' }}>Dulux</span>
-                  )}
+            {brands.map((b, idx) => (
+              <ScrollReveal key={b.name} delay={idx * 100} direction="up" distance={20}>
+                <div className="bg-white p-8 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center min-h-[120px] h-full">
+                  <div className="flex items-center justify-center">
+                    {b.name === "PHILIPS" && (
+                      <span className="font-sans font-black tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>Philips</span>
+                    )}
+                    {b.name === "Schneider Electric" && (
+                      <div className="flex items-center gap-2">
+                        <svg className="w-8 h-8" style={{ color: '#3DCD58' }} viewBox="0 0 100 100" fill="currentColor">
+                          <path d="M20,20 L80,20 L80,80 L20,80 Z M35,35 L65,35 L65,65 L35,65 Z" fillRule="evenodd" clipRule="evenodd" />
+                        </svg>
+                        <span className="font-sans font-bold tracking-tight text-base leading-tight" style={{ color: '#3DCD58' }}>Schneider<br />Electric</span>
+                      </div>
+                    )}
+                    {b.name === "OSRAM" && (
+                      <span className="font-sans font-bold tracking-widest text-2xl uppercase" style={{ color: '#FF6600' }}>Osram</span>
+                    )}
+                    {b.name === "Legrand" && (
+                      <div className="flex items-center gap-2">
+                        <svg className="w-6 h-6" style={{ color: '#E30613' }} viewBox="0 0 100 100" fill="currentColor">
+                          <rect x="10" y="10" width="35" height="80" />
+                          <rect x="55" y="10" width="35" height="80" />
+                        </svg>
+                        <span className="font-sans font-black tracking-tight text-xl lowercase" style={{ color: '#E30613' }}>legrand</span>
+                      </div>
+                    )}
+                    {b.name === "ABB" && (
+                      <span className="font-sans font-black tracking-tighter text-4xl uppercase" style={{ color: '#FF000F' }}>ABB</span>
+                    )}
+                    {b.name === "HAVELLS" && (
+                      <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#ED1C24' }}>Havells</span>
+                    )}
+                    {b.name === "3M" && (
+                      <span className="font-sans font-black tracking-tighter text-5xl uppercase" style={{ color: '#FF0000' }}>3M</span>
+                    )}
+                    {b.name === "Dulux" && (
+                      <span className="font-serif font-bold italic tracking-tight text-3xl" style={{ color: '#003B7E' }}>Dulux</span>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -346,7 +345,7 @@ export default function HomePage() {
       {/* 5. CLIENT REVIEWS & TESTIMONIALS */}
       <section className="py-20 bg-[#090e17] text-white border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <ScrollReveal direction="up" className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold uppercase tracking-wider text-[#00e5f2]">
               Client Testimonials
             </span>
@@ -356,7 +355,7 @@ export default function HomePage() {
             <p className="text-sm text-slate-400 mt-3">
               Don't just take our word for it. Here is what engineering consultants and main contractors have to say about partnering with Al Kabir Lighting.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -376,31 +375,32 @@ export default function HomePage() {
                 content: "Fast RFQ turnarounds and excellent availability of ATEX industrial fittings. When we needed explosion-proof lighting for a critical port facility on short notice, they delivered from local stock within 48 hours.",
               }
             ].map((review, idx) => (
-              <div 
-                key={idx} 
-                className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 p-8 rounded-3xl hover:border-[#009ea9]/50 transition-colors group"
-              >
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-[#009ea9]/20 group-hover:text-[#009ea9]/40 transition-colors" />
-                <div className="flex gap-1 mb-6">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-[#00e5f2] text-[#00e5f2]" />
-                  ))}
+              <ScrollReveal key={idx} delay={idx * 200} direction="up" distance={30}>
+                <div className="h-full relative bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 p-8 rounded-3xl hover:border-[#009ea9]/50 transition-colors group">
+                  <Quote className="absolute top-6 right-6 w-8 h-8 text-[#009ea9]/20 group-hover:text-[#009ea9]/40 transition-colors" />
+                  <div className="flex gap-1 mb-6">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="w-4 h-4 fill-[#00e5f2] text-[#00e5f2]" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-slate-300 leading-relaxed mb-8 italic">
+                    "{review.content}"
+                  </p>
+                  <div>
+                    <h4 className="text-base font-bold text-white group-hover:text-[#00e5f2] transition-colors">{review.name}</h4>
+                    <p className="text-xs font-medium text-slate-500 mt-1">{review.role}</p>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-300 leading-relaxed mb-8 italic">
-                  "{review.content}"
-                </p>
-                <div>
-                  <h4 className="text-base font-bold text-white group-hover:text-[#00e5f2] transition-colors">{review.name}</h4>
-                  <p className="text-xs font-medium text-slate-500 mt-1">{review.role}</p>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* 6. INTERACTIVE RFQ / REQUIREMENT FORM */}
-      <ContactForm />
+      <ScrollReveal direction="up" distance={40}>
+        <ContactForm />
+      </ScrollReveal>
 
       {/* Global Quote Modal */}
       <QuoteModal
