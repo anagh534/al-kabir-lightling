@@ -13,6 +13,8 @@ import {
   Award,
   Truck,
   ExternalLink,
+  Star,
+  Quote
 } from "lucide-react";
 import { productCategories } from "@/data/categories";
 import { brands } from "@/data/brands";
@@ -341,7 +343,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. INTERACTIVE RFQ / REQUIREMENT FORM */}
+      {/* 5. CLIENT REVIEWS & TESTIMONIALS */}
+      <section className="py-20 bg-[#090e17] text-white border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#00e5f2]">
+              Client Testimonials
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+              Trusted by Oman's Leading Developers
+            </h2>
+            <p className="text-sm text-slate-400 mt-3">
+              Don't just take our word for it. Here is what engineering consultants and main contractors have to say about partnering with Al Kabir Lighting.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Ahmed Al Balushi",
+                role: "Procurement Manager, Muscat Construction Co.",
+                content: "Al Kabir Lighting completely transformed how we source for our commercial projects. Their technical support for Dialux calculations ensured we passed consultant approvals without a single revision. Highly dependable partner.",
+              },
+              {
+                name: "Sarah Matthews",
+                role: "Lead Architect, Gulf Design Studio",
+                content: "The architectural lighting fixtures we received were exactly as specified. Their team suggested equivalent alternatives that saved us 15% on budget while maintaining the exact aesthetic we needed for the hotel lobby.",
+              },
+              {
+                name: "Mohammed Tariq",
+                role: "MEP Engineer, Infrastructure Oman",
+                content: "Fast RFQ turnarounds and excellent availability of ATEX industrial fittings. When we needed explosion-proof lighting for a critical port facility on short notice, they delivered from local stock within 48 hours.",
+              }
+            ].map((review, idx) => (
+              <div 
+                key={idx} 
+                className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 p-8 rounded-3xl hover:border-[#009ea9]/50 transition-colors group"
+              >
+                <Quote className="absolute top-6 right-6 w-8 h-8 text-[#009ea9]/20 group-hover:text-[#009ea9]/40 transition-colors" />
+                <div className="flex gap-1 mb-6">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-[#00e5f2] text-[#00e5f2]" />
+                  ))}
+                </div>
+                <p className="text-sm text-slate-300 leading-relaxed mb-8 italic">
+                  "{review.content}"
+                </p>
+                <div>
+                  <h4 className="text-base font-bold text-white group-hover:text-[#00e5f2] transition-colors">{review.name}</h4>
+                  <p className="text-xs font-medium text-slate-500 mt-1">{review.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. INTERACTIVE RFQ / REQUIREMENT FORM */}
       <ContactForm />
 
       {/* Global Quote Modal */}
