@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   MapPin,
@@ -30,6 +30,16 @@ export default function ContactPage() {
     message: "",
     fileName: "",
   });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const subjectParam = params.get("subject");
+      if (subjectParam) {
+        setFormData((prev) => ({ ...prev, subject: subjectParam }));
+      }
+    }
+  }, []);
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -417,6 +427,9 @@ export default function ContactPage() {
                       }
                       className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#009ea9] focus:border-[#009ea9] outline-none bg-white"
                     >
+                      {!["Sales & Project Quotation", "Engineering & Lux Calculations", "Accounts & Invoicing", "General & Administration"].includes(formData.subject) && (
+                        <option value={formData.subject}>Quotation for: {formData.subject}</option>
+                      )}
                       <option value="Sales & Project Quotation">
                         Sales Enquiries (sales@alkabirlighting.com)
                       </option>

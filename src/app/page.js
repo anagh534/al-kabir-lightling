@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -20,7 +21,7 @@ import { productCategories } from "@/data/categories";
 import { brands } from "@/data/brands";
 import { companyInfo } from "@/data/company";
 import ContactForm from "@/components/ContactForm";
-import QuoteModal from "@/components/QuoteModal";
+
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroImg from "../../public/images/hero-lighting.jpg";
@@ -61,13 +62,11 @@ export default function HomePage() {
     setIsHeroVisible(true);
   }, []);
 
-  const [activeModalCategory, setActiveModalCategory] = useState("");
-  const [modalOpen, setModalOpen] = useState(false);
+  const router = useRouter();
   const [selectedCategoryTab, setSelectedCategoryTab] = useState("all");
 
   const handleOpenQuote = (categoryName = "") => {
-    setActiveModalCategory(categoryName);
-    setModalOpen(true);
+    router.push(`/contact?subject=${encodeURIComponent(categoryName)}`);
   };
 
   const engineeringCapabilities = [
@@ -402,12 +401,7 @@ export default function HomePage() {
         <ContactForm />
       </ScrollReveal>
 
-      {/* Global Quote Modal */}
-      <QuoteModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        initialCategory={activeModalCategory}
-      />
+
     </div>
   );
 }
