@@ -67,97 +67,106 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[620px] lg:min-h-[720px] flex items-center bg-[#090e17] text-white overflow-hidden motion-reduce:transition-none">
-        {/* Master Hero Background Photography */}
+      {/* 1. HERO SECTION - REDESIGNED */}
+      <section className="relative min-h-[100svh] flex items-center bg-[#090e17] text-white overflow-hidden motion-reduce:transition-none pt-20">
+        {/* Modern Architectural Background */}
         <div 
           className="absolute inset-0 z-0 transform-gpu"
           style={{
-            clipPath: isHeroVisible ? 'inset(0 0 0 0)' : 'inset(5% 5% 5% 5%)',
-            transition: 'clip-path 1200ms cubic-bezier(0.16, 1, 0.3, 1)',
+            clipPath: isHeroVisible ? 'inset(0 0 0 0)' : 'inset(8% 8% 8% 8%)',
+            transform: isHeroVisible ? 'scale(1)' : 'scale(1.05)',
+            transition: 'all 1600ms cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <Image
-            src={heroImg}
-            alt="Monumental Architectural Lighting in Modern Commercial Lobby"
-            fill
-            priority
-            quality={92}
-            className="object-cover object-center filter brightness-[0.78]"
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop"
+            alt="Modern Architectural Lighting in Oman"
+            className="w-full h-full object-cover object-center filter brightness-[0.65] contrast-[1.1]"
           />
-
-
-
-          {/* Subtle gradient vignette */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#090e17]/95 via-[#090e17]/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-transparent to-transparent" />
+          {/* Multi-layer thematic gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#090e17] via-[#090e17]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#090e17] via-transparent to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-[#009ea9]/10 mix-blend-overlay" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
-          <div className="max-w-3xl space-y-6">
-            <div className="overflow-hidden">
-              <p className={`text-xs sm:text-sm font-semibold tracking-widest text-[#00e5f2] uppercase transition-transform duration-1200 ease-editorial will-change-transform motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
-                Oman&apos;s Trusted Project Supply Partner
-              </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+          <div className="max-w-4xl space-y-8">
+            
+            {/* Dynamic Floating Badges - Instantly answers "What do we do?" */}
+            <div className="flex flex-wrap items-center gap-3">
+              {[
+                { name: 'Architectural Lighting', delay: 'delay-100' },
+                { name: 'Electrical Switchgear', delay: 'delay-200' },
+                { name: 'Building Materials', delay: 'delay-300' }
+              ].map((badge) => (
+                <span 
+                  key={badge.name}
+                  className={`px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest bg-white/5 border border-white/10 backdrop-blur-md text-[#e6f8fa] shadow-2xl transition-all duration-1000 ease-editorial transform will-change-transform ${isHeroVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-4 opacity-0 scale-95'} ${badge.delay}`}
+                >
+                  {badge.name}
+                </span>
+              ))}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
               <span className="block overflow-hidden pb-1">
-                <span className={`block transition-transform duration-1200 ease-editorial delay-100 will-change-transform motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
-                  Architectural Lighting &amp;
+                <span className={`block transition-transform duration-1200 ease-editorial delay-300 will-change-transform ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
+                  Engineering the Light
                 </span>
               </span>
               <span className="block overflow-hidden pb-1">
-                <span className={`block transition-transform duration-1200 ease-editorial delay-200 will-change-transform motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
-                  Building Material Solutions
+                <span className={`block transition-transform duration-1200 ease-editorial delay-400 will-change-transform text-[#00e5f2]`}>
+                  <span className={`block transition-transform duration-1200 ease-editorial delay-400 will-change-transform ${isHeroVisible ? 'translate-y-0' : 'translate-y-[110%]'}`}>
+                    that builds Oman.
+                  </span>
                 </span>
               </span>
             </h1>
 
             <div className="overflow-hidden">
-              <p className={`text-base sm:text-lg text-slate-200 leading-relaxed font-normal max-w-2xl transition-all duration-1200 ease-editorial delay-300 motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                Supplying high-performance commercial, industrial, infrastructure
-                lighting, and certified electrical building materials across the
-                Sultanate of Oman.
+              <p className={`text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl transition-all duration-1200 ease-editorial delay-500 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                We are Oman's premier supply partner, sourcing world-class luminaires, certified electrical infrastructure, and structural materials for commercial and industrial mega-projects.
               </p>
             </div>
 
-            {/* CTAs */}
-            <div className={`flex flex-wrap items-center gap-4 pt-4 transition-all duration-1200 ease-editorial delay-500 motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+            {/* CTAs with modern pulse animation */}
+            <div className={`flex flex-wrap items-center gap-5 pt-6 transition-all duration-1200 ease-editorial delay-700 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <button
                 onClick={() => handleOpenQuote("Turnkey Project Solution")}
                 type="button"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-bold text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-95 transition-all shadow-lg shadow-[#009ea9]/25 cursor-pointer"
+                className="relative inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-black text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-95 transition-all shadow-[0_0_40px_rgba(0,158,169,0.4)] hover:shadow-[0_0_60px_rgba(0,158,169,0.6)] cursor-pointer group overflow-hidden"
               >
-                <span>Request Project Quotation</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="relative z-10">Request Project Quotation</span>
+                <ArrowRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
               </button>
 
               <a
                 href="#categories"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white bg-white/5 hover:bg-white/15 border border-white/20 backdrop-blur-md transition-all cursor-pointer group"
               >
-                <span>Browse Portfolio</span>
+                <span>View Our Portfolio</span>
+                <ArrowRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
               </a>
             </div>
 
-            {/* Value Indicators */}
-            <div className={`pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 text-slate-300 text-xs transition-all duration-1200 ease-editorial delay-700 motion-reduce:transform-none motion-reduce:opacity-100 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-              <div>
-                <p className="text-xl sm:text-2xl font-black text-white">500+</p>
-                <p className="text-slate-400 mt-0.5">Projects Supplied</p>
+            {/* Value Indicators - Refined */}
+            <div className={`pt-12 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-8 text-slate-300 text-xs transition-all duration-1200 ease-editorial delay-1000 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              <div className="group">
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">500+</p>
+                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Projects Supplied</p>
               </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-black text-white">50+</p>
-                <p className="text-slate-400 mt-0.5">Global Brand Partners</p>
+              <div className="group">
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">50+</p>
+                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Global Brands</p>
               </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-black text-white">100%</p>
-                <p className="text-slate-400 mt-0.5">Oman Spec Compliant</p>
+              <div className="group">
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">100%</p>
+                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Spec Compliant</p>
               </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-black text-white">24–48h</p>
-                <p className="text-slate-400 mt-0.5">RFQ Turnaround</p>
+              <div className="group">
+                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">24h</p>
+                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">RFQ Turnaround</p>
               </div>
             </div>
           </div>
