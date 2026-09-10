@@ -104,12 +104,182 @@ function FilterAccordion({ title, sectionKey, options, filters, onFilterChange, 
 }
 
 /* ──────────────────────────────────────────────
+   Product Detail Modal
+   ────────────────────────────────────────────── */
+function ProductDetailModal({ product, isOpen, onClose, onQuote }) {
+  // Lock body scroll
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleEsc = (e) => { if (e.key === "Escape") onClose(); };
+    if (isOpen) window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [isOpen, onClose]);
+
+  if (!product) return null;
+
+  const specItems = [
+    { label: "Category", value: product.category },
+    { label: "Brand", value: product.brand },
+    { label: "Colour Temp", value: product.colorTemp },
+    { label: "Power", value: product.power },
+    { label: "Mounting", value: product.mounting },
+    { label: "Warranty", value: product.warranty },
+  ];
+
+  return (
+    <div
+      className={`fixed inset-0 z-50 transition-opacity duration-300 ${
+        isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={onClose} />
+
+      {/* Modal Panel */}
+      <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
+        <div
+          className={`relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col transition-all duration-300 ${
+            isOpen ? "scale-100 translate-y-0" : "scale-95 translate-y-4"
+          }`}
+        >
+          {/* Close button */}
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 z-20 w-10 h-10 rounded-xl bg-slate-100/80 backdrop-blur-sm hover:bg-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Scrollable content */}
+          <div className="overflow-y-auto flex-1">
+            <div className="flex flex-col md:flex-row">
+              {/* Left: Image */}
+              <div className="md:w-5/12 bg-[#f8f8f8] p-10 md:p-12 flex items-center justify-center shrink-0 md:sticky md:top-0 md:h-[90vh]">
+                <div className="relative w-full aspect-square max-w-[320px]">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="400px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Right: Details */}
+              <div className="md:w-7/12 p-6 sm:p-8 lg:p-10 flex flex-col">
+                {/* Category badge */}
+                <span className="inline-flex self-start px-3 py-1 rounded-lg bg-[#e6f8fa] text-[10px] font-bold text-[#009ea9] uppercase tracking-wider mb-4">
+                  {product.category}
+                </span>
+
+                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-2">
+                  {product.name}
+                </h2>
+
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-5">
+                  by {product.brand} — {product.specs}
+                </p>
+
+                <p className="text-sm text-slate-600 leading-relaxed mb-8">
+                  {product.longDescription || product.description}
+                </p>
+
+                {/* Spec Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                  {specItems.map((item) => (
+                    <div key={item.label} className="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">
+                        {item.label}
+                      </span>
+                      <span className="text-[13px] font-semibold text-slate-900">{item.value}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Features */}
+                {product.features && product.features.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="text-sm font-bold text-slate-900 mb-3">Key Features</h3>
+                    <div className="space-y-2">
+                      {product.features.map((feat, i) => (
+                        <div key={i} className="flex items-start gap-2.5">
+                          <div className="w-5 h-5 rounded-full bg-[#e6f8fa] text-[#009ea9] flex items-center justify-center shrink-0 mt-0.5">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span className="text-[13px] text-slate-600">{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Applications */}
+                {product.applications && product.applications.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="text-sm font-bold text-slate-900 mb-3">Applications</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {product.applications.map((app) => (
+                        <span key={app} className="px-3 py-1.5 rounded-lg border border-slate-200 text-[12px] font-semibold text-slate-700 bg-white">
+                          {app}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Certifications */}
+                {product.certifications && product.certifications.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="text-sm font-bold text-slate-900 mb-3">Certifications</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {product.certifications.map((cert) => (
+                        <span key={cert} className="px-3 py-1.5 rounded-lg bg-slate-900 text-[11px] font-bold text-white tracking-wide">
+                          {cert}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* CTA */}
+                <div className="pt-4 mt-auto border-t border-slate-100">
+                  <button
+                    onClick={() => { onQuote(product.name); onClose(); }}
+                    className="w-full py-3.5 rounded-2xl text-sm font-bold text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-[#009ea9]/25"
+                  >
+                    Request Quotation for {product.name}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────────────
    Product Card
    ────────────────────────────────────────────── */
-function ProductCard({ product, index, onQuote }) {
+function ProductCard({ product, index, onQuote, onViewDetail }) {
   return (
     <ScrollReveal direction="up" distance={24} delay={(index % 8) * 80} duration={700}>
-      <div className="group bg-white rounded-2xl border border-slate-200/60 hover:shadow-xl hover:shadow-[#009ea9]/8 hover:border-[#009ea9]/30 transition-all duration-500 flex flex-col h-full overflow-hidden transform-gpu hover:-translate-y-1">
+      <div
+        onClick={() => onViewDetail(product)}
+        className="group bg-white rounded-2xl border border-slate-200/60 hover:shadow-xl hover:shadow-[#009ea9]/8 hover:border-[#009ea9]/30 transition-all duration-500 flex flex-col h-full overflow-hidden transform-gpu hover:-translate-y-1 cursor-pointer"
+      >
         {/* Product Image */}
         <div className="relative w-full aspect-square bg-[#f8f8f8] p-8 flex items-center justify-center overflow-hidden">
           <div className="relative w-full h-full">
@@ -132,7 +302,7 @@ function ProductCard({ product, index, onQuote }) {
             {product.description}
           </p>
           <button
-            onClick={() => onQuote(product.name)}
+            onClick={(e) => { e.stopPropagation(); onQuote(product.name); }}
             className="w-full py-2.5 rounded-lg text-xs font-bold text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 shadow-sm"
           >
             Request Quote
@@ -153,6 +323,7 @@ export default function ProductsPage() {
   /* ── State ── */
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [filters, setFilters] = useState({
     categories: [],
     brands: [],
@@ -379,6 +550,7 @@ export default function ProductsPage() {
                       product={product}
                       index={idx}
                       onQuote={handleQuote}
+                      onViewDetail={setSelectedProduct}
                     />
                   ))}
                 </div>
@@ -447,6 +619,16 @@ export default function ProductsPage() {
           </div>
         </div>
       </div>
+
+      {/* ═══════════════════════════════════════
+          7. PRODUCT DETAIL MODAL
+          ═══════════════════════════════════════ */}
+      <ProductDetailModal
+        product={selectedProduct}
+        isOpen={!!selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+        onQuote={handleQuote}
+      />
     </div>
   );
 }
