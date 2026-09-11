@@ -52,42 +52,63 @@ export default function BranchesPage() {
             </div>
           </ScrollReveal>
 
-          {/* Branch Tabs */}
+          {/* Branch Grid Selector */}
           <ScrollReveal direction="up" distance={16} delay={100}>
-            <div className="flex overflow-x-auto gap-3 pb-2 mb-10 scrollbar-hide snap-x snap-mandatory">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
               {branches.map((branch) => (
                 <button
                   key={branch.id}
                   onClick={() => setActiveBranchId(branch.id)}
-                  className={`shrink-0 snap-start flex items-center gap-3 px-5 py-3.5 rounded-2xl border text-left transition-all duration-300 ${
+                  className={`relative flex flex-col items-start p-5 rounded-2xl border text-left transition-all duration-300 overflow-hidden group ${
                     activeBranchId === branch.id
-                      ? "bg-[#009ea9] text-white border-[#009ea9] shadow-lg shadow-[#009ea9]/20"
-                      : "bg-white text-slate-700 border-slate-200 hover:border-[#009ea9]/40 hover:shadow-sm"
+                      ? "bg-[#009ea9] border-[#009ea9] shadow-lg shadow-[#009ea9]/25"
+                      : "bg-white border-slate-200 hover:border-[#009ea9]/40 hover:bg-slate-50 hover:shadow-md"
                   }`}
                 >
-                  <div
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                      activeBranchId === branch.id
-                        ? "bg-white/20 text-white"
-                        : "bg-slate-100 text-[#009ea9]"
-                    }`}
-                  >
-                    {branch.isHeadquarters ? (
-                      <Star className="w-4 h-4" />
-                    ) : (
-                      <Building2 className="w-4 h-4" />
+                  <div className="flex items-center gap-3 w-full mb-3">
+                    <div
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                        activeBranchId === branch.id
+                          ? "bg-white/20 text-white"
+                          : "bg-slate-100 text-[#009ea9] group-hover:bg-[#e6f8fa]"
+                      }`}
+                    >
+                      {branch.isHeadquarters ? (
+                        <Star className="w-5 h-5" />
+                      ) : (
+                        <Building2 className="w-5 h-5" />
+                      )}
+                    </div>
+                    {branch.isHeadquarters && (
+                      <span className={`ml-auto text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md border ${
+                        activeBranchId === branch.id
+                          ? "bg-white/10 border-white/20 text-white"
+                          : "bg-amber-50 border-amber-200 text-amber-600"
+                      }`}>
+                        HQ
+                      </span>
                     )}
                   </div>
                   <div>
-                    <p className="text-sm font-bold leading-tight">{branch.name}</p>
+                    <p className={`text-sm sm:text-base font-bold leading-tight ${
+                      activeBranchId === branch.id ? "text-white" : "text-slate-900"
+                    }`}>
+                      {branch.name}
+                    </p>
                     <p
-                      className={`text-[11px] mt-0.5 ${
-                        activeBranchId === branch.id ? "text-white/70" : "text-slate-400"
+                      className={`text-xs mt-1 font-medium ${
+                        activeBranchId === branch.id ? "text-white/80" : "text-slate-500"
                       }`}
                     >
                       {branch.type}
                     </p>
                   </div>
+                  {/* Active Indicator Bar */}
+                  <div 
+                    className={`absolute bottom-0 left-0 h-1 bg-white transition-all duration-500 ease-out ${
+                      activeBranchId === branch.id ? "w-full opacity-100" : "w-0 opacity-0"
+                    }`}
+                  />
                 </button>
               ))}
             </div>
