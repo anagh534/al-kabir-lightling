@@ -1,3 +1,16 @@
+import img1 from "../../public/images/products/led_downlight.jpg";
+import img2 from "../../public/images/products/led_panel_light.jpg";
+import img3 from "../../public/images/products/led_track_light.jpg";
+import img4 from "../../public/images/products/led_pendant_light.jpg";
+import img5 from "../../public/images/products/led_linear_light.jpg";
+import img6 from "../../public/images/products/led_ceiling_light.jpg";
+import img7 from "../../public/images/products/led_wall_light.jpg";
+import img8 from "../../public/images/products/led_spot_light.jpg";
+import img9 from "../../public/images/products/decorative_chandelier.jpg";
+import img10 from "../../public/images/products/led_ceiling_fan_light.jpg";
+import img11 from "../../public/images/products/emergency_light.jpg";
+import img12 from "../../public/images/products/smart_led_light.jpg";
+
 export const products = [
   {
     id: "p1",
@@ -14,7 +27,7 @@ export const products = [
     applications: ["Offices & Workspaces", "Homes & Residential", "Retail Stores"],
     certifications: ["CE", "RoHS"],
     warranty: "5 Years",
-    image: "/images/products/led_downlight.jpg",
+    image: img1,
   },
   {
     id: "p2",
@@ -31,7 +44,7 @@ export const products = [
     applications: ["Offices & Workspaces", "Educational Institutions", "Healthcare Facilities"],
     certifications: ["CE", "RoHS", "ENEC"],
     warranty: "5 Years",
-    image: "/images/products/led_panel_light.jpg",
+    image: img2,
   },
   {
     id: "p3",
@@ -48,7 +61,7 @@ export const products = [
     applications: ["Retail Stores & Showrooms", "Art Galleries", "Hospitality"],
     certifications: ["CE", "RoHS", "UL Listed"],
     warranty: "3 Years",
-    image: "/images/products/led_track_light.jpg",
+    image: img3,
   },
   {
     id: "p4",
@@ -65,7 +78,7 @@ export const products = [
     applications: ["Homes & Residential", "Hotels & Hospitality", "Cafes & Restaurants"],
     certifications: ["CE", "RoHS"],
     warranty: "3 Years",
-    image: "/images/products/led_pendant_light.jpg",
+    image: img4,
   },
   {
     id: "p5",
@@ -82,7 +95,7 @@ export const products = [
     applications: ["Offices & Workspaces", "Educational Institutions", "Corridors"],
     certifications: ["CE", "RoHS"],
     warranty: "5 Years",
-    image: "/images/products/led_linear_light.jpg",
+    image: img5,
   },
   {
     id: "p6",
@@ -99,7 +112,7 @@ export const products = [
     applications: ["Homes & Residential", "Bathrooms", "Utility Areas"],
     certifications: ["CE", "RoHS"],
     warranty: "2 Years",
-    image: "/images/products/led_ceiling_light.jpg",
+    image: img6,
   },
   {
     id: "p7",
@@ -116,7 +129,7 @@ export const products = [
     applications: ["Hotels & Hospitality", "Building Facades", "Homes & Residential"],
     certifications: ["CE", "RoHS"],
     warranty: "3 Years",
-    image: "/images/products/led_wall_light.jpg",
+    image: img7,
   },
   {
     id: "p8",
@@ -133,7 +146,7 @@ export const products = [
     applications: ["Retail Stores & Showrooms", "Art Galleries", "Homes & Residential"],
     certifications: ["CE", "RoHS"],
     warranty: "3 Years",
-    image: "/images/products/led_spot_light.jpg",
+    image: img8,
   },
   {
     id: "p9",
@@ -150,7 +163,7 @@ export const products = [
     applications: ["Hotels & Hospitality", "Homes & Residential", "Corporate Lobbies"],
     certifications: ["CE", "RoHS"],
     warranty: "3 Years",
-    image: "/images/products/decorative_chandelier.jpg",
+    image: img9,
   },
   {
     id: "p10",
@@ -167,7 +180,7 @@ export const products = [
     applications: ["Homes & Residential", "Hotels & Hospitality"],
     certifications: ["CE", "RoHS"],
     warranty: "2 Years",
-    image: "/images/products/led_ceiling_fan_light.jpg",
+    image: img10,
   },
   {
     id: "p11",
@@ -184,7 +197,7 @@ export const products = [
     applications: ["Offices & Workspaces", "Retail Stores & Showrooms", "Educational Institutions"],
     certifications: ["CE", "RoHS", "ISO 7010"],
     warranty: "2 Years",
-    image: "/images/products/emergency_light.jpg",
+    image: img11,
   },
   {
     id: "p12",
@@ -201,7 +214,7 @@ export const products = [
     applications: ["Homes & Residential", "Hotels & Hospitality", "Offices & Workspaces"],
     certifications: ["CE", "RoHS", "Wi-Fi Certified"],
     warranty: "2 Years",
-    image: "/images/products/smart_led_light.jpg",
+    image: img12,
   }
 ];
 
