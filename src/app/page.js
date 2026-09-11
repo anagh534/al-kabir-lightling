@@ -28,6 +28,7 @@ import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroImg from "../../public/images/hero/hero-lighting.jpg";
 
+import officeImg from "../../public/images/portfolio/office.jpg";
 const Counter = ({ end, suffix = "", duration = 2000, trigger }) => {
   const [count, setCount] = useState(0);
 
@@ -87,7 +88,7 @@ export default function HomePage() {
           }}
         >
           <img
-            src="/images/portfolio/office.jpg"
+            src={officeImg.src}
             alt="Modern Architectural Lighting in Oman"
             className="w-full h-full object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.75] contrast-[1.15] transition-all duration-[2000ms] ease-out"
           />
