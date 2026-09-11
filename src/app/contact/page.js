@@ -21,6 +21,7 @@ import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import { productCategories } from "@/data/categories";
 import { companyInfo } from "@/data/company";
+import { branches } from "@/data/branches";
 import { faqs } from "@/data/faqs";
 import { ChevronDown } from "lucide-react";
 
@@ -238,13 +239,13 @@ export default function ContactPage() {
                 {/* Instant WhatsApp Action */}
                 <div className="pt-2">
                   <a
-                    href={`https://wa.me/${companyInfo.whatsapp}?text=Hello%20Al%20Kabir%20Lighting,%20I%20would%20like%20to%20inquire%20about%20your%20products%20and%20pricing.`}
+                    href={`https://wa.me/${companyInfo.whatsapp}?text=${encodeURIComponent(companyInfo.whatsappMessage)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-xs"
                   >
                     <MessageSquare className="w-4 h-4" />
-                    <span>Chat on WhatsApp (+968 9123 4567)</span>
+                    <span>Chat on WhatsApp ({companyInfo.whatsappFormatted})</span>
                   </a>
                 </div>
               </div>
@@ -453,17 +454,17 @@ export default function ContactPage() {
               Location &amp; Showroom
             </span>
             <h2 className="text-2xl font-bold text-slate-900 mt-1">
-              Visit Our Muscat Headquarters
+              Visit Our {companyInfo.city} Headquarters
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Conveniently situated on Sultan Qaboos Street in Al Khuwair.
+              Conveniently situated at {companyInfo.address}.
             </p>
           </div>
 
           <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-white h-80 sm:h-96 relative">
             <iframe
-              title="Al Kabir Lighting Muscat Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116986.72149586118!2d58.3496035!3d23.5932599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ff24e23114d5%3A0x6b4fb712f5188f61!2sAl%20Khuwair%2C%20Muscat%2C%20Oman!5e0!3m2!1sen!2som!4v1699999999999!5m2!1sen!2som"
+              title={`${companyInfo.name} ${companyInfo.city} Location`}
+              src={branches[0].mapUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}

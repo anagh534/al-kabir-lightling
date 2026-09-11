@@ -26,15 +26,15 @@ export default function Header({ onRequestQuote }) {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009ea9] rounded-lg p-1"
-            aria-label="Al Kabir Lighting - Home"
+            className="flex-shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009ea9] rounded-lg"
+            aria-label={`${companyInfo.name} - Home`}
           >
-            <div className="relative w-40 h-14 sm:w-48 sm:h-16 flex items-center">
+            <div className="relative w-40 sm:w-48 lg:w-56 h-10 sm:h-12 lg:h-14 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={logoImg}
-                alt="Al Kabir Lighting"
+                alt={companyInfo.name}
+                className="object-contain object-left w-full h-full"
                 priority
-                className="object-contain w-auto h-full"
               />
             </div>
           </Link>

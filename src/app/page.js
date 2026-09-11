@@ -20,6 +20,7 @@ import {
 import { productCategories } from "@/data/categories";
 import { brands } from "@/data/brands";
 import { companyInfo } from "@/data/company";
+import { aboutData } from "@/data/about";
 import ContactForm from "@/components/ContactForm";
 import { testimonials } from "@/data/testimonials";
 
@@ -70,32 +71,7 @@ export default function HomePage() {
     router.push(`/contact?subject=${encodeURIComponent(categoryName)}#quote-form`);
   };
 
-  const engineeringCapabilities = [
-    {
-      icon: Cpu,
-      title: "Dialux 3D Photometric Simulation",
-      description:
-        "Comprehensive Lux level calculations, false-color heatmaps, and glare UGR analyses conforming strictly to Oman Municipality and CIBSE guidelines.",
-    },
-    {
-      icon: Layers,
-      title: "Consultant Submittal Preparation",
-      description:
-        "Full technical dossiers with compliance statements, manufacturer datasheets, test certificates, and third-party lab approvals for fast consultant sign-off.",
-    },
-    {
-      icon: FileSpreadsheet,
-      title: "BOQ Take-Off & Value Engineering",
-      description:
-        "Itemized bill-of-quantity pricing and alternative equivalent luminaire proposals that maintain technical integrity while optimizing contractor margins.",
-    },
-    {
-      icon: Award,
-      title: "Sample Coordination & Mockups",
-      description:
-        "Physical luminaire and wiring accessory samples coordinated directly for client and consultant approval committees prior to bulk procurement.",
-    },
-  ];
+  const engineeringCapabilities = aboutData.technicalServices.slice(0, 4);
 
   return (
     <div className="flex flex-col">
@@ -168,22 +144,21 @@ export default function HomePage() {
 
             {/* Value Indicators - Refined */}
             <div className="pt-8 lg:pt-12 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8 text-slate-300 text-xs">
-              <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={500} suffix="+" trigger={isHeroVisible} /></p>
-                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Projects Supplied</p>
-              </div>
-              <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={50} suffix="+" trigger={isHeroVisible} /></p>
-                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Global Brands</p>
-              </div>
-              <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={100} suffix="%" trigger={isHeroVisible} /></p>
-                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">Spec Compliant</p>
-              </div>
-              <div className="group">
-                <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors"><Counter end={24} suffix="h" trigger={isHeroVisible} /></p>
-                <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">RFQ Turnaround</p>
-              </div>
+              {companyInfo.stats.map((stat, idx) => {
+                // Parse number and suffix (e.g. "500+" -> end=500, suffix="+")
+                const match = stat.value.match(/^(\d+)(.*)$/);
+                const end = match ? parseInt(match[1], 10) : 0;
+                const suffix = match ? match[2] : "";
+                
+                return (
+                  <div key={idx} className="group">
+                    <p className="text-3xl font-black text-white group-hover:text-[#00e5f2] transition-colors">
+                      <Counter end={end} suffix={suffix} trigger={isHeroVisible} />
+                    </p>
+                    <p className="text-slate-400 mt-1 uppercase tracking-widest text-[10px] font-bold">{stat.label}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

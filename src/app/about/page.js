@@ -17,98 +17,16 @@ import {
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import studioImg from "../../../public/images/about-studio.jpg";
+import { companyInfo } from "@/data/company";
+import { aboutData } from "@/data/about";
 
 export const metadata = {
-  title: "About Us | Engineering & Lighting Solutions Partner in Oman",
-  description:
-    "Learn about Al Kabir Lighting: our vision, mission, core strengths, international brand sourcing, and engineering technical support for Oman and GCC projects.",
+  title: `About Us | ${companyInfo.name}`,
+  description: companyInfo.description,
 };
 
 export default function AboutPage() {
-  const strengths = [
-    {
-      title: "Multi-Brand Portfolio",
-      desc: "Direct access to top global manufacturers across lighting, power distribution, and building materials.",
-    },
-    {
-      title: "Lighting & Materials Expertise",
-      desc: "Specialized engineering knowledge across commercial, infrastructure, heavy industrial, and ATEX standards.",
-    },
-    {
-      title: "Strong Global Sourcing",
-      desc: "Established supply chains across Europe, the UK, the Middle East, India, and the Far East.",
-    },
-    {
-      title: "Project-Based Supply",
-      desc: "Turnkey supply scheduling tailored to contractor construction milestones and delivery timelines.",
-    },
-    {
-      title: "Technical Engineering Support",
-      desc: "Comprehensive Dialux Lux calculations, consultant technical submittal dossiers, and compliance certificates.",
-    },
-    {
-      title: "Responsive RFQ Turnaround",
-      desc: "Commercial quotation desk providing structured, line-item pricing within 24–48 hours of BOQ receipt.",
-    },
-    {
-      title: "Local Oman Stock",
-      desc: "Central warehousing in Muscat maintaining buffer stock for fast-moving project items.",
-    },
-    {
-      title: "Dedicated Client Care",
-      desc: "Assigned account engineers who coordinate every step from specification to on-site testing and commissioning.",
-    },
-  ];
-
-  const technicalServices = [
-    {
-      icon: Cpu,
-      title: "Lux Calculation & Dialux Simulation",
-      description:
-        "Computer-aided lighting simulations to ensure illuminance levels conform strictly to Oman and CIBSE standards.",
-    },
-    {
-      icon: FileSpreadsheet,
-      title: "BOQ & Tender Estimation Support",
-      description:
-        "Detailed bill-of-quantity takeoff and commercial itemization for contractors preparing competitive bids.",
-    },
-    {
-      icon: Layers,
-      title: "Technical Submittal Dossiers",
-      description:
-        "Full technical dossiers including compliance statements, manufacturer datasheets, test reports, and third-party certificates.",
-    },
-    {
-      icon: Award,
-      title: "Product Samples Coordination",
-      description:
-        "Arranging physical luminaire and wiring accessory samples for client and consultant approval committees.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Alternative Equivalent Engineering",
-      description:
-        "Proposing value-engineered equivalent solutions that match technical specifications while optimizing project budgets.",
-    },
-    {
-      icon: Truck,
-      title: "Project Delivery & Supply Coordination",
-      description:
-        "Fleet logistics and coordinated drop-offs directly to construction sites throughout the Sultanate.",
-    },
-  ];
-
-  const markets = [
-    "Sultanate of Oman Infrastructure",
-    "GCC Cross-Border Projects",
-    "General MEP Contractors & Consultants",
-    "Government Organisations & Ministries",
-    "Oil & Gas / Energy Operating Companies",
-    "Private Developers & Asset Owners",
-    "Facility Management Companies",
-    "Traders, Wholesalers & Resellers",
-  ];
+  const { strengths, technicalServices, markets, narrative, vision, mission } = aboutData;
 
   return (
     <div className="flex flex-col bg-white">
@@ -131,34 +49,21 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 Dependable Engineering &amp; Sourcing for Oman&apos;s Built Environment
               </h2>
-              <p className="text-base text-slate-600 leading-relaxed">
-                <strong>Al Kabir Lighting</strong> is an Oman-based lighting and
-                building material trading company serving contractors,
-                consultants, industries, government organisations, developers,
-                and project customers across the Sultanate and wider GCC region.
-              </p>
-              <p className="text-base text-slate-600 leading-relaxed">
-                We provide dependable products, commercially competitive
-                solutions, and professional project support through a
-                diversified portfolio spanning architectural indoor fixtures,
-                exterior infrastructure luminaires, heavy industrial ATEX
-                fittings, power distribution cables, and high-performance
-                building materials.
-              </p>
+              <div className="space-y-4 text-base text-slate-600 leading-relaxed">
+                {narrative.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
 
               <div className="pt-2 grid grid-cols-2 gap-4">
-                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
-                  <p className="text-3xl font-black text-[#009ea9]">500+</p>
-                  <p className="text-xs font-semibold text-slate-600 mt-1">
-                    Projects Successfully Supplied
-                  </p>
-                </div>
-                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
-                  <p className="text-3xl font-black text-[#009ea9]">50+</p>
-                  <p className="text-xs font-semibold text-slate-600 mt-1">
-                    Global Brand Partners
-                  </p>
-                </div>
+                {companyInfo.stats.slice(0, 2).map((stat, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                    <p className="text-3xl font-black text-[#009ea9]">{stat.value}</p>
+                    <p className="text-xs font-semibold text-slate-600 mt-1">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </ScrollReveal>
 
@@ -202,9 +107,7 @@ export default function AboutPage() {
                   Our Vision
                 </h3>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  To become one of the most trusted lighting and building material
-                  solution providers in Oman and the GCC, renowned for engineering
-                  integrity, product dependability, and rapid commercial response.
+                  {vision}
                 </p>
               </div>
             </ScrollReveal>
@@ -219,10 +122,7 @@ export default function AboutPage() {
                   Our Mission
                 </h3>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  To provide reliable products, professional service and
-                  commercially competitive solutions while building long-term
-                  relationships with customers, suppliers and project partners
-                  supporting the Sultanate’s national growth.
+                  {mission}
                 </p>
               </div>
             </ScrollReveal>

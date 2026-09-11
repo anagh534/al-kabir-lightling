@@ -34,7 +34,7 @@ export default function TopBar() {
         <div className="flex items-center gap-4 text-slate-700 font-medium">
           <div className="flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-[#009ea9]" aria-hidden="true" />
-            <span>Muscat, Oman</span>
+            <span>{companyInfo.city}, {companyInfo.country}</span>
           </div>
           
           <div className="h-3 w-px bg-slate-300"></div>
@@ -58,7 +58,7 @@ export default function TopBar() {
 
         {/* Center: Tagline (hidden on very small screens) */}
         <div className="hidden md:block text-slate-600 font-medium tracking-wide">
-          <span>Supplying a Brighter Tomorrow</span>
+          <span>{companyInfo.tagline}</span>
         </div>
 
         {/* Right: Phone & Email */}
@@ -66,7 +66,7 @@ export default function TopBar() {
           <a
             href={`tel:${companyInfo.phone.replace(/\s+/g, "")}`}
             className="flex items-center gap-1.5 hover:text-[#009ea9] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009ea9] rounded"
-            aria-label={`Call Al Kabir Lighting at ${companyInfo.phone}`}
+            aria-label={`Call ${companyInfo.name} at ${companyInfo.phone}`}
           >
             <Phone className="w-3.5 h-3.5 text-[#009ea9]" aria-hidden="true" />
             <span className="font-semibold">{companyInfo.phone}</span>
@@ -74,7 +74,7 @@ export default function TopBar() {
           <a
             href={`mailto:${companyInfo.email}`}
             className="flex items-center gap-1.5 hover:text-[#009ea9] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009ea9] rounded"
-            aria-label={`Email Al Kabir Lighting at ${companyInfo.email}`}
+            aria-label={`Email ${companyInfo.name} at ${companyInfo.email}`}
           >
             <Mail className="w-3.5 h-3.5 text-[#009ea9]" aria-hidden="true" />
             <span>{companyInfo.email}</span>
