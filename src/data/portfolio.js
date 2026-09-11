@@ -1,10 +1,17 @@
+import airportImg from "../../public/images/portfolio/airport.jpg";
+import conventionImg from "../../public/images/portfolio/convention.jpg";
+import mallImg from "../../public/images/portfolio/mall.jpg";
+import portImg from "../../public/images/portfolio/port.jpg";
+import hotelImg from "../../public/images/portfolio/hotel.jpg";
+import officeImg from "../../public/images/portfolio/office.jpg";
+
 export const projects = [
   {
     id: 1,
     title: "Muscat International Airport",
     category: "Infrastructure",
     description: "Complete supply of high-mast apron lighting and interior terminal LED solutions. Meeting rigorous international aviation standards.",
-    image: "/images/portfolio/airport.jpg",
+    image: airportImg,
     year: "2023",
     brands: ["Philips", "Schneider Electric"]
   },
@@ -13,7 +20,7 @@ export const projects = [
     title: "Oman Convention & Exhibition Centre",
     category: "Commercial",
     description: "Architectural interior lighting and advanced dimming control systems for exhibition halls and luxury auditoriums.",
-    image: "/images/portfolio/convention.jpg",
+    image: conventionImg,
     year: "2022",
     brands: ["OSRAM", "Legrand"]
   },
@@ -22,7 +29,7 @@ export const projects = [
     title: "Mall of Oman",
     category: "Retail",
     description: "Dynamic facade lighting, general retail ambiance lighting, and comprehensive building material supply for structural integrity.",
-    image: "/images/portfolio/mall.jpg",
+    image: mallImg,
     year: "2021",
     brands: ["Philips", "Havells"]
   },
@@ -31,7 +38,7 @@ export const projects = [
     title: "Sohar Industrial Port",
     category: "Industrial",
     description: "Heavy-duty ATEX certified industrial lighting and robust electrical switchgear for harsh maritime environments.",
-    image: "/images/portfolio/port.jpg",
+    image: portImg,
     year: "2023",
     brands: ["ABB", "3M"]
   },
@@ -40,7 +47,7 @@ export const projects = [
     title: "Kempinski Hotel Muscat",
     category: "Hospitality",
     description: "Luxury hospitality lighting design supply, ensuring a warm, inviting, and highly controlled atmospheric experience.",
-    image: "/images/portfolio/hotel.jpg",
+    image: hotelImg,
     year: "2020",
     brands: ["Legrand", "Dulux"]
   },
@@ -49,7 +56,7 @@ export const projects = [
     title: "Ministry of Education HQ",
     category: "Government",
     description: "Energy-efficient office lighting panels and complete wiring device solutions for a modern corporate workspace.",
-    image: "/images/portfolio/office.jpg",
+    image: officeImg,
     year: "2022",
     brands: ["Schneider Electric", "Philips"]
   }
