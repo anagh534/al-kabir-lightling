@@ -29,10 +29,13 @@ export default function PortfolioPage() {
         
         <ScrollReveal direction="up" distance={40} delay={100}>
           <div className="group relative w-full h-[500px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl transform-gpu border border-slate-200/50">
-            <img
+            <Image
               src={featuredProject.image}
               alt={featuredProject.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
+              fill
+              sizes="100vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
+              unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#090e17]/90 via-[#090e17]/40 to-transparent" />
             
@@ -85,10 +88,13 @@ function ProjectCard({ project, index }) {
     <ScrollReveal direction="up" distance={30} delay={(index % 3) * 150} className="h-full">
       <div className="h-full flex flex-col group bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#009ea9]/40 transition-all duration-500">
         <div className="relative h-64 shrink-0 overflow-hidden bg-slate-100">
-          <img
+          <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700" />
           <span className="absolute bottom-4 left-4 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest bg-white/20 backdrop-blur-md text-white rounded-md">
