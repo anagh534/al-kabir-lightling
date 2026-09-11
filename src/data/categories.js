@@ -1,15 +1,15 @@
-import indoorImg from "../../public/images/cat-indoor.jpg";
-import outdoorImg from "../../public/images/cat-outdoor.jpg";
-import architecturalImg from "../../public/images/cat-architectural.jpg";
-import industrialImg from "../../public/images/cat-industrial.jpg";
-import streetImg from "../../public/images/cat-street.jpg";
-import emergencyImg from "../../public/images/cat-emergency.jpg";
-import landscapeImg from "../../public/images/cat-landscape.jpg";
-import solarImg from "../../public/images/cat-solar.jpg";
-import explosionImg from "../../public/images/cat-explosion.jpg";
-import sportsImg from "../../public/images/cat-sports.jpg";
-import electricalImg from "../../public/images/cat-electrical.jpg";
-import materialsImg from "../../public/images/cat-materials.jpg";
+import indoorImg from "../../public/images/categories/cat-indoor.jpg";
+import outdoorImg from "../../public/images/categories/cat-outdoor.jpg";
+import architecturalImg from "../../public/images/categories/cat-architectural.jpg";
+import industrialImg from "../../public/images/categories/cat-industrial.jpg";
+import streetImg from "../../public/images/categories/cat-street.jpg";
+import emergencyImg from "../../public/images/categories/cat-emergency.jpg";
+import landscapeImg from "../../public/images/categories/cat-landscape.jpg";
+import solarImg from "../../public/images/categories/cat-solar.jpg";
+import explosionImg from "../../public/images/categories/cat-explosion.jpg";
+import sportsImg from "../../public/images/categories/cat-sports.jpg";
+import electricalImg from "../../public/images/categories/cat-electrical.jpg";
+import materialsImg from "../../public/images/categories/cat-materials.jpg";
 
 export const productCategories = [
   {

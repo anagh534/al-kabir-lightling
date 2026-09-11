@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
-import studioImg from "../../../public/images/about-studio.jpg";
+import studioImg from "../../../public/images/about/about-studio.jpg";
 import { companyInfo } from "@/data/company";
 import { aboutData } from "@/data/about";
 

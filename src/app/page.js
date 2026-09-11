@@ -26,7 +26,7 @@ import { testimonials } from "@/data/testimonials";
 
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import ScrollReveal from "@/components/ScrollReveal";
-import heroImg from "../../public/images/hero-lighting.jpg";
+import heroImg from "../../public/images/hero/hero-lighting.jpg";
 
 const Counter = ({ end, suffix = "", duration = 2000, trigger }) => {
   const [count, setCount] = useState(0);

@@ -41,7 +41,7 @@ export const metadata = {
     siteName: "Al Kabir Lighting",
     images: [
       {
-        url: "/images/hero-lighting.jpg",
+        url: "/images/hero/hero-lighting.jpg",
         width: 1920,
         height: 1080,
         alt: "Al Kabir Lighting Oman Showroom & Architectural Projects",
@@ -55,7 +55,7 @@ export const metadata = {
     title: "Al Kabir Lighting | Lighting & Building Material Solutions Oman",
     description:
       "Premium lighting, electrical, and project supply across the Sultanate of Oman.",
-    images: ["/images/hero-lighting.jpg"],
+    images: ["/images/hero/hero-lighting.jpg"],
   },
   icons: {
     icon: "/logo.png",

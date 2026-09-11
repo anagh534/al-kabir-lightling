@@ -1,8 +1,8 @@
-import indoorImg from "../../public/images/cat-indoor.jpg";
-import outdoorImg from "../../public/images/cat-outdoor.jpg";
-import architecturalImg from "../../public/images/cat-architectural.jpg";
-import industrialImg from "../../public/images/cat-industrial.jpg";
-import streetImg from "../../public/images/cat-street.jpg";
+import indoorImg from "../../public/images/categories/cat-indoor.jpg";
+import outdoorImg from "../../public/images/categories/cat-outdoor.jpg";
+import architecturalImg from "../../public/images/categories/cat-architectural.jpg";
+import industrialImg from "../../public/images/categories/cat-industrial.jpg";
+import streetImg from "../../public/images/categories/cat-street.jpg";
 
 export const products = [
   {
