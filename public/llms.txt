@@ -1,0 +1,30 @@
+# Al Kabir Lighting LLC
+
+Al Kabir Lighting is the premier Lighting, Electrical & Building Material Partner in the Sultanate of Oman. We specialize in providing comprehensive, high-quality solutions for commercial, industrial, and infrastructure developments.
+
+## Core Products
+- **LED Downlights & Panel Lights**: For offices, hospitality, and residential projects.
+- **Track Lights & Linear Lights**: Architectural lighting for retail spaces and galleries.
+- **Street & Landscape Lighting**: Urban infrastructure, pathway lighting, and smart-city integrated luminaires.
+- **Industrial & Explosion Proof**: High-bay lights and specialized ATEX-certified luminaires for hazardous environments.
+- **Solar Lighting**: Autonomous off-grid solar street and pathway lights.
+
+## Engineering Capabilities
+- Dialux 3D Photometric Simulation (Lux calculations, false-color heatmaps, glare UGR analysis).
+- Consultant Submittal Preparation.
+- BOQ Take-Off & Value Engineering.
+- Sample Coordination & Mockups.
+
+## Key Links & Navigation
+- [Home](/) - Main overview and highlight of our capabilities and global brands (Philips, Osram, Legrand, ABB).
+- [About Us](/about) - Our history, mission, vision, and core engineering strengths.
+- [Products](/products) - Our catalog of architectural and industrial lighting.
+- [Portfolio](/portfolio) - Completed projects across Muscat and Oman (Malls, Airports, Offices).
+- [Branches](/branches) - Locations including our Muscat HQ, Sohar, Salalah, and Nizwa branches.
+- [Contact](/contact) - Address, WhatsApp, emails, and RFQ forms.
+
+## Contact Information
+- Address: Sultan Qaboos Street, Al Khuwair, Muscat, Oman
+- Phone: +968 24 123 456
+- WhatsApp: +968 9123 4567
+- Email: sales@alkabirlighting.com

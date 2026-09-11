@@ -2,6 +2,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import SiteLayout from "@/components/SiteLayout";
+import { siteConfig } from "@/data/siteConfig";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -11,7 +12,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://alkabirlighting.com"),
+  robots: {
+    index: siteConfig.allowIndexing,
+    follow: siteConfig.allowIndexing,
+  },
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
     default: "Al Kabir Lighting | Premium Architectural, Industrial & Infrastructure Solutions in Oman",
     template: "%s | Al Kabir Lighting Oman",
