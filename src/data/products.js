@@ -1,8 +1,3 @@
-import indoorImg from "../../public/images/categories/cat-indoor.jpg";
-import outdoorImg from "../../public/images/categories/cat-outdoor.jpg";
-import architecturalImg from "../../public/images/categories/cat-architectural.jpg";
-import industrialImg from "../../public/images/categories/cat-industrial.jpg";
-import streetImg from "../../public/images/categories/cat-street.jpg";
 
 export const products = [
   {
@@ -20,7 +15,7 @@ export const products = [
     applications: ["Offices & Workspaces", "Hotels & Hospitality", "Retail Stores"],
     certifications: ["CE", "RoHS", "IEC 60598"],
     warranty: "5 Years",
-    image: indoorImg,
+    image: "/images/categories/cat-indoor.jpg",
   },
   {
     id: "p2",
@@ -37,7 +32,7 @@ export const products = [
     applications: ["Retail Stores", "Art Galleries", "Hospitality"],
     certifications: ["CE", "RoHS", "UL Listed"],
     warranty: "3 Years",
-    image: indoorImg,
+    image: "/images/categories/cat-indoor.jpg",
   },
   {
     id: "p3",
@@ -54,7 +49,7 @@ export const products = [
     applications: ["Building Facades", "Security Perimeters", "Sports Courts"],
     certifications: ["CE", "RoHS", "IEC 60598", "IECEE CB"],
     warranty: "5 Years",
-    image: outdoorImg,
+    image: "/images/categories/cat-outdoor.jpg",
   },
   {
     id: "p4",
@@ -71,7 +66,7 @@ export const products = [
     applications: ["Gardens & Parks", "Hotel Grounds", "Commercial Campuses"],
     certifications: ["CE", "RoHS"],
     warranty: "3 Years",
-    image: outdoorImg,
+    image: "/images/categories/cat-outdoor.jpg",
   },
   {
     id: "p5",
@@ -88,7 +83,7 @@ export const products = [
     applications: ["Corporate Offices", "Educational Facilities", "Healthcare"],
     certifications: ["CE", "RoHS", "ENEC"],
     warranty: "5 Years",
-    image: architecturalImg,
+    image: "/images/categories/cat-architectural.jpg",
   },
   {
     id: "p6",
@@ -105,7 +100,7 @@ export const products = [
     applications: ["Museums & Galleries", "Corporate Lobbies", "Premium Retail"],
     certifications: ["CE", "RoHS"],
     warranty: "3 Years",
-    image: architecturalImg,
+    image: "/images/categories/cat-architectural.jpg",
   },
   {
     id: "p7",
@@ -122,7 +117,7 @@ export const products = [
     applications: ["Warehouses", "Manufacturing Plants", "Distribution Centres"],
     certifications: ["CE", "RoHS", "IEC 60598", "ATEX Zone 2"],
     warranty: "5 Years",
-    image: industrialImg,
+    image: "/images/categories/cat-industrial.jpg",
   },
   {
     id: "p8",
@@ -139,7 +134,7 @@ export const products = [
     applications: ["Oil & Gas Refineries", "Petrochemical Plants", "Offshore Platforms"],
     certifications: ["ATEX", "IECEx", "CE", "RoHS"],
     warranty: "5 Years",
-    image: industrialImg,
+    image: "/images/categories/cat-industrial.jpg",
   },
   {
     id: "p9",
@@ -156,7 +151,7 @@ export const products = [
     applications: ["Urban Roads", "Highways", "Smart City Projects"],
     certifications: ["CE", "RoHS", "ENEC", "IEC 60598"],
     warranty: "7 Years",
-    image: streetImg,
+    image: "/images/categories/cat-street.jpg",
   },
   {
     id: "p10",
@@ -173,7 +168,7 @@ export const products = [
     applications: ["Remote Pathways", "Rural Roads", "Parks & Gardens"],
     certifications: ["CE", "RoHS", "IEC 62124"],
     warranty: "5 Years",
-    image: streetImg,
+    image: "/images/categories/cat-street.jpg",
   }
 ];
 
