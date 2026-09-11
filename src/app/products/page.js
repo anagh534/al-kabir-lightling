@@ -9,6 +9,8 @@ import {
   X,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
   ArrowRight,
   Home,
   Building2,
@@ -321,9 +323,11 @@ export default function ProductsPage() {
   const router = useRouter();
 
   /* ── State ── */
+  const ITEMS_PER_PAGE = 12;
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
   const [filters, setFilters] = useState({
     categories: [],
     brands: [],
@@ -353,10 +357,12 @@ export default function ProductsPage() {
         : [...current, value];
       return { ...prev, [section]: updated };
     });
+    setCurrentPage(1);
   }, []);
 
   const clearSection = useCallback((section) => {
     setFilters((prev) => ({ ...prev, [section]: [] }));
+    setCurrentPage(1);
   }, []);
 
   const clearAllFilters = useCallback(() => {
@@ -368,6 +374,7 @@ export default function ProductsPage() {
       mountingTypes: [],
     });
     setSearchQuery("");
+    setCurrentPage(1);
   }, []);
 
   const handleQuote = useCallback(
@@ -394,6 +401,24 @@ export default function ProductsPage() {
       return matchesSearch && matchesCat && matchesBrand && matchesTemp && matchesPower && matchesMounting;
     });
   }, [searchQuery, filters]);
+
+  /* ── Pagination ── */
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / ITEMS_PER_PAGE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const paginatedProducts = filteredProducts.slice(
+    (safeCurrentPage - 1) * ITEMS_PER_PAGE,
+    safeCurrentPage * ITEMS_PER_PAGE
+  );
+  const startItem = filteredProducts.length === 0 ? 0 : (safeCurrentPage - 1) * ITEMS_PER_PAGE + 1;
+  const endItem = Math.min(safeCurrentPage * ITEMS_PER_PAGE, filteredProducts.length);
+
+  // Reset page when search changes
+  useEffect(() => { setCurrentPage(1); }, [searchQuery]);
+
+  const goToPage = useCallback((page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   /* ── Lock body scroll when mobile filter is open ── */
   useEffect(() => {
@@ -478,7 +503,7 @@ export default function ProductsPage() {
 
             {/* Product count */}
             <span className="hidden md:block text-xs text-slate-500 font-medium shrink-0">
-              {filteredProducts.length} of {products.length} products
+              Showing {startItem}–{endItem} of {filteredProducts.length} products
             </span>
           </div>
         </div>
@@ -543,17 +568,89 @@ export default function ProductsPage() {
                   </div>
                 </ScrollReveal>
               ) : (
-                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5">
-                  {filteredProducts.map((product, idx) => (
-                    <ProductCard
-                      key={product.id}
-                      product={product}
-                      index={idx}
-                      onQuote={handleQuote}
-                      onViewDetail={setSelectedProduct}
-                    />
-                  ))}
-                </div>
+                <>
+                  <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5">
+                    {paginatedProducts.map((product, idx) => (
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        index={idx}
+                        onQuote={handleQuote}
+                        onViewDetail={setSelectedProduct}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Pagination Controls */}
+                  {totalPages > 1 && (
+                    <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+                      {/* Page info (mobile) */}
+                      <p className="text-xs text-slate-500 font-medium order-2 sm:order-1">
+                        Showing {startItem}–{endItem} of {filteredProducts.length} products
+                      </p>
+
+                      {/* Page buttons */}
+                      <div className="flex items-center gap-1.5 order-1 sm:order-2">
+                        {/* Prev */}
+                        <button
+                          onClick={() => goToPage(safeCurrentPage - 1)}
+                          disabled={safeCurrentPage === 1}
+                          className="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center text-slate-500 hover:border-[#009ea9] hover:text-[#009ea9] disabled:opacity-30 disabled:pointer-events-none transition-all bg-white shadow-xs"
+                        >
+                          <ChevronLeft className="w-4 h-4" />
+                        </button>
+
+                        {/* Page numbers */}
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                          // Show first, last, current, and neighbors; ellipsis for gaps
+                          const isVisible =
+                            page === 1 ||
+                            page === totalPages ||
+                            Math.abs(page - safeCurrentPage) <= 1;
+
+                          if (!isVisible) {
+                            // Show ellipsis only once per gap
+                            const prevVisible =
+                              page - 1 === 1 ||
+                              page - 1 === totalPages ||
+                              Math.abs(page - 1 - safeCurrentPage) <= 1;
+                            if (prevVisible) {
+                              return (
+                                <span key={page} className="w-10 h-10 flex items-center justify-center text-slate-400 text-sm">
+                                  …
+                                </span>
+                              );
+                            }
+                            return null;
+                          }
+
+                          return (
+                            <button
+                              key={page}
+                              onClick={() => goToPage(page)}
+                              className={`w-10 h-10 rounded-xl text-sm font-bold transition-all ${
+                                page === safeCurrentPage
+                                  ? "bg-[#009ea9] text-white shadow-md"
+                                  : "border border-slate-200 text-slate-600 hover:border-[#009ea9] hover:text-[#009ea9] bg-white shadow-xs"
+                              }`}
+                            >
+                              {page}
+                            </button>
+                          );
+                        })}
+
+                        {/* Next */}
+                        <button
+                          onClick={() => goToPage(safeCurrentPage + 1)}
+                          disabled={safeCurrentPage === totalPages}
+                          className="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center text-slate-500 hover:border-[#009ea9] hover:text-[#009ea9] disabled:opacity-30 disabled:pointer-events-none transition-all bg-white shadow-xs"
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
             </main>
           </div>
