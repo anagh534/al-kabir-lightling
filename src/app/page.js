@@ -237,18 +237,21 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Grid of High-Res Category Cards using Architectural Design System */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {/* Horizontal Scrollable Row of Category Cards */}
+          <div className="-mx-4 sm:mx-0 px-4 sm:px-0 flex overflow-x-auto gap-6 pb-12 pt-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {productCategories.map((cat, idx) => (
-              <ProductShowcaseCard
-                key={cat.id}
-                title={cat.name}
-                designer={cat.tagline}
-                imageUrl={cat.image}
-                description={cat.description}
-                items={cat.items}
-                onQuoteClick={() => handleOpenQuote(cat.name)}
-              />
+              <div key={cat.id} className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] shrink-0 snap-start flex">
+                <div className="w-full flex">
+                  <ProductShowcaseCard
+                    title={cat.name}
+                    designer={cat.tagline}
+                    imageUrl={cat.image}
+                    description={cat.description}
+                    items={cat.items}
+                    onQuoteClick={() => handleOpenQuote(cat.name)}
+                  />
+                </div>
+              </div>
             ))}
           </div>
         </div>

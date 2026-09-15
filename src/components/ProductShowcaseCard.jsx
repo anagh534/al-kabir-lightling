@@ -28,7 +28,7 @@ export default function ProductShowcaseCard({ title, designer, imageUrl, descrip
   return (
     <div
       ref={cardRef}
-      className={`group bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:shadow-[#009ea9]/15 hover:border-[#009ea9]/40 transition-all duration-700 flex flex-col justify-between transform-gpu ease-editorial ${
+      className={`group w-full bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:shadow-[#009ea9]/15 hover:border-[#009ea9]/40 transition-all duration-700 flex flex-col justify-between transform-gpu ease-editorial ${
         isIntersecting ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
       }`}
     >
