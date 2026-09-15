@@ -9,6 +9,7 @@ export default function sitemap() {
     "/products",
     "/portfolio",
     "/branches",
+    "/careers",
     "/contact",
   ].map((route) => ({
     url: `${siteConfig.baseUrl}${route}`,
