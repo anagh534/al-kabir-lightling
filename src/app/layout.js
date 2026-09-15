@@ -62,11 +62,6 @@ export const metadata = {
       "Premium lighting, electrical, and project supply across the Sultanate of Oman.",
     images: ["/images/hero/hero-lighting.jpg"],
   },
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
 };
 
 const jsonLd = {
