@@ -331,16 +331,10 @@ export default function ProductsPage() {
   const [filters, setFilters] = useState({
     categories: [],
     brands: [],
-    colorTemperatures: [],
-    powerRanges: [],
-    mountingTypes: [],
   });
   const [openSections, setOpenSections] = useState({
     categories: true,
     brands: true,
-    colorTemperatures: true,
-    powerRanges: true,
-    mountingTypes: true,
   });
 
   /* ── Handlers ── */
@@ -369,9 +363,6 @@ export default function ProductsPage() {
     setFilters({
       categories: [],
       brands: [],
-      colorTemperatures: [],
-      powerRanges: [],
-      mountingTypes: [],
     });
     setSearchQuery("");
     setCurrentPage(1);
@@ -392,13 +383,8 @@ export default function ProductsPage() {
         p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q);
       const matchesCat = filters.categories.length === 0 || filters.categories.includes(p.category);
       const matchesBrand = filters.brands.length === 0 || filters.brands.includes(p.brand);
-      const matchesTemp =
-        filters.colorTemperatures.length === 0 || filters.colorTemperatures.includes(p.colorTemp);
-      const matchesPower = filters.powerRanges.length === 0 || filters.powerRanges.includes(p.power);
-      const matchesMounting =
-        filters.mountingTypes.length === 0 || filters.mountingTypes.includes(p.mounting);
 
-      return matchesSearch && matchesCat && matchesBrand && matchesTemp && matchesPower && matchesMounting;
+      return matchesSearch && matchesCat && matchesBrand;
     });
   }, [searchQuery, filters]);
 
@@ -533,9 +519,6 @@ export default function ProductsPage() {
                 <div className="px-5 max-h-[calc(100vh-180px)] overflow-y-auto">
                   <FilterAccordion {...filterProps("categories", "Categories")} />
                   <FilterAccordion {...filterProps("brands", "Brands")} />
-                  <FilterAccordion {...filterProps("colorTemperatures", "Colour Temperature")} />
-                  <FilterAccordion {...filterProps("powerRanges", "Power Range")} />
-                  <FilterAccordion {...filterProps("mountingTypes", "Mounting Type")} />
                 </div>
               </div>
             </aside>
@@ -693,9 +676,6 @@ export default function ProductsPage() {
           <div className="flex-1 overflow-y-auto px-5">
             <FilterAccordion {...filterProps("categories", "Categories")} />
             <FilterAccordion {...filterProps("brands", "Brands")} />
-            <FilterAccordion {...filterProps("colorTemperatures", "Colour Temperature")} />
-            <FilterAccordion {...filterProps("powerRanges", "Power Range")} />
-            <FilterAccordion {...filterProps("mountingTypes", "Mounting Type")} />
           </div>
 
           {/* Footer actions */}

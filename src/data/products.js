@@ -229,8 +229,5 @@ export const filterOptions = {
     "Chandeliers",
     "Decorative Lighting"
   ],
-  brands: ["Philips", "Osram", "Legrand", "ABB", "Havells", "3M", "Dulux", "Others"],
-  colorTemperatures: ["Warm White (3000K)", "Neutral White (4000K)", "Cool White (6500K)"],
-  powerRanges: ["Up to 10W", "10W - 30W", "30W - 50W", "Above 50W"],
-  mountingTypes: ["Recessed", "Surface Mounted", "Suspended", "Track", "Wall Mounted"]
+  brands: ["Philips", "Osram", "Legrand", "ABB", "Havells", "3M", "Dulux", "Others"]
 };
