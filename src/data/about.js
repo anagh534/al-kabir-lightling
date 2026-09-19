@@ -1,4 +1,4 @@
-import { Cpu, FileSpreadsheet, Layers, Award, Lightbulb, Truck } from "lucide-react";
+
 
 export const aboutData = {
   vision: "To be the foremost provider of lighting and electrical solutions in Oman, leading the industry with uncompromised quality, engineering expertise, and relentless innovation.",
@@ -41,38 +41,7 @@ export const aboutData = {
       desc: "Assigned account engineers who coordinate every step from specification to on-site testing and commissioning.",
     },
   ],
-  technicalServices: [
-    {
-      icon: Cpu,
-      title: "Lux Calculation & Dialux Simulation",
-      description: "Computer-aided lighting simulations to ensure illuminance levels conform strictly to Oman and CIBSE standards.",
-    },
-    {
-      icon: FileSpreadsheet,
-      title: "BOQ & Tender Estimation Support",
-      description: "Detailed bill-of-quantity takeoff and commercial itemization for contractors preparing competitive bids.",
-    },
-    {
-      icon: Layers,
-      title: "Technical Submittal Dossiers",
-      description: "Full technical dossiers including compliance statements, manufacturer datasheets, test reports, and third-party certificates.",
-    },
-    {
-      icon: Award,
-      title: "Product Samples Coordination",
-      description: "Arranging physical luminaire and wiring accessory samples for client and consultant approval committees.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Alternative Equivalent Engineering",
-      description: "Proposing value-engineered equivalent solutions that match technical specifications while optimizing project budgets.",
-    },
-    {
-      icon: Truck,
-      title: "Project Delivery & Supply Coordination",
-      description: "Fleet logistics and coordinated drop-offs directly to construction sites throughout the Sultanate.",
-    },
-  ],
+
   markets: [
     "Sultanate of Oman Infrastructure",
     "GCC Cross-Border Projects",

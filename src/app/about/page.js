@@ -1,16 +1,8 @@
 import Image from "next/image";
 
 import {
-  CheckCircle2,
   Target,
   Compass,
-  Cpu,
-  Layers,
-  FileSpreadsheet,
-  Award,
-  Lightbulb,
-  Truck,
-  ShieldCheck,
   Check,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
@@ -25,7 +17,7 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const { strengths, technicalServices, markets, narrative, vision, mission } = aboutData;
+  const { strengths, markets, narrative, vision, mission } = aboutData;
 
   return (
     <div className="flex flex-col bg-white">
@@ -165,45 +157,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Technical Engineering Services */}
-      <section className="py-20 bg-[#090e17] text-white border-y border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up" className="max-w-3xl mb-16">
-            <span className="text-xs uppercase tracking-wider font-bold text-[#00e5f2]">
-              Practical Engineering Value
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">
-              Technical &amp; Project Support Services
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 mt-3">
-              We present technical support as a practical service that assists
-              consultants and contractors in passing project submissions,
-              achieving spec compliance, and accelerating installation.
-            </p>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technicalServices.map((service, idx) => {
-              const Icon = service.icon;
-              return (
-                <ScrollReveal key={idx} direction="up" distance={30} delay={idx * 100}>
-                  <div className="h-full bg-slate-900/90 border border-slate-800 rounded-3xl p-7 hover:border-[#009ea9] transition-all">
-                    <div className="w-10 h-10 rounded-xl bg-[#009ea9]/20 text-[#00e5f2] flex items-center justify-center mb-4">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-base font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* 5. Markets We Serve */}
       <section className="py-20 bg-slate-50">
