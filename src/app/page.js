@@ -19,7 +19,7 @@ import { productCategories } from "@/data/categories";
 import { brands } from "@/data/brands";
 import { companyInfo } from "@/data/company";
 import { aboutData } from "@/data/about";
-import ContactForm from "@/components/ContactForm";
+import CtaBanner from "@/components/CtaBanner";
 
 
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
@@ -319,10 +319,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. INTERACTIVE RFQ / REQUIREMENT FORM */}
-      <ScrollReveal direction="up" distance={40}>
-        <ContactForm />
-      </ScrollReveal>
+      {/* 6. CTA BANNER */}
+      <CtaBanner />
 
 
     </div>
