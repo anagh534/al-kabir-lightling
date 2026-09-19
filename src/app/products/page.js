@@ -239,7 +239,7 @@ export default function ProductsPage() {
   const router = useRouter();
 
   /* ── State ── */
-  const ITEMS_PER_PAGE = 12;
+  const ITEMS_PER_PAGE = 16;
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -353,7 +353,7 @@ export default function ProductsPage() {
                 </ScrollReveal>
               ) : (
                 <>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {paginatedProducts.map((product, idx) => (
                       <ProductCard
                         key={product.id}
