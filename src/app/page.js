@@ -123,7 +123,7 @@ export default function HomePage() {
             {/* CTAs with modern pulse animation */}
             <div className={`flex flex-wrap items-center gap-4 pt-2 lg:pt-6 transition-all duration-1200 ease-editorial delay-700 ${isHeroVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <button
-                onClick={() => handleOpenQuote("Turnkey Project Solution")}
+                onClick={() => handleOpenQuote("Project Quotation")}
                 type="button"
                 className="relative inline-flex items-center gap-3 px-6 py-3.5 lg:px-8 lg:py-4 rounded-full text-sm font-black text-white bg-[#009ea9] hover:bg-[#00858f] active:scale-95 transition-all shadow-[0_0_40px_rgba(0,158,169,0.4)] hover:shadow-[0_0_60px_rgba(0,158,169,0.6)] cursor-pointer group overflow-hidden"
               >
