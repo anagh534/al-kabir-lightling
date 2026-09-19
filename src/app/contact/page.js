@@ -10,12 +10,6 @@ import {
   Send,
   MessageSquare,
   CheckCircle2,
-  UploadCloud,
-  FileText,
-  Briefcase,
-  Layers,
-  Receipt,
-  HelpCircle,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -67,8 +61,6 @@ export default function ContactPage() {
     }
   };
 
-  const departmentIcons = [Briefcase, Layers, Receipt, HelpCircle];
-
 
   return (
     <div className="flex flex-col bg-white">
@@ -79,61 +71,6 @@ export default function ContactPage() {
         breadcrumbs={[{ label: "Contact Us" }]}
       />
 
-      {/* 1. Direct Department Contacts (Docx Page 11) */}
-      <section className="py-20 bg-slate-50 border-b border-slate-200/80 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up" distance={30} className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div className="max-w-2xl">
-              <span className="text-xs font-black uppercase tracking-widest text-[#009ea9]">
-                Department Directory
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
-                Reach the Correct Team Directly
-              </h2>
-              <p className="text-sm text-slate-500 mt-3 leading-relaxed">
-                Skip the general inbox. Connect directly with our specialized engineering, sales, and logistics desks for rapid project processing and technical support.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {companyInfo.departments.map((dept, idx) => {
-              const Icon = departmentIcons[idx] || Briefcase;
-              return (
-                <ScrollReveal key={idx} direction="up" distance={20} delay={idx * 100}>
-                  <div className="group relative bg-white rounded-[2rem] p-6 lg:p-8 border border-slate-200/80 shadow-sm hover:shadow-2xl hover:shadow-[#009ea9]/10 transition-all duration-500 flex flex-col h-full overflow-hidden">
-                    {/* Hover Gradient Wash */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#e6f8fa]/0 via-transparent to-[#009ea9]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    
-                    <div className="relative z-10 flex flex-col flex-grow">
-                      <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-[#009ea9] group-hover:border-[#009ea9] text-slate-400 group-hover:text-white transition-all duration-500 flex items-center justify-center mb-6 shadow-xs">
-                        <Icon className="w-6 h-6" />
-                      </div>
-                      
-                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#009ea9] transition-colors mb-2">
-                        {dept.name}
-                      </h3>
-                      <p className="text-xs text-slate-500 leading-relaxed flex-grow">
-                        {dept.role}
-                      </p>
-                    </div>
-
-                    <div className="relative z-10 mt-6 pt-6 border-t border-slate-100 flex items-center justify-between group-hover:border-[#009ea9]/20 transition-colors">
-                      <a
-                        href={`mailto:${dept.email}`}
-                        className="text-[13px] font-bold text-slate-600 group-hover:text-[#009ea9] transition-colors flex items-center gap-2 truncate"
-                      >
-                        <Mail className="w-4 h-4 shrink-0" />
-                        <span className="truncate">{dept.email}</span>
-                      </a>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* 2. Contact Information & Interactive Form Section */}
       <section className="py-16 sm:py-20 bg-white">
@@ -277,8 +214,8 @@ export default function ContactPage() {
                   </h4>
                   <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
                     Thank you, <strong>{formData.name}</strong>. Your enquiry
-                    regarding &quot;{formData.subject}&quot; has been routed to
-                    the respective department. We will revert with technical and
+                    regarding &quot;{formData.subject}&quot; has been received. 
+                    We will revert with technical and
                     commercial details shortly.
                   </p>
                   <button

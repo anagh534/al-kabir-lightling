@@ -15,28 +15,7 @@ export const companyInfo = {
   hours: "Sun - Thu: 8:00 AM - 6:00 PM",
   description: "Al Kabir Lighting is an Oman-based lighting, electrical, and building materials specialist supplying high-spec commercial, industrial, and infrastructure developments.",
   whatsappMessage: "Hello Al Kabir Lighting, I would like to inquire about products and pricing.",
-  departments: [
-    {
-      name: "Sales Enquiries",
-      email: "sales@alkabirlighting.com",
-      role: "Commercial tenders, quotations & contractor inquiries",
-    },
-    {
-      name: "Project Enquiries",
-      email: "projects@alkabirlighting.com",
-      role: "Engineering submittals, Lux calculations & BOQs",
-    },
-    {
-      name: "Accounts & Finance",
-      email: "accounts@alkabirlighting.com",
-      role: "Billing, supplier invoices & commercial credits",
-    },
-    {
-      name: "General Enquiries",
-      email: "admin@alkabirlighting.com",
-      role: "Corporate affairs & administrative support",
-    },
-  ],
+
   socials: {
     linkedin: "https://linkedin.com/company/alkabirlighting",
     facebook: "https://facebook.com/alkabirlighting",
