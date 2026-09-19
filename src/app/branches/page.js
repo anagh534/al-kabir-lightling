@@ -7,7 +7,6 @@ import {
   Mail,
   Clock,
   Star,
-  ChevronRight,
   Navigation,
   CheckCircle2,
   Building2,
@@ -18,6 +17,7 @@ import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import { branches } from "@/data/branches";
 import { companyInfo } from "@/data/company";
+import CtaBanner from "@/components/CtaBanner";
 
 export default function BranchesPage() {
   const [activeBranchId, setActiveBranchId] = useState(branches[0]?.id);
@@ -320,40 +320,7 @@ export default function BranchesPage() {
       {/* ═══════════════════════════════════════
           3. CTA BANNER
           ═══════════════════════════════════════ */}
-      <section className="py-16 bg-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal direction="up" distance={20}>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#00e5f2]">
-              Can&apos;t Visit Us?
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-2 mb-4">
-              Connect with Our Team Remotely
-            </h2>
-            <p className="text-sm text-slate-400 mb-8 max-w-xl mx-auto">
-              Our sales and engineering teams are available via phone, email, and
-              WhatsApp to assist with your project requirements from anywhere.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#009ea9] hover:bg-[#00858f] rounded-xl text-sm font-bold text-white shadow-lg transition-all active:scale-[0.98]"
-              >
-                Contact Us
-                <ChevronRight className="w-4 h-4" />
-              </a>
-              <a
-                href={`https://wa.me/${companyInfo.whatsapp}?text=Hello%20Al%20Kabir%20Lighting`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/20 rounded-xl text-sm font-bold text-white bg-white/5 hover:bg-white/15 transition-all"
-              >
-                <MessageSquare className="w-4 h-4" />
-                WhatsApp Us
-              </a>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <CtaBanner />
     </div>
   );
 }
