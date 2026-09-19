@@ -175,16 +175,16 @@ export default function CareersPage() {
                 <div className="w-20 h-20 rounded-full bg-slate-50 flex items-center justify-center mb-6">
                   <Briefcase className="w-10 h-10 text-slate-300" />
                 </div>
-                <h3 className="text-2xl font-extrabold text-slate-900 mb-3">No Open Positions Currently</h3>
+                <h3 className="text-2xl font-extrabold text-slate-900 mb-3">We&apos;re Always Looking for Talent</h3>
                 <p className="text-slate-500 leading-relaxed mb-8 max-w-lg">
-                  We are not actively hiring for specific roles at the moment, but we are always eager to meet talented professionals in the lighting and electrical industry. 
+                  While our team is fully staffed right now, we are continually growing and love connecting with passionate professionals in the lighting and electrical industry. 
                 </p>
                 <a 
                   href={`mailto:${careersData.applicationProcess.email}?subject=General Application`}
                   className="inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-sm font-bold text-[#009ea9] bg-[#e6f8fa] hover:bg-[#c9f1f4] transition-all shadow-sm active:scale-95"
                 >
                   <Mail className="w-4 h-4" />
-                  Submit General Application
+                  Send CV
                 </a>
               </div>
             </ScrollReveal>
