@@ -71,21 +71,21 @@ const jsonLd = {
   legalName: "Al Kabir Lighting & Trading LLC",
   image: "https://alkabirlighting.com/logo.png",
   url: "https://alkabirlighting.com",
-  telephone: "+96824567890",
-  email: "info@alkabirlighting.com",
+  telephone: "+96892125048",
+  email: "sales@alkabirlighting.com",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Sultan Qaboos Street, Al Khuwair",
+    streetAddress: "Honda Road Ruwi",
     addressLocality: "Muscat",
     addressRegion: "Muscat Governorate",
-    postalCode: "1234",
+    postalCode: "",
     addressCountry: "OM",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "23.5933",
-    longitude: "58.4218",
+    latitude: "23.585890",
+    longitude: "58.549866",
   },
   openingHoursSpecification: [
     {
