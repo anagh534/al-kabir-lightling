@@ -53,7 +53,7 @@ export default function BranchesPage() {
 
           {/* Branch Grid Selector */}
           <ScrollReveal direction="up" distance={16} delay={100}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-12">
               {branches.map((branch) => (
                 <button
                   key={branch.id}
@@ -133,11 +133,12 @@ export default function BranchesPage() {
               <div className="bg-slate-50 rounded-2xl border border-slate-200/80 divide-y divide-slate-200/80 overflow-hidden">
                 <InfoRow icon={MapPin} label="Address">
                   {activeBranch.address}
-                  <br />
-                  <span className="text-slate-400">{activeBranch.poBox}</span>
-                </InfoRow>
-                <InfoRow icon={Phone} label="Telephone" href={`tel:${activeBranch.phone.replace(/\s+/g, "")}`}>
-                  {activeBranch.phone}
+                  {activeBranch.poBox && (
+                    <>
+                      <br />
+                      <span className="text-slate-400">{activeBranch.poBox}</span>
+                    </>
+                  )}
                 </InfoRow>
                 <InfoRow icon={Phone} label="Mobile" href={`tel:${activeBranch.mobile.replace(/\s+/g, "")}`}>
                   {activeBranch.mobile}
@@ -177,7 +178,7 @@ export default function BranchesPage() {
                   Get Directions
                 </a>
                 <a
-                  href={`tel:${activeBranch.phone.replace(/\s+/g, "")}`}
+                  href={`tel:${activeBranch.mobile.replace(/\s+/g, "")}`}
                   className="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 bg-white hover:border-[#009ea9] hover:text-[#009ea9] transition-all"
                 >
                   <Phone className="w-3.5 h-3.5" />
@@ -233,7 +234,7 @@ export default function BranchesPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
             {branches.map((branch, idx) => (
               <ScrollReveal key={branch.id} direction="up" distance={24} delay={idx * 100}>
                 <div className="h-full bg-white rounded-2xl border border-slate-200/80 p-6 hover:shadow-lg hover:border-[#009ea9]/30 transition-all duration-500 flex flex-col">
@@ -277,10 +278,10 @@ export default function BranchesPage() {
                     <div className="flex items-center gap-2.5">
                       <Phone className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
                       <a
-                        href={`tel:${branch.phone.replace(/\s+/g, "")}`}
+                        href={`tel:${branch.mobile.replace(/\s+/g, "")}`}
                         className="text-[12px] text-slate-600 hover:text-[#009ea9] transition-colors"
                       >
-                        {branch.phone}
+                        {branch.mobile}
                       </a>
                     </div>
                     <div className="flex items-center gap-2.5">

@@ -113,19 +113,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-slate-900">
-                      Telephone &amp; Mobile
+                      Mobile
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                      Tel:{" "}
-                      <a
-                        href={`tel:${companyInfo.phone.replace(/\s+/g, "")}`}
-                        className="font-medium text-slate-900 hover:text-[#009ea9]"
-                      >
-                        {companyInfo.phone}
-                      </a>
-                    </p>
-                    <p className="text-xs sm:text-sm text-slate-600">
-                      Direct:{" "}
                       <a
                         href={`tel:${companyInfo.mobile.replace(/\s+/g, "")}`}
                         className="font-medium text-slate-900 hover:text-[#009ea9]"
