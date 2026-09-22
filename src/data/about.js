@@ -1,7 +1,7 @@
 import { Cpu, FileSpreadsheet, Layers, Award, Lightbulb, Truck } from "lucide-react";
 
 export const aboutData = {
-  vision: "To be the foremost provider of lighting and electrical solutions in Oman, leading the industry with uncompromised quality, engineering expertise, and relentless innovation.",
+  vision: "Our vision is to contribute to the sustainable growth and development of Oman by providing quality, reliable, and environmentally responsible products and solutions. We aim to support the country’s evolving needs through innovation, responsible business practices, and solutions that create lasting value for communities, businesses, and the environment.",
   mission: "To deliver superior lighting products and comprehensive technical support that enables contractors and developers to execute complex projects safely, beautifully, and within budget.",
   narrative: [
     "Al Kabir Lighting is an Oman-based lighting and building material trading company, operating under the management umbrella of a robust, multi-disciplinary trading conglomerate. Having developed deep integration with the Sultanate's dynamic construction sector, we are a single-point supply partner for the complete spectrum of lighting solutions, electrical infrastructure, and building materials.",
