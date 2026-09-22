@@ -50,7 +50,7 @@ export const products = [
     id: "p3",
     name: "LED Track Light",
     category: "Track Lights",
-    brand: "Legrand",
+    brand: "Mk",
     colorTemp: "Warm White (3000K)",
     power: "10W - 30W",
     mounting: "Track",
@@ -67,7 +67,7 @@ export const products = [
     id: "p4",
     name: "LED Pendant Light",
     category: "Pendant Lights",
-    brand: "Havells",
+    brand: "OTSEN",
     colorTemp: "Warm White (3000K)",
     power: "10W - 30W",
     mounting: "Suspended",
@@ -118,7 +118,7 @@ export const products = [
     id: "p7",
     name: "LED Wall Light",
     category: "Wall Lights",
-    brand: "Dulux",
+    brand: "ENLIGHT",
     colorTemp: "Warm White (3000K)",
     power: "Up to 10W",
     mounting: "Wall Mounted",
@@ -169,7 +169,7 @@ export const products = [
     id: "p10",
     name: "LED Ceiling Fan Light",
     category: "Decorative Lighting",
-    brand: "Havells",
+    brand: "OTSEN",
     colorTemp: "Neutral White (4000K)",
     power: "30W - 50W",
     mounting: "Suspended",
@@ -186,7 +186,7 @@ export const products = [
     id: "p11",
     name: "Emergency Light",
     category: "Wall Lights",
-    brand: "Legrand",
+    brand: "Mk",
     colorTemp: "Cool White (6500K)",
     power: "Up to 10W",
     mounting: "Wall Mounted",
@@ -229,5 +229,5 @@ export const filterOptions = {
     "Chandeliers",
     "Decorative Lighting"
   ],
-  brands: ["Philips", "Osram", "Legrand", "ABB", "Havells", "3M", "Dulux", "Others"]
+  brands: ["OTSEN", "ARCOLITE", "PHILIPS", "OSRAM", "SCHNIEDER", "ABB", "FSL", "TM", "ENLIGHT", "Mk", "Panasonic", "Others"]
 };

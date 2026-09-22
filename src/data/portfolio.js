@@ -13,7 +13,7 @@ export const projects = [
     description: "Complete supply of high-mast apron lighting and interior terminal LED solutions. Meeting rigorous international aviation standards.",
     image: airportImg,
     year: "2023",
-    brands: ["Philips", "Schneider Electric"]
+    brands: ["PHILIPS", "SCHNIEDER"]
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const projects = [
     description: "Architectural interior lighting and advanced dimming control systems for exhibition halls and luxury auditoriums.",
     image: conventionImg,
     year: "2022",
-    brands: ["OSRAM", "Legrand"]
+    brands: ["OSRAM", "Mk"]
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const projects = [
     description: "Dynamic facade lighting, general retail ambiance lighting, and comprehensive building material supply for structural integrity.",
     image: mallImg,
     year: "2021",
-    brands: ["Philips", "Havells"]
+    brands: ["PHILIPS", "OTSEN"]
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ export const projects = [
     description: "Heavy-duty ATEX certified industrial lighting and robust electrical switchgear for harsh maritime environments.",
     image: portImg,
     year: "2023",
-    brands: ["ABB", "3M"]
+    brands: ["ABB", "ENLIGHT"]
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const projects = [
     description: "Luxury hospitality lighting design supply, ensuring a warm, inviting, and highly controlled atmospheric experience.",
     image: hotelImg,
     year: "2020",
-    brands: ["Legrand", "Dulux"]
+    brands: ["ARCOLITE", "TM"]
   },
   {
     id: 6,
@@ -58,6 +58,6 @@ export const projects = [
     description: "Energy-efficient office lighting panels and complete wiring device solutions for a modern corporate workspace.",
     image: officeImg,
     year: "2022",
-    brands: ["Schneider Electric", "Philips"]
+    brands: ["SCHNIEDER", "Panasonic"]
   }
 ];

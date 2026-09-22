@@ -30,7 +30,7 @@ export const metadata = {
     "Industrial Lighting Oman",
     "Building Materials Oman",
     "Philips Lighting Oman",
-    "Schneider Electric Oman",
+    "SCHNIEDER Oman",
     "LED Street Lighting Oman",
     "Explosion Proof Lighting ATEX",
     "Dialux Lux Calculations Oman",

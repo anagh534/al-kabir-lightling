@@ -276,10 +276,16 @@ export default function HomePage() {
               <ScrollReveal key={b.name} delay={idx * 100} direction="up" distance={20}>
                 <div className="bg-white p-8 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center min-h-[120px] h-full">
                   <div className="flex items-center justify-center">
+                    {b.name === "OTSEN" && (
+                      <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#1A1A1A' }}>OTSEN</span>
+                    )}
+                    {b.name === "ARCOLITE" && (
+                      <span className="font-sans font-bold tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>ARCOLITE</span>
+                    )}
                     {b.name === "PHILIPS" && (
                       <span className="font-sans font-black tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>Philips</span>
                     )}
-                    {b.name === "Schneider Electric" && (
+                    {b.name === "SCHNIEDER" && (
                       <div className="flex items-center gap-2">
                         <svg className="w-8 h-8" style={{ color: '#3DCD58' }} viewBox="0 0 100 100" fill="currentColor">
                           <path d="M20,20 L80,20 L80,80 L20,80 Z M35,35 L65,35 L65,65 L35,65 Z" fillRule="evenodd" clipRule="evenodd" />
@@ -290,26 +296,23 @@ export default function HomePage() {
                     {b.name === "OSRAM" && (
                       <span className="font-sans font-bold tracking-widest text-2xl uppercase" style={{ color: '#FF6600' }}>Osram</span>
                     )}
-                    {b.name === "Legrand" && (
-                      <div className="flex items-center gap-2">
-                        <svg className="w-6 h-6" style={{ color: '#E30613' }} viewBox="0 0 100 100" fill="currentColor">
-                          <rect x="10" y="10" width="35" height="80" />
-                          <rect x="55" y="10" width="35" height="80" />
-                        </svg>
-                        <span className="font-sans font-black tracking-tight text-xl lowercase" style={{ color: '#E30613' }}>legrand</span>
-                      </div>
-                    )}
                     {b.name === "ABB" && (
                       <span className="font-sans font-black tracking-tighter text-4xl uppercase" style={{ color: '#FF000F' }}>ABB</span>
                     )}
-                    {b.name === "HAVELLS" && (
-                      <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#ED1C24' }}>Havells</span>
+                    {b.name === "FSL" && (
+                      <span className="font-sans font-black tracking-widest text-3xl uppercase" style={{ color: '#E30613' }}>FSL</span>
                     )}
-                    {b.name === "3M" && (
-                      <span className="font-sans font-black tracking-tighter text-5xl uppercase" style={{ color: '#FF0000' }}>3M</span>
+                    {b.name === "TM" && (
+                      <span className="font-sans font-bold tracking-tighter text-4xl uppercase" style={{ color: '#003B7E' }}>TM</span>
                     )}
-                    {b.name === "Dulux" && (
-                      <span className="font-serif font-bold italic tracking-tight text-3xl" style={{ color: '#003B7E' }}>Dulux</span>
+                    {b.name === "ENLIGHT" && (
+                      <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#FFC107' }}>ENLIGHT</span>
+                    )}
+                    {b.name === "Mk" && (
+                      <span className="font-sans font-bold tracking-tighter text-4xl" style={{ color: '#E30613' }}>Mk</span>
+                    )}
+                    {b.name === "Panasonic" && (
+                      <span className="font-sans font-black tracking-wider text-2xl" style={{ color: '#004098' }}>Panasonic</span>
                     )}
                   </div>
                 </div>
