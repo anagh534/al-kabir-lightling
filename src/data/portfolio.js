@@ -1,20 +1,22 @@
 import logoImg from "../../public/images/portfolio/logo_placeholder.png";
 import mallImg from "../../public/images/portfolio/mall.jpg";
-import theVillageImg from "../../public/images/portfolio/the_village.jpg";
-import ministryHousingSurImg from "../../public/images/portfolio/ministry_housing_sur.jpg";
+import theVillageImg from "../../public/images/portfolio/the_village.jpeg";
+import ministryHousingSurImg from "../../public/images/portfolio/ministry_housing_sur.jpeg";
 import galfarHoImg from "../../public/images/portfolio/galfar_ho.jpg";
-import masjidIrfanImg from "../../public/images/portfolio/masjid_irfan.jpg";
+import masjidIrfanImg from "../../public/images/portfolio/masjid_irfan.jpeg";
 import excellenceWeddingImg from "../../public/images/portfolio/excellence_wedding.jpg";
-import wadiKabirResImg from "../../public/images/portfolio/wadi_kabir_res.png";
+import wadiKabirResImg from "../../public/images/portfolio/wadi_kabir_res.jpeg";
 import hyundaiAzaibaImg from "../../public/images/portfolio/hyundai_azaiba.jpg";
 import nboBranchImg from "../../public/images/portfolio/nbo_branch.jpg";
-import soharBranchImg from "../../public/images/portfolio/sohar_branch.jpg";
+import soharBranchImg from "../../public/images/portfolio/sohar_branch.png";
 import iocPdoImg from "../../public/images/portfolio/ioc_pdo.jpg";
-import brixCafeImg from "../../public/images/portfolio/brix_cafe.png";
+import brixCafeImg from "../../public/images/portfolio/brix_cafe.jpg";
 import musandamRestImg from "../../public/images/portfolio/musandam_rest.jpg";
 import sahmVocationalImg from "../../public/images/portfolio/sahm_vocational.jpg";
 import autoSpaImg from "../../public/images/portfolio/auto_spa.jpg";
-import soharSwiftImg from "../../public/images/portfolio/sohar_swift.jpg";
+import soharSwiftImg from "../../public/images/portfolio/sohar_swift.jpeg";
+import geelycarImg from "../../public/images/portfolio/geely-car.jpg";
+import alkhoudImg from '../../public/images/portfolio/al-khoud.jpeg';
 
 export const projects = [
   {
@@ -94,7 +96,7 @@ export const projects = [
     title: "Geely Car Showroom Azaiba",
     category: "Commercial",
     description: "High-intensity showroom lighting to perfectly showcase automotive designs.",
-    image: logoImg,
+    image: geelycarImg,
     year: "Recent",
     brands: ["Al Kabir Lighting"]
   },
@@ -166,7 +168,7 @@ export const projects = [
     title: "Commercial Building Al Khoud",
     category: "Commercial",
     description: "Complete electrical and lighting solutions for a multi-use commercial building.",
-    image: logoImg,
+    image: alkhoudImg,
     year: "Recent",
     brands: ["Al Kabir Lighting"]
   },
