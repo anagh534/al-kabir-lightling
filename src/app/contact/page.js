@@ -22,8 +22,6 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
-    email: "",
-    mobile: "",
     subject: "",
     message: "",
     fileName: "",
@@ -45,9 +43,14 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    const text = `*New Enquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Company:* ${formData.company || 'N/A'}%0A*Category:* ${formData.subject || 'N/A'}%0A*Message:* ${formData.message}`;
+    const waLink = `https://wa.me/${companyInfo.whatsapp.replace(/\+/g, "")}?text=${text}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
+      window.open(waLink, '_blank');
     }, 700);
   };
 
@@ -216,8 +219,6 @@ export default function ContactPage() {
                       setFormData({
                         name: "",
                         company: "",
-                        email: "",
-                        mobile: "",
                         subject: "Sales & Project Quotation",
                         message: "",
                         fileName: "",
@@ -268,43 +269,7 @@ export default function ContactPage() {
                       </label>
                     </div>
 
-                    {/* Floating Label: Email */}
-                    <div className="relative group">
-                      <input
-                        id="c-email"
-                        type="email"
-                        required
-                        placeholder="Email Address *"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
-                      />
-                      <label
-                        htmlFor="c-email"
-                        className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
-                      >
-                        Email Address *
-                      </label>
-                    </div>
 
-                    {/* Floating Label: Mobile */}
-                    <div className="relative group">
-                      <input
-                        id="c-mobile"
-                        type="tel"
-                        required
-                        placeholder="Mobile / WhatsApp *"
-                        value={formData.mobile}
-                        onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                        className="peer w-full px-5 pt-6 pb-2 text-sm bg-slate-50/50 border border-slate-200 rounded-2xl outline-none focus:border-[#009ea9] focus:bg-white focus:ring-4 focus:ring-[#009ea9]/10 transition-all placeholder-transparent"
-                      />
-                      <label
-                        htmlFor="c-mobile"
-                        className="absolute left-5 top-4 text-sm font-medium text-slate-400 transition-all pointer-events-none peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-[10px] peer-focus:text-[#009ea9] peer-focus:font-bold peer-valid:top-2 peer-valid:text-[10px] peer-valid:font-bold"
-                      >
-                        Mobile / WhatsApp *
-                      </label>
-                    </div>
                   </div>
 
                   {/* Category Dropdown (Floating Label Style) */}
