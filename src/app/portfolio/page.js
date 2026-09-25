@@ -40,9 +40,7 @@ function ProjectCard({ project, index }) {
             unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700" />
-          <span className="absolute bottom-4 left-4 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest bg-white/20 backdrop-blur-md text-white rounded-md">
-            {project.category}
-          </span>
+
         </div>
         <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#009ea9] transition-colors mb-3">
@@ -51,19 +49,7 @@ function ProjectCard({ project, index }) {
           <p className="text-sm text-slate-500 leading-relaxed mb-6 line-clamp-3 flex-grow">
             {project.description}
           </p>
-          
-          <div className="flex items-center justify-between pt-4 border-t border-slate-100 shrink-0">
-            <span className="text-xs font-bold text-slate-400">
-              {project.year}
-            </span>
-            <div className="flex flex-wrap justify-end gap-2">
-              {project.brands.map(brand => (
-                <span key={brand} className="text-[10px] font-bold uppercase tracking-wider text-[#009ea9] bg-[#e6f8fa] px-2 py-0.5 rounded-sm">
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div>
+
         </div>
       </div>
     </ScrollReveal>

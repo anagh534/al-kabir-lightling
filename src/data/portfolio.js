@@ -22,172 +22,115 @@ export const projects = [
   {
     id: 1,
     title: "The Village",
-    category: "Commercial",
     description: "Complete lighting solutions enhancing the aesthetic and functional appeal of The Village.",
-    image: theVillageImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: theVillageImg
   },
   {
     id: 2,
     title: "Mall of Oman",
-    category: "Retail",
     description: "Dynamic facade lighting, general retail ambiance lighting, and comprehensive building material supply for structural integrity.",
-    image: mallImg,
-    year: "2021",
-    brands: ["PHILIPS", "OTSEN"]
+    image: mallImg
   },
   {
     id: 3,
     title: "Ministry of Housing - Sur",
-    category: "Government",
     description: "Supply of efficient office lighting and robust electrical solutions for the ministry's branch in Sur.",
-    image: ministryHousingSurImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: ministryHousingSurImg
   },
   {
     id: 4,
     title: "Galfar HO",
-    category: "Corporate",
     description: "Modern office lighting panels and complete wiring device solutions for Galfar's Headquarters.",
-    image: galfarHoImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: galfarHoImg
   },
   {
     id: 5,
     title: "Masjid Irfan",
-    category: "Religious",
     description: "Architectural interior and exterior lighting designed to highlight the spiritual and architectural beauty of the mosque.",
-    image: masjidIrfanImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: masjidIrfanImg
   },
   {
     id: 6,
     title: "Excellence Wedding Hall",
-    category: "Hospitality",
     description: "Luxurious and elegant lighting design to create a warm and inviting atmosphere for events.",
-    image: excellenceWeddingImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: excellenceWeddingImg
   },
   {
     id: 7,
     title: "Ministry of Interior External Lights Al Khuwair",
-    category: "Government",
     description: "High-power exterior and facade lighting solutions for the Ministry of Interior in Al Khuwair.",
-    image: logoImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: logoImg
   },
   {
     id: 8,
     title: "Residential Building Wadi Kabir",
-    category: "Residential",
     description: "Comprehensive electrical wiring and modern lighting fixtures for a large residential complex.",
-    image: wadiKabirResImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: wadiKabirResImg
   },
   {
     id: 9,
     title: "Geely Car Showroom Azaiba",
-    category: "Commercial",
     description: "High-intensity showroom lighting to perfectly showcase automotive designs.",
-    image: geelycarImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: geelycarImg
   },
   {
     id: 10,
     title: "Hyundai Heavy Vehicle Yard Azaiba",
-    category: "Industrial",
     description: "Heavy-duty outdoor industrial lighting designed for large scale vehicle yards.",
-    image: hyundaiAzaibaImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: hyundaiAzaibaImg
   },
   {
     id: 11,
     title: "NBO Bank Branches",
-    category: "Commercial",
     description: "Reliable and bright office lighting supplied across multiple NBO Bank branches.",
-    image: nboBranchImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: nboBranchImg
   },
   {
     id: 12,
     title: "Sohar Bank Branches",
-    category: "Commercial",
     description: "Consistent and energy-efficient lighting solutions for Sohar Bank locations.",
-    image: soharBranchImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: soharBranchImg
   },
   {
     id: 13,
     title: "IOC Building PDO",
-    category: "Industrial",
     description: "Specialized lighting and electrical supply meeting rigorous standards for PDO facilities.",
-    image: iocPdoImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: iocPdoImg
   },
   {
     id: 14,
     title: "BRIX CAFE",
-    category: "Hospitality",
     description: "Custom ambient lighting to enhance the modern and cozy aesthetic of the cafe.",
-    image: brixCafeImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: brixCafeImg
   },
   {
     id: 15,
     title: "Musandam Restaurant - Intercontinental Qurum",
-    category: "Hospitality",
     description: "Premium hospitality lighting supplying a sophisticated dining experience.",
-    image: musandamRestImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: musandamRestImg
   },
   {
     id: 16,
     title: "Vocational College Saham",
-    category: "Education",
     description: "Energy-efficient and bright lighting suitable for modern educational environments.",
-    image: sahmVocationalImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: sahmVocationalImg
   },
   {
     id: 17,
     title: "Commercial Building Al Khoud",
-    category: "Commercial",
     description: "Complete electrical and lighting solutions for a multi-use commercial building.",
-    image: alkhoudImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: alkhoudImg
   },
   {
     id: 18,
     title: "Auto Spa",
-    category: "Commercial",
     description: "Bright and functional lighting designed specifically for automotive detailing services.",
-    image: autoSpaImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: autoSpaImg
   },
   {
     id: 19,
     title: "Sohar Swift Factory",
-    category: "Industrial",
     description: "Heavy-duty industrial lighting and robust switchgear for factory operations.",
-    image: soharSwiftImg,
-    year: "Recent",
-    brands: ["Al Kabir Lighting"]
+    image: soharSwiftImg
   }
 ];
