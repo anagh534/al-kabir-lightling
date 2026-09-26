@@ -15,7 +15,7 @@ export const branches = [
   },
   {
     id: 2,
-    name: "AL KABIR LIGHTING (Known as Otsen store)",
+    name: "AL KABIR LIGHTING",
     type: "Branch Office",
     address: "Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
