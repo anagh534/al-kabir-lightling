@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
+import ReadMoreText from "@/components/ReadMoreText";
 import studioImg from "../../../public/images/about/about-studio.jpg";
 import { companyInfo } from "@/data/company";
 import { aboutData } from "@/data/about";
@@ -99,9 +100,9 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
                   Our Vision
                 </h3>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  {vision}
-                </p>
+                <div className="text-slate-600 text-sm sm:text-base leading-relaxed h-auto">
+                  <ReadMoreText text={vision} maxChars={400} />
+                </div>
               </div>
             </ScrollReveal>
 
@@ -114,9 +115,9 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
                   Our Mission
                 </h3>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  {mission}
-                </p>
+                <div className="text-slate-600 text-sm sm:text-base leading-relaxed h-auto">
+                  <ReadMoreText text={mission} maxChars={400} />
+                </div>
               </div>
             </ScrollReveal>
           </div>
