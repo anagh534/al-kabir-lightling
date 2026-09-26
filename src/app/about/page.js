@@ -40,9 +40,11 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 Dependable Engineering &amp; Sourcing for Oman&apos;s Built Environment
               </h2>
-              <div className="space-y-4 text-base text-slate-600 leading-relaxed">
+              <div className="space-y-5 text-base text-slate-600 leading-loose text-justify">
                 {narrative.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
+                  <p key={index} className={index === 0 ? "text-[17px] font-medium text-slate-800 leading-relaxed" : ""}>
+                    {paragraph}
+                  </p>
                 ))}
               </div>
 
