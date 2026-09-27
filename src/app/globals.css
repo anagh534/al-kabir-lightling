@@ -25,6 +25,17 @@
   --duration-700: 700ms;
   --duration-1200: 1200ms;
 
+  --animate-marquee: marquee 30s linear infinite;
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   --background-image-ceiling-wash: linear-gradient(105deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%);
 }
 

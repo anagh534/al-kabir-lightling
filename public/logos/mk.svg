@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+        <rect x="70" y="5" width="60" height="50" rx="10" fill="#E2231A"/>
+        <circle cx="100" cy="30" r="22" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <text x="100" y="32" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#FFFFFF">MK</text>
+    </svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+        <g transform="translate(10, 15)">
+            <path d="M15,0 A15,15 0 0,0 0,15 L10,15 A5,5 0 0,1 15,10 Z" fill="#00A5B4"/>
+            <path d="M18,0 L18,10 A5,5 0 0,1 23,15 L33,15 A15,15 0 0,0 18,0 Z" fill="#00A5B4"/>
+            <path d="M0,18 A15,15 0 0,0 15,33 L15,23 A5,5 0 0,1 10,18 Z" fill="#00A5B4"/>
+            <path d="M33,18 L23,18 A5,5 0 0,1 18,23 L18,33 A15,15 0 0,0 33,18 Z" fill="#00A5B4"/>
+        </g>
+        <text x="55" y="40" font-family="Arial, sans-serif" font-weight="900" font-size="34" fill="#00A5B4" letter-spacing="2">TSEN</text>
+    </svg>

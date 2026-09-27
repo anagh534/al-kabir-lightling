@@ -5,7 +5,7 @@ export const brands = [
     category: "LED Lighting Solutions",
     origin: "Global",
     specialty: "Commercial & Residential Lighting",
-    logo: "/logos/otsen.png",
+    logo: "/logos/otsen.svg",
   },
   {
     name: "ARCOLITE",
@@ -13,7 +13,7 @@ export const brands = [
     category: "Architectural Lighting",
     origin: "Global",
     specialty: "High-Performance Luminaires",
-    logo: "/logos/arcolite.png",
+    logo: "/logos/arcolite.svg",
   },
   {
     name: "PHILIPS",
@@ -21,7 +21,7 @@ export const brands = [
     category: "Architectural & Roadway Lighting",
     origin: "Netherlands",
     specialty: "Connected LED Luminaires & Controls",
-    logo: "/logos/philips.png",
+    logo: "/logos/philips.svg",
   },
   {
     name: "OSRAM",
@@ -29,7 +29,7 @@ export const brands = [
     category: "Specialized Project & Optical Lamps",
     origin: "Germany",
     specialty: "High-Performance Modules & Optics",
-    logo: "/logos/osram.png",
+    logo: "/logos/osram.svg",
   },
   {
     name: "SCHNIEDER",
@@ -37,7 +37,7 @@ export const brands = [
     category: "Power Distribution & Wiring Devices",
     origin: "France",
     specialty: "Modular Switchgear, Acti9, Unica Series",
-    logo: "/logos/schneider.png",
+    logo: "/logos/schneider.svg",
   },
   {
     name: "ABB",
@@ -45,7 +45,7 @@ export const brands = [
     category: "Electrification & Automation",
     origin: "Switzerland",
     specialty: "Breakers, Contactors, Industrial Drives",
-    logo: "/logos/abb.png",
+    logo: "/logos/abb.svg",
   },
   {
     name: "FSL",
@@ -53,7 +53,7 @@ export const brands = [
     category: "LED Lighting & Fixtures",
     origin: "China",
     specialty: "Industrial & Commercial Lighting",
-    logo: "/logos/fsl.png",
+    logo: "/logos/fsl.svg",
   },
   {
     name: "TM",
@@ -61,7 +61,7 @@ export const brands = [
     category: "Electrical Components",
     origin: "Global",
     specialty: "Wiring Accessories",
-    logo: "/logos/tm.png",
+    logo: "/logos/tm.svg",
   },
   {
     name: "ENLIGHT",
@@ -69,7 +69,7 @@ export const brands = [
     category: "Smart Lighting",
     origin: "Global",
     specialty: "Energy Efficient Solutions",
-    logo: "/logos/enlight.png",
+    logo: "/logos/enlight.svg",
   },
   {
     name: "Mk",
@@ -77,7 +77,7 @@ export const brands = [
     category: "Wiring Devices & Accessories",
     origin: "United Kingdom",
     specialty: "Switches, Sockets & Controls",
-    logo: "/logos/mk.png",
+    logo: "/logos/mk.svg",
   },
   {
     name: "Panasonic",
@@ -85,6 +85,6 @@ export const brands = [
     category: "Electrical & Lighting",
     origin: "Japan",
     specialty: "Wiring Devices, LED Lighting",
-    logo: "/logos/panasonic.png",
+    logo: "/logos/panasonic.svg",
   },
 ];

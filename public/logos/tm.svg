@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+        <circle cx="100" cy="30" r="25" fill="none" stroke="#B0B0B0" stroke-width="3"/>
+        <text x="100" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#8CC63F">tm</text>
+    </svg>

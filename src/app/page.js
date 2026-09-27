@@ -270,50 +270,15 @@ export default function HomePage() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
             {brands.map((b, idx) => (
               <ScrollReveal key={b.name} delay={idx * 100} direction="up" distance={20}>
-                <div className="bg-white p-8 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center min-h-[120px] h-full">
-                  <div className="flex items-center justify-center">
-                    {b.name === "OTSEN" && (
-                      <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#1A1A1A' }}>OTSEN</span>
-                    )}
-                    {b.name === "ARCOLITE" && (
-                      <span className="font-sans font-bold tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>ARCOLITE</span>
-                    )}
-                    {b.name === "PHILIPS" && (
-                      <span className="font-sans font-black tracking-wider text-2xl uppercase" style={{ color: '#00529A' }}>Philips</span>
-                    )}
-                    {b.name === "SCHNIEDER" && (
-                      <div className="flex items-center gap-2">
-                        <svg className="w-8 h-8" style={{ color: '#3DCD58' }} viewBox="0 0 100 100" fill="currentColor">
-                          <path d="M20,20 L80,20 L80,80 L20,80 Z M35,35 L65,35 L65,65 L35,65 Z" fillRule="evenodd" clipRule="evenodd" />
-                        </svg>
-                        <span className="font-sans font-bold tracking-tight text-base leading-tight" style={{ color: '#3DCD58' }}>Schneider<br />Electric</span>
-                      </div>
-                    )}
-                    {b.name === "OSRAM" && (
-                      <span className="font-sans font-bold tracking-widest text-2xl uppercase" style={{ color: '#FF6600' }}>Osram</span>
-                    )}
-                    {b.name === "ABB" && (
-                      <span className="font-sans font-black tracking-tighter text-4xl uppercase" style={{ color: '#FF000F' }}>ABB</span>
-                    )}
-                    {b.name === "FSL" && (
-                      <span className="font-sans font-black tracking-widest text-3xl uppercase" style={{ color: '#E30613' }}>FSL</span>
-                    )}
-                    {b.name === "TM" && (
-                      <span className="font-sans font-bold tracking-tighter text-4xl uppercase" style={{ color: '#003B7E' }}>TM</span>
-                    )}
-                    {b.name === "ENLIGHT" && (
-                      <span className="font-sans font-black tracking-widest text-2xl uppercase" style={{ color: '#FFC107' }}>ENLIGHT</span>
-                    )}
-                    {b.name === "Mk" && (
-                      <span className="font-sans font-bold tracking-tighter text-4xl" style={{ color: '#E30613' }}>Mk</span>
-                    )}
-                    {b.name === "Panasonic" && (
-                      <span className="font-sans font-black tracking-wider text-2xl" style={{ color: '#004098' }}>Panasonic</span>
-                    )}
-                  </div>
+                <div className="bg-white p-6 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center min-h-[90px] h-full">
+                  <img
+                    src={b.logo}
+                    alt={`${b.name} logo`}
+                    className={`max-h-12 max-w-[130px] object-contain hover:scale-105 transition-transform duration-300 ${b.name === "OTSEN" ? "invert dark:invert-0" : "filter-none"}`}
+                  />
                 </div>
               </ScrollReveal>
             ))}
