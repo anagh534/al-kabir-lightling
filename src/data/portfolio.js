@@ -8,7 +8,7 @@ import excellenceWeddingImg from "../../public/images/portfolio/excellence_weddi
 import wadiKabirResImg from "../../public/images/portfolio/wadi_kabir_res.jpeg";
 import hyundaiAzaibaImg from "../../public/images/portfolio/hyundai_azaiba.jpg";
 import nboBranchImg from "../../public/images/portfolio/nbo_branch.jpg";
-import soharBranchImg from "../../public/images/portfolio/sohar_branch.png";
+import soharBranchImg from "../../public/images/portfolio/sohar_branch.jpeg";
 import iocPdoImg from "../../public/images/portfolio/ioc_pdo.jpg";
 import brixCafeImg from "../../public/images/portfolio/brix_cafe.jpg";
 import musandamRestImg from "../../public/images/portfolio/musandam_rest.jpg";
@@ -17,6 +17,7 @@ import autoSpaImg from "../../public/images/portfolio/auto_spa.jpg";
 import soharSwiftImg from "../../public/images/portfolio/sohar_swift.jpeg";
 import geelycarImg from "../../public/images/portfolio/geely-car.jpg";
 import alkhoudImg from '../../public/images/portfolio/al-khoud.jpeg';
+import minstryInteriorImg from '../../public/images/portfolio/ministry-interior.jpeg';
 
 export const projects = [
   {
@@ -59,7 +60,7 @@ export const projects = [
     id: 7,
     title: "Ministry of Interior External Lights Al Khuwair",
     description: "High-power exterior and facade lighting solutions for the Ministry of Interior in Al Khuwair.",
-    image: logoImg
+    image: minstryInteriorImg
   },
   {
     id: 8,
