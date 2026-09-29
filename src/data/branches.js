@@ -1,9 +1,15 @@
+import ruwiImg from "../../public/images/branches/ruwi-honda-road.jpeg";
+import alkabirImg from "../../public/images/branches/al-kabir-lighting.jpeg";
+import alkabir3Img from "../../public/images/branches/al-kabir-lighting-3.jpeg";
+import ghubraImg from "../../public/images/branches/al-kabir-lighting-ghubra.jpeg";
+import salalahImg from "../../public/images/branches/al-kabir-lighting-salalah.jpeg";
+
 export const branches = [
   {
     id: 1,
     name: "RUWI Honda road",
     type: "BRANCH OUTLET",
-    image: "/images/branches/ruwi-honda-road.jpeg",
+    image: ruwiImg,
     address: "Honda Road Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -18,7 +24,7 @@ export const branches = [
     id: 2,
     name: "AL KABIR LIGHTING",
     type: "BRANCH OUTLET",
-    image: "/images/branches/al-kabir-lighting.jpeg",
+    image: alkabirImg,
     address: "Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -33,7 +39,7 @@ export const branches = [
     id: 3,
     name: "Al Kabir Lighting",
     type: "BRANCH OUTLET",
-    image: "/images/branches/al-kabir-lighting-3.jpeg",
+    image: alkabir3Img,
     address: "Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -48,7 +54,7 @@ export const branches = [
     id: 4,
     name: "AL KABIR LIGHTING GHUBRA",
     type: "BRANCH OUTLET",
-    image: "/images/branches/al-kabir-lighting-ghubra.jpeg",
+    image: ghubraImg,
     address: "Ghubra, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -63,7 +69,7 @@ export const branches = [
     id: 5,
     name: "AL KABIR LIGHTING SALALAH",
     type: "BRANCH OUTLET",
-    image: "/images/branches/al-kabir-lighting-salalah.jpeg",
+    image: salalahImg,
     address: "Salalah, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
