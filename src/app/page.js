@@ -274,9 +274,11 @@ export default function HomePage() {
             {brands.map((b, idx) => (
               <ScrollReveal key={b.name} delay={idx * 100} direction="up" distance={20}>
                 <div className="bg-white p-4 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center h-28">
-                  <img
+                  <Image
                     src={b.logo}
                     alt={`${b.name} logo`}
+                    width={160}
+                    height={64}
                     className="max-h-16 max-w-[160px] w-auto h-auto object-contain hover:scale-110 transition-transform duration-300"
                   />
                 </div>
