@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+
 import {
   MapPin,
   Phone,
@@ -19,9 +19,6 @@ import { companyInfo } from "@/data/company";
 import CtaBanner from "@/components/CtaBanner";
 
 export default function BranchesPage() {
-  const [activeBranchId, setActiveBranchId] = useState(branches[0]?.id);
-  const activeBranch = branches.find((b) => b.id === activeBranchId) || branches[0];
-
   return (
     <div className="flex flex-col bg-white min-h-screen">
       <PageHeader
@@ -114,17 +111,16 @@ export default function BranchesPage() {
                     </div>
                   </div>
 
-                  {/* View on Map button */}
-                  <button
-                    onClick={() => {
-                      setActiveBranchId(branch.id);
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }}
+                  {/* View on Map link */}
+                  <a
+                    href={branch.mapUrl.replace('&output=embed', '')}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-6 w-full py-2.5 rounded-xl text-xs font-bold text-[#009ea9] bg-[#e6f8fa] hover:bg-[#009ea9] hover:text-white transition-all flex items-center justify-center gap-1.5"
                   >
                     <ExternalLink className="w-3 h-3" />
                     View on Map
-                  </button>
+                  </a>
                 </div>
               </ScrollReveal>
             ))}
