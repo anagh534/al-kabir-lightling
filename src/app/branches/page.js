@@ -1,6 +1,7 @@
 "use client";
 
 
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -48,79 +49,81 @@ export default function BranchesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
             {branches.map((branch, idx) => (
               <ScrollReveal key={branch.id} direction="up" distance={24} delay={idx * 100}>
-                <div className="h-full bg-white rounded-2xl border border-slate-200/80 p-6 hover:shadow-lg hover:border-[#009ea9]/30 transition-all duration-500 flex flex-col">
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-5">
-                    <div
-                      className={`w-11 h-11 rounded-xl flex items-center justify-center ${branch.isHeadquarters
-                        ? "bg-amber-50 text-amber-600 border border-amber-200"
-                        : "bg-[#e6f8fa] text-[#009ea9]"
-                        }`}
-                    >
-                      {branch.isHeadquarters ? (
-                        <Star className="w-5 h-5" />
-                      ) : (
-                        <Building2 className="w-5 h-5" />
-                      )}
-                    </div>
+                <div className="h-full bg-white rounded-2xl border border-slate-200/80 hover:shadow-lg hover:border-[#009ea9]/30 transition-all duration-500 flex flex-col overflow-hidden">
+                  {/* Branch Image */}
+                  <div className="relative w-full h-48 bg-slate-100 group">
+                    {branch.image ? (
+                      <Image
+                        src={branch.image}
+                        alt={branch.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-slate-300">
+                        <Building2 className="w-12 h-12" />
+                      </div>
+                    )}
                     {branch.isHeadquarters && (
-                      <span className="text-[9px] font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-2 py-1 rounded-md border border-amber-200">
+                      <span className="absolute top-4 right-4 text-[9px] font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-2.5 py-1.5 rounded-md border border-amber-200 z-10 shadow-sm">
                         HQ
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 mb-1">
-                    {branch.name}
-                  </h3>
-                  <p className="text-[11px] text-slate-400 font-medium mb-5">
-                    {branch.type}
-                  </p>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-base font-bold text-slate-900 mb-1">
+                      {branch.name}
+                    </h3>
+                    <p className="text-[11px] text-slate-400 font-medium mb-5 uppercase tracking-wider">
+                      {branch.type}
+                    </p>
 
-                  {/* Quick Contacts */}
-                  <div className="space-y-3 flex-grow">
-                    <div className="flex items-start gap-2.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#009ea9] mt-0.5 shrink-0" />
-                      <span className="text-[12px] text-slate-600 leading-snug">
-                        {branch.address}
-                      </span>
+                    {/* Quick Contacts */}
+                    <div className="space-y-3 flex-grow">
+                      <div className="flex items-start gap-2.5">
+                        <MapPin className="w-3.5 h-3.5 text-[#009ea9] mt-0.5 shrink-0" />
+                        <span className="text-[12px] text-slate-600 leading-snug">
+                          {branch.address}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2.5">
+                        <Phone className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
+                        <a
+                          href={`tel:${branch.mobile.replace(/\s+/g, "")}`}
+                          className="text-[12px] text-slate-600 hover:text-[#009ea9] transition-colors"
+                        >
+                          {branch.mobile}
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2.5">
+                        <Mail className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
+                        <a
+                          href={`mailto:${branch.email}`}
+                          className="text-[12px] text-slate-600 hover:text-[#009ea9] transition-colors"
+                        >
+                          {branch.email}
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2.5">
+                        <Clock className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
+                        <span className="text-[12px] text-slate-600">
+                          {branch.hours}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2.5">
-                      <Phone className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
-                      <a
-                        href={`tel:${branch.mobile.replace(/\s+/g, "")}`}
-                        className="text-[12px] text-slate-600 hover:text-[#009ea9] transition-colors"
-                      >
-                        {branch.mobile}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-2.5">
-                      <Mail className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
-                      <a
-                        href={`mailto:${branch.email}`}
-                        className="text-[12px] text-slate-600 hover:text-[#009ea9] transition-colors"
-                      >
-                        {branch.email}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-2.5">
-                      <Clock className="w-3.5 h-3.5 text-[#009ea9] shrink-0" />
-                      <span className="text-[12px] text-slate-600">
-                        {branch.hours}
-                      </span>
-                    </div>
+
+                    {/* View on Map link */}
+                    <a
+                      href={branch.mapUrl.replace('&output=embed', '')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 w-full py-2.5 rounded-xl text-xs font-bold text-[#009ea9] bg-[#e6f8fa] hover:bg-[#009ea9] hover:text-white transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      View on Map
+                    </a>
                   </div>
-
-                  {/* View on Map link */}
-                  <a
-                    href={branch.mapUrl.replace('&output=embed', '')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 w-full py-2.5 rounded-xl text-xs font-bold text-[#009ea9] bg-[#e6f8fa] hover:bg-[#009ea9] hover:text-white transition-all flex items-center justify-center gap-1.5"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                    View on Map
-                  </a>
                 </div>
               </ScrollReveal>
             ))}
