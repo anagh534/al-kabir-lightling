@@ -1,3 +1,15 @@
+import otsenLogo from "../../public/logos/otsen.svg";
+import arcoliteLogo from "../../public/logos/arcolite.svg";
+import philipsLogo from "../../public/logos/philips.svg";
+import osramLogo from "../../public/logos/osram.svg";
+import schneiderLogo from "../../public/logos/schneider.svg";
+import abbLogo from "../../public/logos/abb.svg";
+import fslLogo from "../../public/logos/fsl.svg";
+import tmLogo from "../../public/logos/tm.svg";
+import enlightLogo from "../../public/logos/enlight.svg";
+import mkLogo from "../../public/logos/mk.svg";
+import panasonicLogo from "../../public/logos/panasonic.svg";
+
 export const brands = [
   {
     name: "OTSEN",
@@ -5,7 +17,7 @@ export const brands = [
     category: "LED Lighting Solutions",
     origin: "Global",
     specialty: "Commercial & Residential Lighting",
-    logo: "/logos/otsen.svg",
+    logo: otsenLogo,
   },
   {
     name: "ARCOLITE",
@@ -13,7 +25,7 @@ export const brands = [
     category: "Architectural Lighting",
     origin: "Global",
     specialty: "High-Performance Luminaires",
-    logo: "/logos/arcolite.svg",
+    logo: arcoliteLogo,
   },
   {
     name: "PHILIPS",
@@ -21,7 +33,7 @@ export const brands = [
     category: "Architectural & Roadway Lighting",
     origin: "Netherlands",
     specialty: "Connected LED Luminaires & Controls",
-    logo: "/logos/philips.svg",
+    logo: philipsLogo,
   },
   {
     name: "OSRAM",
@@ -29,7 +41,7 @@ export const brands = [
     category: "Specialized Project & Optical Lamps",
     origin: "Germany",
     specialty: "High-Performance Modules & Optics",
-    logo: "/logos/osram.svg",
+    logo: osramLogo,
   },
   {
     name: "SCHNIEDER",
@@ -37,7 +49,7 @@ export const brands = [
     category: "Power Distribution & Wiring Devices",
     origin: "France",
     specialty: "Modular Switchgear, Acti9, Unica Series",
-    logo: "/logos/schneider.svg",
+    logo: schneiderLogo,
   },
   {
     name: "ABB",
@@ -45,7 +57,7 @@ export const brands = [
     category: "Electrification & Automation",
     origin: "Switzerland",
     specialty: "Breakers, Contactors, Industrial Drives",
-    logo: "/logos/abb.svg",
+    logo: abbLogo,
   },
   {
     name: "FSL",
@@ -53,7 +65,7 @@ export const brands = [
     category: "LED Lighting & Fixtures",
     origin: "China",
     specialty: "Industrial & Commercial Lighting",
-    logo: "/logos/fsl.svg",
+    logo: fslLogo,
   },
   {
     name: "TM",
@@ -61,7 +73,7 @@ export const brands = [
     category: "Electrical Components",
     origin: "Global",
     specialty: "Wiring Accessories",
-    logo: "/logos/tm.svg",
+    logo: tmLogo,
   },
   {
     name: "ENLIGHT",
@@ -69,7 +81,7 @@ export const brands = [
     category: "Smart Lighting",
     origin: "Global",
     specialty: "Energy Efficient Solutions",
-    logo: "/logos/enlight.svg",
+    logo: enlightLogo,
   },
   {
     name: "Mk",
@@ -77,7 +89,7 @@ export const brands = [
     category: "Wiring Devices & Accessories",
     origin: "United Kingdom",
     specialty: "Switches, Sockets & Controls",
-    logo: "/logos/mk.svg",
+    logo: mkLogo,
   },
   {
     name: "Panasonic",
@@ -85,6 +97,6 @@ export const brands = [
     category: "Electrical & Lighting",
     origin: "Japan",
     specialty: "Wiring Devices, LED Lighting",
-    logo: "/logos/panasonic.svg",
+    logo: panasonicLogo,
   },
 ];
