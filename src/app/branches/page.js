@@ -53,8 +53,8 @@ export default function BranchesPage() {
                   <div className="flex items-start justify-between mb-5">
                     <div
                       className={`w-11 h-11 rounded-xl flex items-center justify-center ${branch.isHeadquarters
-                          ? "bg-amber-50 text-amber-600 border border-amber-200"
-                          : "bg-[#e6f8fa] text-[#009ea9]"
+                        ? "bg-amber-50 text-amber-600 border border-amber-200"
+                        : "bg-[#e6f8fa] text-[#009ea9]"
                         }`}
                     >
                       {branch.isHeadquarters ? (
@@ -129,7 +129,85 @@ export default function BranchesPage() {
       </section>
 
       {/* ═══════════════════════════════════════
-          3. CTA BANNER
+          3. HEAD OFFICE DETAILS
+          ═══════════════════════════════════════ */}
+      <section className="py-20 bg-white border-t border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up" distance={20}>
+            <div className="mb-14 text-center max-w-2xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+                Al Kabir Lighting Head Office
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+            {/* Contact Details Card */}
+            <ScrollReveal direction="right" distance={30} className="lg:col-span-2">
+              <div className="bg-slate-50 p-8 sm:p-10 rounded-[2rem] border border-slate-200/80 shadow-sm h-full flex flex-col justify-center">
+                <h3 className="text-2xl font-bold text-slate-900 mb-8">Get in Touch</h3>
+                <div className="space-y-8">
+                  <div className="flex items-start gap-5">
+                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center shrink-0 text-[#009ea9]">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div className="pt-1">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Address</p>
+                      <p className="text-[15px] font-medium text-slate-700 leading-relaxed">
+                        Al Kabir Lighting<br />
+                        Muscat, Sultanate of Oman
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-5">
+                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center shrink-0 text-[#009ea9]">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div className="pt-1">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Phone</p>
+                      <a href="tel:+96892125048" className="text-[15px] font-medium text-slate-700 hover:text-[#009ea9] transition-colors">
+                        +968 9212 5048
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-5">
+                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-200/80 flex items-center justify-center shrink-0 text-[#009ea9]">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div className="pt-1">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Email</p>
+                      <a href="mailto:sales@alkabirlighting.com" className="text-[15px] font-medium text-slate-700 hover:text-[#009ea9] transition-colors">
+                        sales@alkabirlighting.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Map iframe */}
+            <ScrollReveal direction="left" distance={30} className="lg:col-span-3 h-full">
+              <div className="h-[400px] lg:h-[500px] w-full rounded-[2rem] overflow-hidden border border-slate-200/80 shadow-md">
+                <iframe
+                  src="https://maps.google.com/maps?q=23.585972,58.549839&z=15&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                ></iframe>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════
+          4. CTA BANNER
           ═══════════════════════════════════════ */}
       <CtaBanner />
     </div>
