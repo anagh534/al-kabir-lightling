@@ -2,7 +2,7 @@ export const branches = [
   {
     id: 1,
     name: "RUWI Honda road",
-    type: "Headquarters",
+    type: "BRANCH OUTLET",
     address: "Honda Road Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -10,13 +10,13 @@ export const branches = [
     email: "sales@alkabirlighting.com",
     hours: "Sun – Thu: 8:00 AM – 6:00 PM",
     mapUrl: "https://maps.google.com/maps?q=23.585890,58.549866&hl=en&z=14&output=embed",
-    features: ["Product Showroom", "Technical Consultation", "Headquarters"],
-    isHeadquarters: true,
+    features: ["Product Showroom", "Technical Consultation"],
+    isHeadquarters: false,
   },
   {
     id: 2,
     name: "AL KABIR LIGHTING",
-    type: "Branch Office",
+    type: "BRANCH OUTLET",
     address: "Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -30,7 +30,7 @@ export const branches = [
   {
     id: 3,
     name: "Al Kabir Lighting",
-    type: "Branch Office",
+    type: "BRANCH OUTLET",
     address: "Ruwi, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -44,7 +44,7 @@ export const branches = [
   {
     id: 4,
     name: "AL KABIR LIGHTING GHUBRA",
-    type: "Branch Office",
+    type: "BRANCH OUTLET",
     address: "Ghubra, Muscat, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
@@ -58,7 +58,7 @@ export const branches = [
   {
     id: 5,
     name: "AL KABIR LIGHTING SALALAH",
-    type: "Branch Office",
+    type: "BRANCH OUTLET",
     address: "Salalah, Sultanate of Oman",
     poBox: "",
     phone: "+968 9212 5048",
