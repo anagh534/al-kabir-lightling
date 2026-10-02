@@ -39,6 +39,7 @@ export default function ProductShowcaseCard({ title, designer, imageUrl, descrip
             src={imageUrl}
             alt={title}
             fill
+            loading="lazy"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-center group-hover:scale-[1.05] transition-transform duration-1000 ease-out will-change-transform"
           />

@@ -84,10 +84,12 @@ export default function HomePage() {
             transition: 'all 1600ms cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <img
-            src={heroImg.src}
+          <Image
+            src={heroImg}
             alt="Modern Architectural Lighting in Oman"
-            className="w-full h-full object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.75] contrast-[1.15] transition-all duration-[2000ms] ease-out"
+            fill
+            priority
+            className="object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.75] contrast-[1.15] transition-all duration-[2000ms] ease-out"
           />
           {/* Multi-layer thematic gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#090e17] via-[#090e17]/80 to-transparent" />
@@ -279,6 +281,7 @@ export default function HomePage() {
                     alt={`${b.name} logo`}
                     width={160}
                     height={64}
+                    loading="lazy"
                     className="max-h-16 max-w-[160px] w-auto h-auto object-contain hover:scale-110 transition-transform duration-300"
                   />
                 </div>
