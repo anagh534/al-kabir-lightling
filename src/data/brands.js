@@ -1,5 +1,5 @@
 import otsenLogo from "../../public/logos/otsen.svg";
-import arcoliteLogo from "../../public/logos/arcolite.svg";
+import arcoliteLogo from "../../public/logos/arcolite.png";
 import philipsLogo from "../../public/logos/philips.svg";
 import osramLogo from "../../public/logos/osram.svg";
 import schneiderLogo from "../../public/logos/schneider.svg";
