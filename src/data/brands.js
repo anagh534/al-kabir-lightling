@@ -9,6 +9,7 @@ import tmLogo from "../../public/logos/tm.svg";
 import enlightLogo from "../../public/logos/enlight.svg";
 import mkLogo from "../../public/logos/mk.svg";
 import panasonicLogo from "../../public/logos/panasonic.svg";
+import fumagalliLogo from "../../public/logos/fumagalli.svg";
 
 export const brands = [
   {
@@ -98,5 +99,14 @@ export const brands = [
     origin: "Japan",
     specialty: "Wiring Devices, LED Lighting",
     logo: panasonicLogo,
+  },
+  {
+    name: "FUMAGALLI",
+    tag: "Lighting",
+    category: "Outdoor Lighting",
+    origin: "Italy",
+    specialty: "Resin Outdoor Lighting",
+    logo: fumagalliLogo,
+    darkBg: true,
   },
 ];

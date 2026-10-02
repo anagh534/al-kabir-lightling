@@ -229,5 +229,5 @@ export const filterOptions = {
     "Chandeliers",
     "Decorative Lighting"
   ],
-  brands: ["OTSEN", "ARCOLITE", "PHILIPS", "OSRAM", "SCHNIEDER", "ABB", "FSL", "TM", "ENLIGHT", "Mk", "Panasonic", "Others"]
+  brands: ["OTSEN", "ARCOLITE", "PHILIPS", "OSRAM", "SCHNIEDER", "ABB", "FSL", "TM", "ENLIGHT", "Mk", "Panasonic", "FUMAGALLI", "Others"]
 };

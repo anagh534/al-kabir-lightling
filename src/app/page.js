@@ -273,7 +273,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
             {brands.map((b, idx) => (
               <ScrollReveal key={b.name} delay={idx * 100} direction="up" distance={20}>
-                <div className="bg-white p-4 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center h-28">
+                <div className={`p-4 rounded-2xl border border-slate-200/90 hover:border-[#009ea9] hover:shadow-md transition-all flex items-center justify-center h-28 ${b.darkBg ? "bg-slate-900" : "bg-white"}`}>
                   <Image
                     src={b.logo}
                     alt={`${b.name} logo`}
