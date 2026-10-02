@@ -11,12 +11,18 @@ export default function sitemap() {
     "/branches",
     "/careers",
     "/contact",
-  ].map((route) => ({
-    url: `${siteConfig.baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
-  }));
+  ].map((route) => {
+    let priority = 0.8;
+    if (route === "") priority = 1;
+    if (route === "/products" || route === "/portfolio") priority = 0.9;
+    
+    return {
+      url: `${siteConfig.baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: route === "" ? "weekly" : "monthly",
+      priority,
+    };
+  });
 
   return routes;
 }
