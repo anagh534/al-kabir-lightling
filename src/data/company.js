@@ -12,7 +12,7 @@ export const companyInfo = {
   address: "Honda Road Ruwi, Muscat, Sultanate of Oman",
   city: "Muscat",
   country: "Sultanate of Oman",
-  hours: "Sun - Thu: 8:00 AM - 6:00 PM",
+  hours: "Sun - Thu: 8:00 AM - 9:00 PM",
   description: "Al Kabir Lighting is an Oman-based lighting, electrical, and building materials specialist supplying high-spec commercial, industrial, and infrastructure developments.",
   whatsappMessage: "Hello Al Kabir Lighting, I would like to inquire about products and pricing.",
 

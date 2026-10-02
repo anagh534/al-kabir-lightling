@@ -102,7 +102,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-slate-900">
-                      Showroom &amp; Head Office
+                      Head Office
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed">
                       {companyInfo.address}
@@ -135,7 +135,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-slate-900">
-                      General Email
+                      Email
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
                       <a
