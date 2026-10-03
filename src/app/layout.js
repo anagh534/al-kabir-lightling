@@ -38,6 +38,9 @@ export const metadata = {
   authors: [{ name: "Al Kabir Lighting LLC" }],
   creator: "Al Kabir Lighting LLC",
   publisher: "Al Kabir Lighting LLC",
+  verification: {
+    google: "CiCtcLl2dQT9Xsv7xzHf4x1icqvv-5xePGARApHaQs8",
+  },
   openGraph: {
     title: "Al Kabir Lighting | Architectural & Project Solutions Oman",
     description:
@@ -92,7 +95,7 @@ const jsonLd = {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
       opens: "08:00",
-      closes: "18:00",
+      closes: "21:00",
     },
   ],
   areaServed: ["Oman", "GCC"],
