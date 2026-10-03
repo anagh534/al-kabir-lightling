@@ -19,7 +19,7 @@ export const companyInfo = {
   socials: {
     linkedin: "https://linkedin.com/company/alkabirlighting",
     facebook: "https://facebook.com/alkabirlighting",
-    instagram: "https://instagram.com/alkabirlighting",
+    instagram: "https://www.instagram.com/otsenlighting",
     youtube: "https://youtube.com/@alkabirlighting",
   },
   stats: [
