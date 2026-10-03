@@ -13,8 +13,15 @@ import { companyInfo } from "@/data/company";
 import { aboutData } from "@/data/about";
 import CtaBanner from "@/components/CtaBanner";
 export const metadata = {
-  title: "About Us",
+  title: "About Our Lighting Company",
   description: companyInfo.description,
+  keywords: [
+    "lighting company Oman",
+    "شركة إنارة في عمان",
+    "lighting supplier Oman",
+    "Al Kabir Lighting",
+    "electrical wholesaler Oman"
+  ],
   alternates: {
     canonical: "/about",
   },

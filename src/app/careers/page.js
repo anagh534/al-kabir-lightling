@@ -15,7 +15,14 @@ import {
 
 export const metadata = {
   title: "Careers",
-  description: "Join the Al Kabir Lighting team and build a rewarding career in the lighting and building materials industry.",
+  description: "Join Al Kabir Lighting, Oman's top lighting company. Build a rewarding career in the LED lighting and electrical materials industry.",
+  keywords: [
+    "lighting company Oman",
+    "شركة إنارة في عمان",
+    "lighting supplier Oman",
+    "Al Kabir Lighting",
+    "electrical wholesaler Oman"
+  ],
   alternates: {
     canonical: "/careers",
   },
