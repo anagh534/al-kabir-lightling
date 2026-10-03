@@ -13,8 +13,11 @@ import { companyInfo } from "@/data/company";
 import { aboutData } from "@/data/about";
 import CtaBanner from "@/components/CtaBanner";
 export const metadata = {
-  title: `About Us | ${companyInfo.name}`,
+  title: "About Us",
   description: companyInfo.description,
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

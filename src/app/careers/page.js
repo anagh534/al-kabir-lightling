@@ -16,6 +16,9 @@ import {
 export const metadata = {
   title: "Careers",
   description: "Join the Al Kabir Lighting team and build a rewarding career in the lighting and building materials industry.",
+  alternates: {
+    canonical: "/careers",
+  },
 };
 
 const iconMap = {

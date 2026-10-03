@@ -65,6 +65,9 @@ export const metadata = {
       "Premium lighting, electrical, and project supply across the Sultanate of Oman.",
     images: ["/images/hero/hero-lighting.webp"],
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const jsonLd = {
