@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { companyInfo } from "@/data/company";
 import { navLinks } from "@/data/navigation";
-import logoImg from "../../public/logo.png";
+import logoImg from "../../public/logo.webp";
 
 export default function Footer({ onRequestQuote }) {
   const getSocialIcon = (platform) => {

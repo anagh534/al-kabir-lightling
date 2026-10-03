@@ -1,9 +1,9 @@
-import indoorImg from "../../public/images/categories/cat-indoor.jpg";
-import outdoorImg from "../../public/images/categories/cat-outdoor.jpg";
-import archImg from "../../public/images/categories/cat-architectural.jpg";
-import emergImg from "../../public/images/categories/cat-emergency.jpg";
-import elecImg from "../../public/images/categories/cat-electrical.jpg";
-import matImg from "../../public/images/categories/cat-materials.jpg";
+import indoorImg from "../../public/images/categories/cat-indoor.webp";
+import outdoorImg from "../../public/images/categories/cat-outdoor.webp";
+import archImg from "../../public/images/categories/cat-architectural.webp";
+import emergImg from "../../public/images/categories/cat-emergency.webp";
+import elecImg from "../../public/images/categories/cat-electrical.webp";
+import matImg from "../../public/images/categories/cat-materials.webp";
 
 export const productCategories = [
   {

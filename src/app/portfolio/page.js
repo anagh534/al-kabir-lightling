@@ -33,11 +33,11 @@ function ProjectCard({ project, index }) {
         <div className="relative h-64 shrink-0 overflow-hidden bg-slate-100">
           <Image
             src={project.image}
-            alt={project.title}
+            alt={`${project.title} - Al Kabir Lighting project in Oman`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
-            unoptimized
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700" />
 

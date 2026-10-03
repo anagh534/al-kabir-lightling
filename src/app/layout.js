@@ -49,7 +49,7 @@ export const metadata = {
     siteName: "Al Kabir Lighting",
     images: [
       {
-        url: "/images/hero/hero-lighting.jpg",
+        url: "/images/hero/hero-lighting.webp",
         width: 1920,
         height: 1080,
         alt: "Al Kabir Lighting Oman Showroom & Architectural Projects",
@@ -63,7 +63,7 @@ export const metadata = {
     title: "Al Kabir Lighting | Lighting & Building Material Solutions Oman",
     description:
       "Premium lighting, electrical, and project supply across the Sultanate of Oman.",
-    images: ["/images/hero/hero-lighting.jpg"],
+    images: ["/images/hero/hero-lighting.webp"],
   },
 };
 
@@ -72,7 +72,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Al Kabir Lighting",
   legalName: "Al Kabir Lighting & Trading LLC",
-  image: "https://alkabirlighting.com/logo.png",
+  image: "https://alkabirlighting.com/logo.webp",
   url: "https://alkabirlighting.com",
   telephone: "+96892125048",
   email: "sales@alkabirlighting.com",
@@ -114,13 +114,18 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Preconnect to Google Translate CDN to reduce connection latency */}
+        <link rel="preconnect" href="https://translate.google.com" />
+        <link rel="preconnect" href="https://translate.googleapis.com" />
+        <link rel="dns-prefetch" href="https://translate.google.com" />
       </head>
       <body className="min-h-full flex flex-col font-sans text-slate-900 bg-white">
+        {/* Google Translate — lazyOnload so it never blocks rendering */}
         <Script
           src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-translate-init" strategy="afterInteractive">
+        <Script id="google-translate-init" strategy="lazyOnload">
           {`
             function googleTranslateElementInit() {
               new google.translate.TranslateElement({

@@ -37,7 +37,7 @@ export default function ProductShowcaseCard({ title, designer, imageUrl, descrip
         <div className="relative w-full h-64 overflow-hidden bg-slate-100 rounded-t-3xl">
           <Image
             src={imageUrl}
-            alt={title}
+            alt={`${title} - Al Kabir Lighting product category`}
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

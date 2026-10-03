@@ -8,7 +8,7 @@ import {
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReadMoreText from "@/components/ReadMoreText";
-import studioImg from "../../../public/images/about/about-studio.jpg";
+import studioImg from "../../../public/images/about/about-studio.webp";
 import { companyInfo } from "@/data/company";
 import { aboutData } from "@/data/about";
 import CtaBanner from "@/components/CtaBanner";
@@ -68,8 +68,10 @@ export default function AboutPage() {
                   src={studioImg}
                   alt="Al Kabir Lighting Engineering Simulation Studio in Muscat"
                   fill
-                  quality={90}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={85}
                   className="object-cover object-center"
+                  loading="lazy"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />

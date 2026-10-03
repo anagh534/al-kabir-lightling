@@ -8,7 +8,7 @@ import { ArrowRight, Menu, X, Phone, Mail } from "lucide-react";
 import { navLinks } from "@/data/navigation";
 import { companyInfo } from "@/data/company";
 
-import logoImg from "../../public/logo.png";
+import logoImg from "../../public/logo.webp";
 
 export default function Header({ onRequestQuote }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +32,8 @@ export default function Header({ onRequestQuote }) {
             <div className="relative w-40 sm:w-48 lg:w-56 h-10 sm:h-12 lg:h-14 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={logoImg}
-                alt={companyInfo.name}
+                alt={`${companyInfo.name} - Architectural Lighting Solutions Oman`}
+                sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 224px"
                 className="object-contain object-left w-full h-full"
                 priority
               />

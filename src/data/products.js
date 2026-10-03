@@ -1,15 +1,15 @@
-import img1 from "../../public/images/products/led_downlight.jpg";
-import img2 from "../../public/images/products/led_panel_light.jpg";
-import img3 from "../../public/images/products/led_track_light.jpg";
-import img4 from "../../public/images/products/led_pendant_light.jpg";
-import img5 from "../../public/images/products/led_linear_light.jpg";
-import img6 from "../../public/images/products/led_ceiling_light.jpg";
-import img7 from "../../public/images/products/led_wall_light.jpg";
-import img8 from "../../public/images/products/led_spot_light.jpg";
-import img9 from "../../public/images/products/decorative_chandelier.jpg";
-import img10 from "../../public/images/products/led_ceiling_fan_light.jpg";
-import img11 from "../../public/images/products/emergency_light.jpg";
-import img12 from "../../public/images/products/smart_led_light.jpg";
+import img1 from "../../public/images/products/led_downlight.webp";
+import img2 from "../../public/images/products/led_panel_light.webp";
+import img3 from "../../public/images/products/led_track_light.webp";
+import img4 from "../../public/images/products/led_pendant_light.webp";
+import img5 from "../../public/images/products/led_linear_light.webp";
+import img6 from "../../public/images/products/led_ceiling_light.webp";
+import img7 from "../../public/images/products/led_wall_light.webp";
+import img8 from "../../public/images/products/led_spot_light.webp";
+import img9 from "../../public/images/products/decorative_chandelier.webp";
+import img10 from "../../public/images/products/led_ceiling_fan_light.webp";
+import img11 from "../../public/images/products/emergency_light.webp";
+import img12 from "../../public/images/products/smart_led_light.webp";
 
 export const products = [
   {

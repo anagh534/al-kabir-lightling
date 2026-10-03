@@ -24,7 +24,7 @@ import CtaBanner from "@/components/CtaBanner";
 
 import ProductShowcaseCard from "@/components/ProductShowcaseCard";
 import ScrollReveal from "@/components/ScrollReveal";
-import heroImg from "../../public/images/hero/hero-lighting.jpg";
+import heroImg from "../../public/images/hero/hero-lighting.webp";
 
 const Counter = ({ end, suffix = "", duration = 2000, trigger }) => {
   const [count, setCount] = useState(0);
@@ -86,9 +86,10 @@ export default function HomePage() {
         >
           <Image
             src={heroImg}
-            alt="Modern Architectural Lighting in Oman"
+            alt="Al Kabir Lighting showroom featuring premium architectural and industrial lighting solutions in Muscat, Oman"
             fill
             priority
+            sizes="100vw"
             className="object-cover object-center filter brightness-[0.4] group-hover:brightness-[0.75] contrast-[1.15] transition-all duration-[2000ms] ease-out"
           />
           {/* Multi-layer thematic gradient */}

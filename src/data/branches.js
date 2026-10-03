@@ -1,8 +1,8 @@
-import ruwiImg from "../../public/images/branches/ruwi-honda-road.jpeg";
-import alkabirImg from "../../public/images/branches/al-kabir-lighting.jpeg";
-import alkabir3Img from "../../public/images/branches/al-kabir-lighting-3.jpeg";
-import ghubraImg from "../../public/images/branches/al-kabir-lighting-ghubra.jpeg";
-import salalahImg from "../../public/images/branches/al-kabir-lighting-salalah.jpeg";
+import ruwiImg from "../../public/images/branches/ruwi-honda-road.webp";
+import alkabirImg from "../../public/images/branches/al-kabir-lighting.webp";
+import alkabir3Img from "../../public/images/branches/al-kabir-lighting-3.webp";
+import ghubraImg from "../../public/images/branches/al-kabir-lighting-ghubra.webp";
+import salalahImg from "../../public/images/branches/al-kabir-lighting-salalah.webp";
 
 export const branches = [
   {
